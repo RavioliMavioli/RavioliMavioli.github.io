@@ -17,49 +17,84 @@
     overflow-x: hidden;
 
 }
-nav{
+.navbar{
+    position:sticky;
+    top: 0px;
+    background: #161f28;
+    margin: 0px;
+    overflow: hidden;
     display: flex;
-    padding: 2% 6%;
     justify-content: space-between;
     align-items: center;
 }
-.nav-links{
-    flex: 1;
-    text-align: right;
-}
-.nav-links ul li{
-    list-style: none;
-    display: inline-block;
-    padding: 8px 12px;
-    position: relative;
-}
-.nav-links ul li a{
+.navbrand a{
     color: white;
     text-decoration: none;
     font-family: Roboto;
     font-style: normal;
-    font-weight: 900;
+    font-weight: 800;
+    font-size: 24px;
+    box-sizing: border-box;
+    float: left;
+    display: inline-block;
+    text-align: center;
+    padding: 30px 24px;
+    transition: 0.5s
+}
+.navsupport a{
+    color: white;
+    text-decoration: none;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
     font-size: 18px;
     line-height: 21px;
+    box-sizing: border-box;
+    float: left;
+    display: inline-block;
+    text-align: center;
+    padding: 12px 24px;
     transition: 0.5s;
+    background: linear-gradient(94.94deg, #FD9E04 -1.76%, #FF4C01 80.53%);
+    border-radius: 75px;
 }
-.nav-links ul li::after{
-    content: "";
-    width: 0%;
-    height: 3px;
+.navsupport a:hover{
+    background: orange;
+    color: black;
+    border-radius: 0px;
+}
+.navcenter{
+    margin-right: 80px;
+}
+.navcenter a{
+    color: white;
+    text-decoration: none;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    box-sizing: border-box;
+    float: left;
+    display: inline-block;
+    text-align: center;
+    padding: 12px 24px;
+    transition: 0.5s
+}
+.navcenter a:hover{
     background: white;
-    display: block;
-    margin: auto;
-    transition: 0.5s;
+    color: black;
+    border-radius: 75px;
 }
-.nav-links ul li:hover::after{
-    width: 100%;
-}
+
+
+
+
 .Title{
     width: 90%;
     color: white;
     position: absolute;
-    top: 380px;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -142,7 +177,7 @@ nav{
     transition: 0.5s;
 }
 .external-links ul li:hover{
-    filter: invert(48%) sepia(13%) saturate(3207%) hue-rotate(0deg) brightness(100%) contrast(100%);
+    filter: invert(48%) sepia(13%) saturate(3207%) hue-rotate(-20deg) brightness(150%) contrast(100%);
 }
 
 
@@ -176,5 +211,15 @@ nav{
         list-style: none;
         display: inline-block;
         position: relative;
+    }
+    .navbar a{
+        font-size: calc(18px / 2);
+        line-height: calc(21px / 2);
+    }
+    .navcenter a{
+        font-size: 8px;
+    }
+    .navcenter{
+        margin-right: 0px;
     }
 }
