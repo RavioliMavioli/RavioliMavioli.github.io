@@ -139,7 +139,12 @@ nav{
     display: inline-block;
     padding: 8px 8px;
     position: relative;
+    transition: 0.5s;
 }
+.external-links ul li:hover{
+    filter: invert(48%) sepia(13%) saturate(3207%) hue-rotate(0deg) brightness(100%) contrast(100%);
+}
+
 
 @media(max-width: 700px){
     .Title img{
