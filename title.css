@@ -16,7 +16,6 @@
 
     overflow-x: hidden;
     overflow-y: auto;
-    perspective: 300px;
 
 }
 nav{
@@ -61,7 +60,7 @@ nav{
     width: 90%;
     color: white;
     position: absolute;
-    top: 350px;
+    top: 100px;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
