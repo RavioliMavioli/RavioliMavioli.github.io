@@ -60,7 +60,7 @@ nav{
     width: 90%;
     color: white;
     position: absolute;
-    top: 100px;
+    top: 350px;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -70,7 +70,7 @@ nav{
 
 }
 .Title img{
-    width: 200px;
+    width: 900px;
     height: auto;
     transition: 0.5s;
 }
