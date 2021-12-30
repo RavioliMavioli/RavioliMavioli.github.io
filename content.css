@@ -14,12 +14,11 @@ body{
     height: 1000px;
 }
 .portofolio{
-    min-height: 100vh;
-    width: 100%;
+    position: relative;
     color: white;
     text-align: center;
     justify-content: space-between;
-    transform: translate(0%, -90%);;
+    transform: translate(0%, 3%);
 }
 .portofolio h1{
     
