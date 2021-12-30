@@ -5,11 +5,16 @@
     <title>RavioliMavioli Commission</title>
     <link rel="stylesheet" href="title.css">
     <link rel="stylesheet" href="content.css">
+    <link rel="stylesheet" href="linux-2.css">
+    <link rel="stylesheet" href="loader.css">
+    <link rel="stylesheet" href="support.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"> 
     <script src="scroll.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 </head>
 <body>
     <section class="header">
@@ -35,6 +40,17 @@
     </section>
 
     <div class="navbar">
+
+        <div class="loader-wrapper">
+            <span class="pac-man"></span>
+        </div>
+        <script>
+            $(window).on("load", function(){
+                $(".loader-wrapper").fadeOut("slow");
+            })
+        </script>
+
+
         <div class="navbrand"><a href="#">RavioliMavioli</a></div>
         <div class="navcenter">
             <a href="https://www.deviantart.com/raviolimavioli/journal/COMMISSION-INFO-CLOSED-881091268">Commission</a>
@@ -50,5 +66,6 @@
         </section>
     </div>
 
+    
 </body>
 </html>

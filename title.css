@@ -23,7 +23,7 @@ html {
 .navbar{
     z-index: 1;
     position:sticky;
-    top: 0px;
+    top: 0;
     background: #161f28;
     margin: 0px;
     overflow: hidden;
