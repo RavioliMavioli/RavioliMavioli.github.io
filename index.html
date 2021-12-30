@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"> 
+    <script src="scroll.js"></script>
 </head>
 <body>
     <section class="header">
@@ -34,16 +35,20 @@
     </section>
 
     <div class="navbar">
-        <div class="navbrand"><a href="">RavioliMavioli</a></div>
+        <div class="navbrand"><a href="#">RavioliMavioli</a></div>
         <div class="navcenter">
-        <a href="https://www.deviantart.com/raviolimavioli/journal/COMMISSION-INFO-CLOSED-881091268">Commission</a>
-        <a href="">Portofolio</a>
-        <a href="">Linux-tan 2.0</a>
+            <a href="https://www.deviantart.com/raviolimavioli/journal/COMMISSION-INFO-CLOSED-881091268">Commission</a>
+            <a href="#1" onclick="scrollToTargetAdjusted('portofolioSection',100)">Portofolio</a>
+            <a href="">Linux-tan 2.0</a>
         </div>
         <div class="navsupport"><a href="https://ko-fi.com/raviolimavioli">Support</a></div>
     </div>
     <div class="content">
         <svg></svg>
+        <section class="portofolio" id="portofolioSection">
+            <h1>Portofolio</h1>
+
+        </section>
     </div>
 
 </body>
