@@ -95,8 +95,6 @@ html {
 }
 
 
-
-
 .Title{
     width: 90%;
     color: white;
@@ -172,21 +170,58 @@ html {
 .external-links img{
     width: 50px;
     height: auto;
-    list-style: none;
-    display: inline-block;
-    position: relative;
 }
 .external-links ul li{
+    position: relative;
     list-style: none;
     display: inline-block;
     padding: 8px 8px;
-    position: relative;
-    transition: 0.3s;
+    transition: 0.2s;
+}
+.external-links li::after{
+    position: absolute;
+    margin-top: -20px;
+    color: transparent;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    display: block;
+    transition: 0.5s;;
+
+}
+.external-links li:nth-child(1):after{
+    content:"Pixiv";
+    transform: translate(10px,8px);
+}
+.external-links li:nth-child(2):after{
+    content:"Instagram";
+    transform: translate(-6px,8px);
+}
+.external-links li:nth-child(3):after{
+    content:"Twitter";
+    transform: translate(2px,8px);
+}
+.external-links li:nth-child(4):after{
+    content:"GitHub";
+    transform: translate(2.5px,8px);
+}
+.external-links li:nth-child(5):after{
+    content:"Ko-Fi";
+    transform: translate(8px,8px);
+}
+
+
+.external-links li:hover:after{
+    color: white;
+    margin-top: 0px;
 }
 .external-links img:hover{
-    scale: 115%;
-    filter: invert(48%) sepia(13%) saturate(3207%) hue-rotate(-20deg) brightness(150%) contrast(100%);
+    scale: 117%;
+    /* filter: invert(48%) sepia(13%) saturate(3207%) hue-rotate(-20deg) brightness(150%) contrast(100%); */
 }
+
+
 
 
 @media(max-width: 700px){
@@ -219,6 +254,9 @@ html {
         list-style: none;
         display: inline-block;
         position: relative;
+    }
+    .external-links li:hover:after{
+        color: transparent;
     }
     .navbar a{
         font-size: calc(18px / 1.7);
