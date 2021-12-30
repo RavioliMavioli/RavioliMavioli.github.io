@@ -226,30 +226,30 @@ html {
 
 @media(max-width: 700px){
     .Title img{
-        width: 150px;
+        width: 160px;
         height: auto;
     }
     .nav-links ul li a{
-        font-size: calc(18px / 1.5);
+        font-size: calc(18px / 1.2);
     }
     .Title h1{
-        font-size: calc(38px / 1.5);
+        font-size: calc(38px / 1.2);
     }
     .Title p{
-        font-size: calc(18px / 1.5);
+        font-size: calc(18px / 1.2);
     }
     .Title svg{
-        height: calc(8px / 1.5);
-        width: calc(198px / 1.5);
+        height: calc(8px / 1.2);
+        width: calc(198px / 1.2);
     }
     .commission-btn{
-        font-size: calc(21px / 1.5);
-        width: calc(352px / 1.5);
-        height: calc(63px / 1.5);
-        line-height: calc(63px / 1.5);
+        font-size: calc(21px / 1.2);
+        width: calc(352px / 1.2);
+        height: calc(63px / 1.2);
+        line-height: calc(63px / 1.2);
     }
     .external-links img{
-        width: calc(50px / 1.5);
+        width: calc(50px / 1.2);
         height: auto;
         list-style: none;
         display: inline-block;
@@ -259,14 +259,15 @@ html {
         color: transparent;
     }
     .navbar a{
-        font-size: calc(18px / 1.7);
-        line-height: calc(21px / 1.7);
+        font-size: calc(18px / 1.33);
+        line-height: calc(21px / 1.33);
     }
     .navcenter a{
-        font-size: 8px;
+        font-size: 10px;
         padding: 3px 6px;
     }
     .navcenter{
         margin-right: 20px;
     }
+    
 }

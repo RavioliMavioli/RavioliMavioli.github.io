@@ -20,9 +20,15 @@ body{
     justify-content: space-between;
     transform: translate(0%, 3%);
 }
-.portofolio h1{
-    
+.portofolio p{
     font-weight: 300;
-    font-size: 38px;
+    font-size: 18px;
+    transition: 0.5s;
 
+}
+
+@media(max-width: 700px){
+    .portofolio p{
+        font-size: calc(18px / 1.2);
+    }
 }
