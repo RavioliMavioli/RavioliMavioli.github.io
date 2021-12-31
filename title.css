@@ -5,6 +5,9 @@
 }
 html {
     scroll-behavior: smooth;
+    font-family: Roboto;
+    font-weight: 800;
+    font-size: 24px;
   }
 .header{
     min-height: 100vh;
@@ -32,17 +35,14 @@ html {
     align-items: center;
 }
 .navbrand a{
+    font-size: 24px;
     color: white;
     text-decoration: none;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 24px;
     box-sizing: border-box;
     float: left;
     display: inline-block;
     text-align: center;
-    padding: 30px 24px;
+    padding: 16px 24px;
     transition: 0.5s
 }
 .navbrand a:hover{
@@ -51,16 +51,13 @@ html {
 .navsupport a{
     color: white;
     text-decoration: none;
-    font-family: Roboto;
-    font-style: normal;
     font-weight: 500;
     font-size: 18px;
-    line-height: 21px;
     box-sizing: border-box;
     float: left;
     display: inline-block;
     text-align: center;
-    padding: 12px 24px;
+    padding: 8px 24px;
     transition: 0.5s;
     background: linear-gradient(94.94deg, #FD9E04 -1.76%, #FF4C01 80.53%);
     border-radius: 75px;
@@ -71,21 +68,18 @@ html {
     border-radius: 0px;
 }
 .navcenter{
-    margin-right: 80px;
+    margin-right: 90px;
 }
 .navcenter a{
     color: white;
     text-decoration: none;
-    font-family: Roboto;
-    font-style: normal;
     font-weight: 500;
-    font-size: 18px;
-    line-height: 21px;
+    font-size: 16px;
     box-sizing: border-box;
     float: left;
     display: inline-block;
     text-align: center;
-    padding: 12px 24px;
+    padding: 10px 20px;
     transition: 0.5s
 }
 .navcenter a:hover{
@@ -143,7 +137,6 @@ html {
     display: inline-block;
 
     text-decoration: none;
-    font-family: Roboto;
     font-style: normal;
     font-weight: bold;
     font-size: 30px;
@@ -182,12 +175,10 @@ html {
     position: absolute;
     margin-top: -20px;
     color: transparent;
-    font-family: Roboto;
-    font-style: normal;
     font-weight: 500;
     font-size: 14px;
     display: block;
-    transition: 0.5s;;
+    transition: 0.5s;
 
 }
 .external-links li:nth-child(1):after{
@@ -206,7 +197,7 @@ html {
     content:"GitHub";
     transform: translate(2.5px,8px);
 }
-.external-links li:nth-child(5):after{
+.external-links li:nth-child(5)::after{
     content:"Ko-Fi";
     transform: translate(8px,8px);
 }
@@ -217,11 +208,9 @@ html {
     margin-top: 0px;
 }
 .external-links img:hover{
-    scale: 117%;
+    transform: scale(1.17);
     /* filter: invert(48%) sepia(13%) saturate(3207%) hue-rotate(-20deg) brightness(150%) contrast(100%); */
 }
-
-
 
 
 @media(max-width: 700px){

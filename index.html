@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+    <!--Welcome to the RavoliMavioli's first bloated website!-->
+    <!--Damn, it was such a pain to design this thing with pure HTML CSS and few Javascript-->
+    <!--Few libraries also used because I'm too lazy do it on my own-->
+    <!--Anyway, thank you for visiting and pressing the inspect element, or maybe you cloned this code-->
+    <!--Which idk why would you do that since the code is basically a baked spaghetti-->
+    <!--But since this is licensed under GPL, feel free to do anything under the license-->
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-9">
@@ -25,12 +31,12 @@
         <h1>RavioliMavioli</h1>
         <p>I am Ravioli, an aspiring freelance artist and open-<br>source enthusiast. Welcome to my web page</p>
         <svg></svg><br>
-        <a href="https://www.deviantart.com/raviolimavioli/journal/COMMISSION-INFO-CLOSED-881091268" class="commission-btn">Commission Info</a>
+        <a href="#2"class="commission-btn" onclick="scrollToTargetAdjusted('commission',100)">Commission Info</a>
         
         <div class="external-links"><br>
             <ul>
-                <li><a href="https://www.pixiv.net/en/users/60562229" target="_blank"><img src="resource/svg/Pixiv.svg" id="Pixiv"></a></li>
-                <li><a href="https://www.instagram.com/raviolimavioli/" target="_blank"><img src="resource/svg/instagram.svg" id="Instagram"></a></li>
+                <li><a href="https://www.pixiv.net/en/users/60562229" target="_blank"><img src="resource/svg/Pixiv.svg"></a></li>
+                <li><a href="https://www.instagram.com/raviolimavioli/" target="_blank"><img src="resource/svg/instagram.svg"></a></li>
                 <li><a href="https://twitter.com/raviolimavioli" target="_blank"><img src="resource/svg/twitter.svg"></a></li>
                 <li><a href="https://github.com/RavioliMavioli" target="_blank"><img src="resource/svg/Github.svg"></a></li>
                 <li><a href="https://ko-fi.com/raviolimavioli" target="_blank"><img src="resource/svg/Kofi.svg"></a></li>
@@ -40,7 +46,69 @@
     </section>
 
     <div class="navbar">
+        <div class="navbrand" data-aos="fade-up" data-aos-once=true><a href="#">RavioliMavioli</a></div>
+        <div class="navcenter" data-aos="fade-up" data-aos-once=true>
+            <a href="#1" onclick="scrollToTargetAdjusted('portfolio',75)">Portfolio</a>
+            <a href="#2" onclick="scrollToTargetAdjusted('commission',75)">Commission</a>
+            <a href="#3" onclick="scrollToTargetAdjusted('linux-tan',75)">Linux-tan 2.0</a>
+        </div>
+        <div class="navsupport" data-aos="fade-up" data-aos-once=true><a href="https://ko-fi.com/raviolimavioli" target="_blank">Support</a></div>
+    </div>
+    <div class="content">
+        <div id="portfolio">
+            <div class="text-title" data-aos="fade-up"><p>Portfolio</p></div>
+            <div class="portfolio-container">
 
+                <div class="portfolio-gallery-item" data-aos="zoom-in" data-aos-delay=0>
+                    <div class="portfolio-images"><img src="resource/png/portfolio/big/1.jpg"></div>
+                </div>
+                
+                <div class="portfolio-gallery-item" data-aos="zoom-in" data-aos-delay=50>
+                    <div class="portfolio-images"><img src="resource/png/portfolio/big/2.jpg"></div>
+                </div>
+
+                <div class="portfolio-gallery-item" data-aos="zoom-in" data-aos-delay=100>
+                    <div class="portfolio-images"><img src="resource/png/portfolio/big/3.png"></div>
+                </div>
+
+                <div class="portfolio-gallery-item" data-aos="zoom-in" data-aos-delay=150>
+                    <div class="portfolio-images"><img src="resource/png/portfolio/big/4.png"></div>
+                </div>
+
+                <div class="portfolio-gallery-item" data-aos="zoom-in" data-aos-delay=0>
+                    <div class="portfolio-images"><img src="resource/png/portfolio/big/5.jpg"></div>
+                </div>
+
+                <div class="portfolio-gallery-item" data-aos="zoom-in" data-aos-delay=50>
+                    <div class="portfolio-images"><img src="resource/png/portfolio/big/6.png"></div>
+                </div>
+
+                <div class="portfolio-gallery-item" data-aos="zoom-in" data-aos-delay=100>
+                    <div class="portfolio-images"><img src="resource/png/portfolio/big/7.png"></div>
+                </div>
+
+                <div class="portfolio-gallery-item" data-aos="zoom-in" data-aos-delay=150>
+                    <div class="portfolio-images"><img src="resource/png/portfolio/big/8.png"></div>
+                </div>
+            </div>
+        </div>
+        <div class="text-normal" data-aos="fade-up"><p>More can be found on my social media</p></div>
+        <div id="commission">
+            <div class="text-title" data-aos="fade-up"><p>Commission</p></div>
+
+            <div class="text-normal" data-aos="fade-up"><p>This page is still under construction :)</p></div>
+        </div>
+
+
+        <div id="linux-tan">
+            <div class="text-title" data-aos="fade-up"><p>Linux-tan 2.0</p></div>
+
+            <div class="text-normal" data-aos="fade-up"><p>This page is still under construction :)</p></div>
+        </div>
+
+
+
+        <!--Page loading animation-->
         <div class="loader-wrapper">
             <span class="pac-man"></span>
         </div>
@@ -49,21 +117,6 @@
                 $(".loader-wrapper").fadeOut("slow");
             })
         </script>
-
-
-        <div class="navbrand" data-aos="fade-up"><a href="#">RavioliMavioli</a></div>
-        <div class="navcenter" data-aos="fade-up">
-            <a href ="https://www.deviantart.com/raviolimavioli/journal/COMMISSION-INFO-CLOSED-881091268" target="_blank">Commission</a>
-            <a href="#1" onclick="scrollToTargetAdjusted('portofolioSection',100)">Portfolio</a>
-            <a href="#1" onclick="scrollToTargetAdjusted('portofolioSection',100)">Linux-tan 2.0</a>
-        </div>
-        <div class="navsupport" data-aos="fade-up"><a href="https://ko-fi.com/raviolimavioli" target="_blank">Support</a></div>
-    </div>
-    <div class="content" data-aos="fade-up">
-        <section class="portofolio" id="portofolioSection">
-            <p data-aos="fade-up">The page is still under construction :)</p>
-            <svg></svg>
-        </section>
     </div>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
@@ -76,7 +129,6 @@
         once: false, // whether animation should happen only once - while scrolling down
         mirror: false, // whether elements should animate out while scrolling past them
         anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation\
-        once: true
 
 });
     </script>
