@@ -7,6 +7,13 @@
     <!--But since this is licensed under GPL, feel free to do anything under the license-->
 <html lang="en">
 <head>
+    <!--Page loading animation-->
+    <div class="loader-wrapper">
+        <span class="pac-man"></span>
+        <div class="loading-text"><p>Loading assets...</p></div>
+    </div>
+    
+    <!--Import files and libaries-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-9">
     <title>RavioliMavioli Commission</title>
     <link rel="stylesheet" href="title.css">
@@ -25,9 +32,9 @@
 
 </head>
 <body>
-    <section class="header" data-aos="fade-up">
+    <section class="header" data-aos="fade-up" loading="lazy">
     <div class="Title">
-        <img src="resource/png/manjaro icon.png">
+        <img src="resource/png/manjaro icon.png" loading="lazy">
         <h1>RavioliMavioli</h1>
         <p>I am Ravioli, an aspiring freelance artist and open-<br>source enthusiast. Welcome to my web page</p>
         <svg></svg><br>
@@ -35,11 +42,11 @@
         
         <div class="external-links"><br>
             <ul>
-                <li><a href="https://www.pixiv.net/en/users/60562229" target="_blank"><img src="resource/svg/Pixiv.svg"></a></li>
-                <li><a href="https://www.instagram.com/raviolimavioli/" target="_blank"><img src="resource/svg/instagram.svg"></a></li>
-                <li><a href="https://twitter.com/raviolimavioli" target="_blank"><img src="resource/svg/twitter.svg"></a></li>
-                <li><a href="https://github.com/RavioliMavioli" target="_blank"><img src="resource/svg/Github.svg"></a></li>
-                <li><a href="https://ko-fi.com/raviolimavioli" target="_blank"><img src="resource/svg/Kofi.svg"></a></li>
+                <li><a href="https://www.pixiv.net/en/users/60562229" target="_blank"><img src="resource/svg/Pixiv.svg" loading="lazy"></a></li>
+                <li><a href="https://www.instagram.com/raviolimavioli/" target="_blank"><img src="resource/svg/instagram.svg" loading="lazy"></a></li>
+                <li><a href="https://twitter.com/raviolimavioli" target="_blank"><img src="resource/svg/twitter.svg" loading="lazy"></a></li>
+                <li><a href="https://github.com/RavioliMavioli" target="_blank"><img src="resource/svg/Github.svg" loading="lazy"></a></li>
+                <li><a href="https://ko-fi.com/raviolimavioli" target="_blank"><img src="resource/svg/Kofi.svg" loading="lazy"></a></li>
             </ul>
         </div>
     </div>
@@ -60,35 +67,35 @@
             <div class="portfolio-container">
 
                 <div class="portfolio-gallery-item" data-aos="zoom-in" data-aos-delay=0>
-                    <div class="portfolio-images"><img src="resource/png/portfolio/big/1.jpg"></div>
+                    <div class="portfolio-images"><img src="resource/png/portfolio/big/1.jpg" loading="lazy"></div>
                 </div>
                 
                 <div class="portfolio-gallery-item" data-aos="zoom-in" data-aos-delay=50>
-                    <div class="portfolio-images"><img src="resource/png/portfolio/big/2.jpg"></div>
+                    <div class="portfolio-images"><img src="resource/png/portfolio/big/2.jpg" loading="lazy"></div>
                 </div>
 
                 <div class="portfolio-gallery-item" data-aos="zoom-in" data-aos-delay=100>
-                    <div class="portfolio-images"><img src="resource/png/portfolio/big/3.png"></div>
+                    <div class="portfolio-images"><img src="resource/png/portfolio/big/3.png" loading="lazy"></div>
                 </div>
 
                 <div class="portfolio-gallery-item" data-aos="zoom-in" data-aos-delay=150>
-                    <div class="portfolio-images"><img src="resource/png/portfolio/big/4.png"></div>
+                    <div class="portfolio-images"><img src="resource/png/portfolio/big/4.png" loading="lazy"></div>
                 </div>
 
                 <div class="portfolio-gallery-item" data-aos="zoom-in" data-aos-delay=0>
-                    <div class="portfolio-images"><img src="resource/png/portfolio/big/5.jpg"></div>
+                    <div class="portfolio-images"><img src="resource/png/portfolio/big/5.jpg" loading="lazy"></div>
                 </div>
 
                 <div class="portfolio-gallery-item" data-aos="zoom-in" data-aos-delay=50>
-                    <div class="portfolio-images"><img src="resource/png/portfolio/big/6.png"></div>
+                    <div class="portfolio-images"><img src="resource/png/portfolio/big/6.png" loading="lazy"></div>
                 </div>
 
                 <div class="portfolio-gallery-item" data-aos="zoom-in" data-aos-delay=100>
-                    <div class="portfolio-images"><img src="resource/png/portfolio/big/7.png"></div>
+                    <div class="portfolio-images"><img src="resource/png/portfolio/big/7.png" loading="lazy"></div>
                 </div>
 
                 <div class="portfolio-gallery-item" data-aos="zoom-in" data-aos-delay=150>
-                    <div class="portfolio-images"><img src="resource/png/portfolio/big/8.png"></div>
+                    <div class="portfolio-images"><img src="resource/png/portfolio/big/8.png" loading="lazy"></div>
                 </div>
             </div>
         </div>
@@ -108,15 +115,13 @@
 
 
 
-        <!--Page loading animation-->
-        <div class="loader-wrapper">
-            <span class="pac-man"></span>
-        </div>
-        <script>
-            $(window).on("load", function(){
-                $(".loader-wrapper").fadeOut("slow");
-            })
-        </script>
+        <!--Page loading animation complete-->
+    
+    <script>
+        $(window).on("load", function(){
+             $(".loader-wrapper").fadeOut("slow");
+        })
+    </script>
     </div>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
