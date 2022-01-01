@@ -47,6 +47,9 @@ html {
 .navbrand a:hover{
    color: orange;
 }
+.navsupport{
+    margin-right: 20px;
+}
 .navsupport a{
     color: white;
     text-decoration: none;
@@ -67,7 +70,7 @@ html {
     border-radius: 0px;
 }
 .navcenter{
-    margin-right: 90px;
+    margin-right: 80px;
 }
 .navcenter a{
     color: white;
@@ -211,8 +214,19 @@ html {
     /* filter: invert(48%) sepia(13%) saturate(3207%) hue-rotate(-20deg) brightness(150%) contrast(100%); */
 }
 
+@media(max-width: 800px){
+    .navcenter{
+        margin-right: 38px;
+    }
+    .navbrand a{
+        font-size: 18px;
+    }
+    .navcenter a{
+        font-size: 14px;
+    }
+}
 
-@media(max-width: 700px){
+@media(max-width: 719px){
     .Title img{
         width: 160px;
         height: auto;
@@ -251,11 +265,14 @@ html {
         line-height: calc(21px / 1.33);
     }
     .navcenter a{
-        font-size: 10px;
-        padding: 3px 6px;
+        font-size: 12px;
+        padding: 6px 10px;
     }
     .navcenter{
-        margin-right: 20px;
+        position: absolute;
+        margin-left: 20px;
     }
-    
+    .navbrand a{
+        font-size: 0px;
+    }
 }
