@@ -14,7 +14,7 @@ html {
     width: 100%;
 
     position: relative;
-    background-image: url(../resource/png/BG.jpg);
+    background-image: url(../resource/image/BG.jpg);
     background-color: rgb(0, 0, 0, 0.66);
     background-blend-mode: multiply;
     background-position: center;
@@ -137,14 +137,9 @@ html {
     cursor: pointer;
     top: 21px;
     width: 352px;
-    height: 63px;
     position: relative;
-    cursor: pointer;
     display: inline-block;
-
-    text-decoration: none;
-    font-style: normal;
-    font-weight: bold;
+    font-style: bold;
     font-size: 30px;
     color: white;
     line-height:63px;
@@ -263,8 +258,9 @@ html {
     }
     
     .external-links li::after{
-        font-size:10px;
+        font-size:0px;
     }
+    /*
     .external-links li:nth-child(1):after{
         content:"Pixiv";
         transform: translate(11px,8px);
@@ -284,7 +280,7 @@ html {
     .external-links li:nth-child(5)::after{
         content:"Ko-Fi";
         transform: translate(10px,8px);
-    }
+    } */
 
 
     .navbar a{
