@@ -267,23 +267,23 @@ html {
     }
     .external-links li:nth-child(1):after{
         content:"Pixiv";
-        transform: translate(10px,8px);
+        transform: translate(11px,8px);
     }
     .external-links li:nth-child(2):after{
         content:"Instagram";
-        transform: translate(-2px,8px);
+        transform: translate(-1px,8px);
     }
     .external-links li:nth-child(3):after{
         content:"Twitter";
-        transform: translate(4px,8px);
+        transform: translate(5px,8px);
     }
     .external-links li:nth-child(4):after{
         content:"GitHub";
-        transform: translate(5px,8px);
+        transform: translate(6px,8px);
     }
     .external-links li:nth-child(5)::after{
         content:"Ko-Fi";
-        transform: translate(9px,8px);
+        transform: translate(10px,8px);
     }
 
 
