@@ -1,17 +1,21 @@
 <!DOCTYPE html>
     <!--Welcome to the RavoliMavioli's first bloated website!-->
     <!--Damn, it was such a pain to design this thing with pure HTML CSS and few Javascript-->
-    <!--Few libraries also used because I'm too lazy do it on my own-->
-    <!--Anyway, thank you for visiting and pressing the inspect element, or maybe you cloned this code-->
+    <!--Few libraries were also used because I'm too lazy do it on my own-->
+    <!--Anyway, thank you for visiting and pressing the inspect element, or maybe you cloned this code via my GitHub-->
     <!--Which idk why would you do that since the code is basically a baked spaghetti-->
     <!--But since this is licensed under GPL, feel free to do anything under the license-->
-
+    <!--                                                                                 -->
+    <!--The web's GitHub sourcecode : https://github.com/RavioliMavioli/RavioliMavioli.github.io -->
+    <!--                                                                                 -->
     <!--LIBRARY AND SCRIPT USED-->
+    <!--                                                                                 -->
     <!--Pacman-loading animation    : https://codepen.io/iddar/pen/xwXowq -->
-    <!--Scrolling script            : https://stackoverflow.com/questions/49820013/javascript-scrollintoview-smooth-scroll-and-offset -->
+    <!--Animate on Scroll           : https://michalsnik.github.io/aos/ -->
     <!--Lightbox                    : https://github.com/lokesh/lightbox2 -->
     <!--jQuerry                     : https://github.com/jquery/jquery -->
     <!--Google Analytics            : https://analytics.google.com/ -->
+    <!--Scrolling script            : https://stackoverflow.com/questions/49820013/javascript-scrollintoview-smooth-scroll-and-offset -->
 
 <html lang="en">
 <head>
@@ -52,125 +56,165 @@
         <span class="pac-man"></span>
         <div class="loading-text"><p>Loading assets...</p></div>
     </div>
-
-    <section class="header" data-aos="fade-up" loading="lazy">
+    <!--Header section (Icon, title, etc)-->
+    <section id="landing" class="header" data-aos="fade-up" loading="lazy">
     <div class="Title">
-        <img src="resource/png/manjaro icon.png" loading="lazy">
+        <img src="resource/png/manjaro icon.png">
         <h1>RavioliMavioli</h1>
         <p>I am Ravioli, an aspiring freelance artist and open-<br>source enthusiast. Welcome to my web page</p>
         <svg></svg><br>
-        <a href="#2"class="commission-btn" onclick="scrollToTargetAdjusted('commission',75)">Commission Info</a>
+        <a class="commission-btn" onclick="scrollToTargetAdjusted('commission',75)">Commission Info</a>
         
         <div class="external-links"><br>
             <ul>
-                <li><a href="https://www.pixiv.net/en/users/60562229" target="_blank"><img src="resource/svg/Pixiv.svg" loading="lazy"></a></li>
-                <li><a href="https://www.instagram.com/raviolimavioli/" target="_blank"><img src="resource/svg/instagram.svg" loading="lazy"></a></li>
-                <li><a href="https://twitter.com/raviolimavioli" target="_blank"><img src="resource/svg/twitter.svg" loading="lazy"></a></li>
-                <li><a href="https://github.com/RavioliMavioli" target="_blank"><img src="resource/svg/Github.svg" loading="lazy"></a></li>
-                <li><a href="https://ko-fi.com/raviolimavioli" target="_blank"><img src="resource/svg/Kofi.svg" loading="lazy"></a></li>
+                <li><a href="https://www.pixiv.net/en/users/60562229" target="_blank"><img src="resource/svg/Pixiv.svg"></a></li>
+                <li><a href="https://www.instagram.com/raviolimavioli/" target="_blank"><img src="resource/svg/instagram.svg"></a></li>
+                <li><a href="https://twitter.com/raviolimavioli" target="_blank"><img src="resource/svg/twitter.svg"></a></li>
+                <li><a href="https://github.com/RavioliMavioli" target="_blank"><img src="resource/svg/Github.svg"></a></li>
+                <li><a href="https://ko-fi.com/raviolimavioli" target="_blank"><img src="resource/svg/Kofi.svg"></a></li>
             </ul>
         </div>
     </div>
     </section>
 
+    <!--Sticky navbar-->
     <div class="navbar">
-        <div class="navbrand" data-aos="fade-up" data-aos-once=true><a href="#">RavioliMavioli</a></div>
+        <div class="navbrand" data-aos="fade-up" data-aos-once=true><a onclick="scrollToTarget('landing')">RavioliMavioli</a></div>
         <div class="navcenter" data-aos="fade-up" data-aos-once=true>
-            <a href="#1" onclick="scrollToTargetAdjusted('portfolio',75)">Portfolio</a>
-            <a href="#2" onclick="scrollToTargetAdjusted('commission',75)">Commission</a>
-            <a id="navlinux" href="#3" onclick="scrollToTargetAdjusted('linux-tan',75)">Linux-tan 2.0</a>
+            <a onclick="scrollToTargetAdjusted('portfolio',75)">Portfolio</a>
+            <a onclick="scrollToTargetAdjusted('commission',75)">Commission</a>
+            <a id="navlinux" onclick="scrollToTargetAdjusted('linux-tan',75)">Linux-tan 2.0</a>
         </div>
         <div class="navsupport" data-aos="fade-up" data-aos-once=true><a href="https://ko-fi.com/raviolimavioli" target="_blank">Support</a></div>
     </div>
+
+
+    <!--Main section-->
     <div class="content">
+
+        <!--Portfolio section-->
         <div id="portfolio">
             <div class="text-title" data-aos="fade-up"><p>Portfolio</p></div>
             <div class="portfolio-container">
 
                 <div class="portfolio-gallery-item" data-aos="zoom-in" data-aos-delay=0>
                     <div class="portfolio-images" >
-                        <a href="resource/png/portfolio/big/1.jpg" data-lightbox="rav-portfolio"><img src="resource/png/portfolio/big/1.jpg" loading="lazy"></a>
+                        <a href="resource/png/portfolio/big/1.jpg" data-lightbox="rav-portfolio"><img src="resource/png/portfolio/smol/1.png" loading="lazy"></a>
                     </div>
                 </div>
                 
                 <div class="portfolio-gallery-item" data-aos="zoom-in" data-aos-delay=0>
                     <div class="portfolio-images" >
-                        <a href="resource/png/portfolio/big/2.jpg" data-lightbox="rav-portfolio"><img src="resource/png/portfolio/big/2.jpg" loading="lazy"></a>
+                        <a href="resource/png/portfolio/big/2.jpg" data-lightbox="rav-portfolio"><img src="resource/png/portfolio/smol/2.png" loading="lazy"></a>
                     </div>
                 </div>
 
                 <div class="portfolio-gallery-item" data-aos="zoom-in" data-aos-delay=0>
                     <div class="portfolio-images" >
-                        <a href="resource/png/portfolio/big/3.png" data-lightbox="rav-portfolio"><img src="resource/png/portfolio/big/3.png" loading="lazy"></a>
+                        <a href="resource/png/portfolio/big/3.png" data-lightbox="rav-portfolio"><img src="resource/png/portfolio/smol/3.png" loading="lazy"></a>
                     </div>
                 </div>
 
                 <div class="portfolio-gallery-item" data-aos="zoom-in" data-aos-delay=0>
                     <div class="portfolio-images" >
-                        <a href="resource/png/portfolio/big/4.png" data-lightbox="rav-portfolio"><img src="resource/png/portfolio/big/4.png" loading="lazy"></a>
+                        <a href="resource/png/portfolio/big/4.png" data-lightbox="rav-portfolio"><img src="resource/png/portfolio/smol/4.png" loading="lazy"></a>
                     </div>
                 </div>
 
                 <div class="portfolio-gallery-item" data-aos="zoom-in" data-aos-delay=0>
                     <div class="portfolio-images" >
-                        <a href="resource/png/portfolio/big/5.jpg" data-lightbox="rav-portfolio"><img src="resource/png/portfolio/big/5.jpg" loading="lazy"></a>
+                        <a href="resource/png/portfolio/big/5.jpg" data-lightbox="rav-portfolio"><img src="resource/png/portfolio/smol/5.png" loading="lazy"></a>
                     </div>
                 </div>
 
                 <div class="portfolio-gallery-item" data-aos="zoom-in" data-aos-delay=0>
                     <div class="portfolio-images" >
-                        <a href="resource/png/portfolio/big/6.png" data-lightbox="rav-portfolio"><img src="resource/png/portfolio/big/6.png" loading="lazy"></a>
+                        <a href="resource/png/portfolio/big/6.png" data-lightbox="rav-portfolio"><img src="resource/png/portfolio/smol/6.png" loading="lazy"></a>
                     </div>
                 </div>
 
                 <div class="portfolio-gallery-item" data-aos="zoom-in" data-aos-delay=0>
                     <div class="portfolio-images" >
-                        <a href="resource/png/portfolio/big/7.png" data-lightbox="rav-portfolio"><img src="resource/png/portfolio/big/7.png" loading="lazy"></a>
+                        <a href="resource/png/portfolio/big/7.png" data-lightbox="rav-portfolio"><img src="resource/png/portfolio/smol/7.png" loading="lazy"></a>
                     </div>
                 </div>
 
                 <div class="portfolio-gallery-item" data-aos="zoom-in" data-aos-delay=0>
                     <div class="portfolio-images" >
-                        <a href="resource/png/portfolio/big/8.png" data-lightbox="rav-portfolio"><img src="resource/png/portfolio/big/8.png" loading="lazy"></a>
+                        <a href="resource/png/portfolio/big/8.png" data-lightbox="rav-portfolio"><img src="resource/png/portfolio/smol/8.png" loading="lazy"></a>
                     </div>
                 </div>
 
         </div>
         <div class="text-normal" data-aos="fade-up"><p><br>More can be found on my social media</p></div>
+
+        <!--Comission section-->
         <div id="commission">
             <div class="text-title" data-aos="fade-up"><p>Commission</p></div>
+            <div class="text-normal commission-section" data-aos="fade-up"><p>This site is still under construction :)</p></div>
+            <!--<div class="commission-section">
+                
+                
+                <div class="commission-container">
+                    <div class="commission-image" data-aos="fade-up" data-aos-delay="50"><img src="resource/png/commission/Arch Chan Transparent.png"></div>
+                </div>
+                
+                <div class="commission-container">
+                    <div class="commission-content" data-aos="fade-up" data-aos-delay="100">
 
-            <div class="text-normal" data-aos="fade-up"><p>This page is still under construction :)</p></div>
+                        <div class="Big-text"><p>Parts</p></div>
+                        
+                        <div class="commission-parts-container-main"><br><br>
+                        
+                            <div class="commission-parts-container">
+                                <div id="comm-headshot"><p>Headshot</p></div>
+                            </div>
+                            
+                            <div class="commission-parts-container">
+                                <div id="comm-bustup"><p>Bustup</p></div>
+                            </div>
+
+                            <div class="commission-parts-container">
+                                <div id="comm-halfbody"><p>Halfbody</p></div>
+                            </div>
+
+                            <div class="commission-parts-container">
+                                <div id="comm-fullbody"><p>Fullbody</p></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                -->
+            </div>
+            
+            
         </div>
-
-
+        <!--Temporary placeholder-->
         <div id="linux-tan">
             <div class="text-title" data-aos="fade-up"><p>Linux-tan 2.0</p></div>
-
-            <div class="text-normal" data-aos="fade-up"><p>This page is still under construction :)</p></div>
+            <div class="text-normal linux-tan-section" data-aos="fade-up"><p>This site is still under construction :)</p></div>
         </div>
 
-
-
-        <!--Page loading animation complete-->
-    
+       
+    <!--Page loading animation when loading is complete-->
     <script>
         $(window).on("load", function(){
              $(".loader-wrapper").fadeOut("slow");
         })
     </script>
     </div>
-
+    <!--Animate on Scroll library initialization-->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init({
         offset:-75,
-        delay: 0, // values from 0 to 3000, with step 50ms
-        duration: 1000, // values from 0 to 3000, with step 50ms
-        easing: 'ease', // default easing for AOS animations
-        once: false, // whether animation should happen only once - while scrolling down
-        mirror: false, // whether elements should animate out while scrolling past them
-        anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation\
+        delay: 0,
+        duration: 1000,
+        easing: 'ease',
+        once: false,
+        mirror: false,
+        anchorPlacement: 'top-bottom'
 
 });
     </script>

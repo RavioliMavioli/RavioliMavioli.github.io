@@ -5,27 +5,25 @@
 }
 html {
     scroll-behavior: smooth;
-    font-family: Roboto;
-    font-weight: 800;
-    font-size: 24px;
   }
 .header{
     min-height: 100vh;
     width: 100%;
 
     position: relative;
-    background-image: url(../resource/png/BG.jpg);
+    background-image: url(resource/png/BG.jpg);
     background-color: rgb(0, 0, 0, 0.66);
     background-blend-mode: multiply;
     background-position: center;
     background-size: cover;
 
     overflow-x: hidden;
+
 }
 .navbar{
     z-index: 1;
     position:sticky;
-    top: 0;
+    top: 0px;
     background: #161f28;
     margin: 0px;
     overflow: hidden;
@@ -34,34 +32,35 @@ html {
     align-items: center;
 }
 .navbrand a{
-    cursor: pointer;
-    font-size: 24px;
     color: white;
     text-decoration: none;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
     box-sizing: border-box;
     float: left;
     display: inline-block;
     text-align: center;
-    padding: 16px 24px;
+    padding: 30px 24px;
     transition: 0.5s
 }
 .navbrand a:hover{
    color: orange;
 }
-.navsupport{
-    cursor: pointer;
-    margin-right: 20px;
-}
 .navsupport a{
     color: white;
     text-decoration: none;
+    font-family: Roboto;
+    font-style: normal;
     font-weight: 500;
     font-size: 18px;
+    line-height: 21px;
     box-sizing: border-box;
     float: left;
     display: inline-block;
     text-align: center;
-    padding: 8px 24px;
+    padding: 12px 24px;
     transition: 0.5s;
     background: linear-gradient(94.94deg, #FD9E04 -1.76%, #FF4C01 80.53%);
     border-radius: 75px;
@@ -72,19 +71,21 @@ html {
     border-radius: 0px;
 }
 .navcenter{
-    cursor: pointer;
     margin-right: 80px;
 }
 .navcenter a{
     color: white;
     text-decoration: none;
+    font-family: Roboto;
+    font-style: normal;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 18px;
+    line-height: 21px;
     box-sizing: border-box;
     float: left;
     display: inline-block;
     text-align: center;
-    padding: 10px 20px;
+    padding: 12px 24px;
     transition: 0.5s
 }
 .navcenter a:hover{
@@ -92,6 +93,9 @@ html {
     color: black;
     border-radius: 75px;
 }
+
+
+
 
 .Title{
     width: 90%;
@@ -117,7 +121,6 @@ html {
     line-height: 80px;
     font-size: 38px;
     transition: 0.5s;
-    text-align: center;
 }
 .Title p{
     font-weight: 300;
@@ -134,7 +137,6 @@ html {
     transition: 0.5s;
 }
 .commission-btn{
-    cursor: pointer;
     top: 21px;
     width: 352px;
     height: 63px;
@@ -143,6 +145,7 @@ html {
     display: inline-block;
 
     text-decoration: none;
+    font-family: Roboto;
     font-style: normal;
     font-weight: bold;
     font-size: 30px;
@@ -169,142 +172,63 @@ html {
 .external-links img{
     width: 50px;
     height: auto;
+    list-style: none;
+    display: inline-block;
+    position: relative;
 }
 .external-links ul li{
-    position: relative;
     list-style: none;
     display: inline-block;
     padding: 8px 8px;
-    transition: 0.2s;
-}
-.external-links li::after{
-    position: absolute;
-    margin-top: -20px;
-    color: transparent;
-    font-weight: 500;
-    font-size: 14px;
-    display: block;
-    transition: 0.5s;
-
-}
-.external-links li:nth-child(1):after{
-    content:"Pixiv";
-    transform: translate(10px,8px);
-}
-.external-links li:nth-child(2):after{
-    content:"Instagram";
-    transform: translate(-6px,8px);
-}
-.external-links li:nth-child(3):after{
-    content:"Twitter";
-    transform: translate(2px,8px);
-}
-.external-links li:nth-child(4):after{
-    content:"GitHub";
-    transform: translate(2.5px,8px);
-}
-.external-links li:nth-child(5)::after{
-    content:"Ko-Fi";
-    transform: translate(8px,8px);
-}
-
-
-.external-links li:hover:after{
-    color: white;
-    margin-top: 0px;
+    position: relative;
+    transition: 0.3s;
 }
 .external-links img:hover{
-    transform: scale(1.17);
-    /* filter: invert(48%) sepia(13%) saturate(3207%) hue-rotate(-20deg) brightness(150%) contrast(100%); */
+    scale: 115%;
+    filter: invert(48%) sepia(13%) saturate(3207%) hue-rotate(-20deg) brightness(150%) contrast(100%);
 }
 
-@media(max-width: 800px){
-    .navcenter{
-        margin-right: 38px;
-    }
-    .navbrand a{
-        font-size: 18px;
-    }
-    .navcenter a{
-        font-size: 14px;
-    }
-}
 
-@media(max-width: 719px){
+@media(max-width: 700px){
     .Title img{
-        width: 160px;
+        width: 150px;
         height: auto;
     }
     .nav-links ul li a{
-        font-size: calc(18px / 1.2);
+        font-size: calc(18px / 1.5);
     }
     .Title h1{
-        font-size: calc(38px / 1.2);
+        font-size: calc(38px / 1.5);
     }
     .Title p{
-        font-size: calc(18px / 1.2);
+        font-size: calc(18px / 1.5);
     }
     .Title svg{
-        height: calc(8px / 1.2);
-        width: calc(198px / 1.2);
+        height: calc(8px / 1.5);
+        width: calc(198px / 1.5);
     }
     .commission-btn{
-        font-size: calc(21px / 1.2);
-        width: calc(352px / 1.2);
-        height: calc(63px / 1.2);
-        line-height: calc(63px / 1.2);
+        font-size: calc(21px / 1.5);
+        width: calc(352px / 1.5);
+        height: calc(63px / 1.5);
+        line-height: calc(63px / 1.5);
     }
     .external-links img{
-        width: calc(50px / 1.2);
+        width: calc(50px / 1.5);
         height: auto;
         list-style: none;
         display: inline-block;
         position: relative;
     }
-    
-    .external-links li::after{
-        font-size:10px;
-    }
-    .external-links li:nth-child(1):after{
-        content:"Pixiv";
-        transform: translate(10px,8px);
-    }
-    .external-links li:nth-child(2):after{
-        content:"Instagram";
-        transform: translate(-2px,8px);
-    }
-    .external-links li:nth-child(3):after{
-        content:"Twitter";
-        transform: translate(4px,8px);
-    }
-    .external-links li:nth-child(4):after{
-        content:"GitHub";
-        transform: translate(5px,8px);
-    }
-    .external-links li:nth-child(5)::after{
-        content:"Ko-Fi";
-        transform: translate(9px,8px);
-    }
-
-
     .navbar a{
-        font-size: calc(18px / 1.33);
-        line-height: calc(21px / 1.33);
+        font-size: calc(18px / 1.7);
+        line-height: calc(21px / 1.7);
     }
     .navcenter a{
-        font-size: 12px;
-        padding: 6px 10px;
+        font-size: 8px;
+        padding: 3px 6px;
     }
     .navcenter{
-        position: absolute;
-        margin-left: 20px;
-    }
-    .navbrand a{
-        font-size: 0px;
-    }
-}
-@media(max-width: 380px){
-    #navlinux{
-        font-size: 0px;
+        margin-right: 20px;
     }
 }

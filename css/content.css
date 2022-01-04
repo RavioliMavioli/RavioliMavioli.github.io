@@ -6,7 +6,6 @@ body{
 .content{
     margin: 20px;
     padding: 0;
-    height: 2000px;
     background-color: #161f28;
     text-align: center;
 }
@@ -16,7 +15,6 @@ body{
     color: white;
     text-align: center;
     justify-content: space-between;
-    transform: translate(0%, 3%);
 }
 .text-title p{
     color: white;
@@ -70,28 +68,107 @@ body{
 .portfolio-gallery-item:hover .portfolio-images img{
     transform: scale(1.1);
 }
+
+
+
+
+
 #commission .text-title p:after{
     width: 150px;
 }
-
 #commission{
     margin-top: 100px;
+    height: 80vh;
 }
-#commission .text-normal{
-    margin-top: 250px;
-}
-#linux-tan{
-    margin-top: 250px;
+.commission-section{
+    margin-top: 3%;
+    /*display: grid; 
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 300px 300px;
+    grid-gap: 10px;*/
+    
 
 }
-#linux-tan .text-normal{
-    margin-top: 250px;
+.commission-section p{
+    margin-top: 38vh;
+    align-items: center;
+    text-align: center;
+    
+}
+.commission-image, .commission-content{
+    height: 100vh;
+    width: 100%;
+    
+}
+.commission-image > img{
+    background: white;
+    height: auto;
+    width: 80%;
+}
+.Big-text p{
+    float: left;
+    font-size: 18;
+    font-style: normal;
+    font-weight: 400;
+    margin:auto;
+    color: white;
+    padding: 8px 20px;
+    margin-left: 20px;
+}
+.Big-text p::after{
+    content: "";
+    background: white;
+    height: 2px;
+    width: 100%;
+    display: block;
+    margin:auto;
+    margin-top: 3px;
+}
+
+.commission-parts-container-main{
+    float: none;
+    justify-content: left;
+}
+
+.commission-parts-container{
+    float: none;
+    justify-content: left;
+    text-align: left;
+    font-size: 18;
+    font-style: normal;
+    font-weight: 400;
+    margin:auto;
+    color: white;
+    padding: 8px 20px;
+    
+    background: linear-gradient(94.94deg, #FD9E04 -1.76%, #FF4C01 80.53%);
+    border-radius: 75px;
+}
+
+@media(max-width: 920px){
+    .commission-image{
+        width: 100%;
+        height: auto;
+        margin-bottom: 25px;
+    }
+    .commission-section{
+        display: block;
+    }
+    .Big-text p{
+        float:none;
+    }
 }
 @media(max-width: 700px){
-    #portfolio p{
-        font-size: calc(28px / 1.2);
+    .text-normal p{
+        font-size: 16px;
     }
-    #portfolio p::after{
-        width: calc(100px / 1.2);
+    .text-title p{
+        font-size: 20px;
+    }
+    #portfolio .text-title p:after{
+        width: 80px;
+    }
+    #commission .text-title p:after{
+        width: 110px;
     }
 }

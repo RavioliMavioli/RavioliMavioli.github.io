@@ -1,0 +1,28 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    background:#161f28;
+}
+.content{
+    padding: 0px 24px;
+    text-align: justify;
+    font-size: 24px;
+}
+.content svg{
+    max-width: 100%;
+    max-height: 100vh;
+    height: 1000px;
+}
+.portofolio{
+    position: relative;
+    color: white;
+    text-align: center;
+    justify-content: space-between;
+    transform: translate(0%, 3%);
+}
+.portofolio h1{
+    
+    font-weight: 300;
+    font-size: 38px;
+
+}
