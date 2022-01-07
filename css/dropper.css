@@ -1,0 +1,340 @@
+.dropper-light-close {
+  transition: box-shadow 0.4s ease-in-out;
+  box-shadow: 0px 5px 15px -3px rgba(0, 0, 0, 0.08);
+}
+.dropper-light-close:hover {
+  box-shadow: 0px 7.5px 22.5px rgba(0, 0, 0, 0.08);
+}
+.dropper-light-medium {
+  transition: box-shadow 0.4s ease-in-out;
+  box-shadow: 0px 8px 13px -3px rgba(0, 0, 0, 0.08);
+}
+.dropper-light-medium:hover {
+  box-shadow: 0px 12px 19.5px rgba(0, 0, 0, 0.08);
+}
+.dropper-light-far {
+  transition: box-shadow 0.4s ease-in-out;
+  box-shadow: 0px 12px 15px -3px rgba(0, 0, 0, 0.08);
+}
+.dropper-light-far:hover {
+  box-shadow: 0px 18px 22.5px rgba(0, 0, 0, 0.08);
+}
+.dropper-light-far2x {
+  transition: box-shadow 0.4s ease-in-out;
+  box-shadow: 0px 15px 18px -3px rgba(0, 0, 0, 0.08);
+}
+.dropper-light-far2x:hover {
+  box-shadow: 0px 22.5px 27px rgba(0, 0, 0, 0.08);
+}
+.dropper-regular-close {
+  transition: box-shadow 0.4s ease-in-out;
+  box-shadow: 0px 7px 17px -3px rgba(0, 0, 0, 0.12);
+}
+.dropper-regular-close:hover {
+  box-shadow: 0px 10.5px 25.5px rgba(0, 0, 0, 0.12);
+}
+.dropper-regular-medium {
+  transition: box-shadow 0.4s ease-in-out;
+  box-shadow: 0px 11px 20px -3px rgba(0, 0, 0, 0.12);
+}
+.dropper-regular-medium:hover {
+  box-shadow: 0px 16.5px 30px rgba(0, 0, 0, 0.12);
+}
+.dropper-regular-far {
+  transition: box-shadow 0.4s ease-in-out;
+  box-shadow: 0px 15px 24px -3px rgba(0, 0, 0, 0.12);
+}
+.dropper-regular-far:hover {
+  box-shadow: 0px 22.5px 36px rgba(0, 0, 0, 0.12);
+}
+.dropper-regular-far2x {
+  transition: box-shadow 0.4s ease-in-out;
+  box-shadow: 0px 17px 27px -3px rgba(0, 0, 0, 0.12);
+}
+.dropper-regular-far2x:hover {
+  box-shadow: 0px 25.5px 40.5px rgba(0, 0, 0, 0.12);
+}
+.dropper-semi-close {
+  transition: box-shadow 0.6s ease-in-out;
+  box-shadow: 0px 7px 17px -3px rgba(0, 0, 0, 0.17);
+}
+.dropper-semi-close:hover {
+  box-shadow: 0px 10.5px 25.5px rgba(0, 0, 0, 0.17);
+}
+.dropper-semi-medium {
+  transition: box-shadow 0.6s ease-in-out;
+  box-shadow: 0px 11px 20px -3px rgba(0, 0, 0, 0.17);
+}
+.dropper-semi-medium:hover {
+  box-shadow: 0px 16.5px 30px rgba(0, 0, 0, 0.17);
+}
+.dropper-semi-far {
+  transition: box-shadow 0.6s ease-in-out;
+  box-shadow: 0px 15px 24px -3px rgba(0, 0, 0, 0.17);
+}
+.dropper-semi-far:hover {
+  box-shadow: 0px 22.5px 36px rgba(0, 0, 0, 0.17);
+}
+.dropper-semi-far2x {
+  transition: box-shadow 0.6s ease-in-out;
+  box-shadow: 0px 17px 27px -3px rgba(0, 0, 0, 0.17);
+}
+.dropper-semi-far2x:hover {
+  box-shadow: 0px 25.5px 40.5px rgba(0, 0, 0, 0.17);
+}
+.dropper-bold-close {
+  transition: box-shadow 0.6s ease-in-out;
+  box-shadow: 0px 7px 17px -3px rgba(0, 0, 0, 0.24);
+}
+.dropper-bold-close:hover {
+  box-shadow: 0px 10.5px 25.5px rgba(0, 0, 0, 0.24);
+}
+.dropper-bold-medium {
+  transition: box-shadow 0.6s ease-in-out;
+  box-shadow: 0px 11px 20px -3px rgba(0, 0, 0, 0.24);
+}
+.dropper-bold-medium:hover {
+  box-shadow: 0px 16.5px 30px rgba(0, 0, 0, 0.24);
+}
+.dropper-bold-far {
+  transition: box-shadow 0.6s ease-in-out;
+  box-shadow: 0px 15px 24px -3px rgba(0, 0, 0, 0.24);
+}
+.dropper-bold-far:hover {
+  box-shadow: 0px 22.5px 36px rgba(0, 0, 0, 0.24);
+}
+.dropper-bold-far2x {
+  transition: box-shadow 0.6s ease-in-out;
+  box-shadow: 0px 17px 27px -3px rgba(0, 0, 0, 0.24);
+}
+.dropper-bold-far2x:hover {
+  box-shadow: 0px 25.5px 40.5px rgba(0, 0, 0, 0.24);
+}
+
+.dropper-left-light-close {
+  transition: box-shadow 0.4s ease-in-out;
+  box-shadow: 10px 5px 15px -3px rgba(0, 0, 0, 0.08);
+}
+.dropper-left-light-close:hover {
+  box-shadow: 12px 7.5px 22.5px rgba(0, 0, 0, 0.08);
+}
+.dropper-left-light-medium {
+  transition: box-shadow 0.4s ease-in-out;
+  box-shadow: 10px 8px 13px -3px rgba(0, 0, 0, 0.08);
+}
+.dropper-left-light-medium:hover {
+  box-shadow: 12px 12px 19.5px rgba(0, 0, 0, 0.08);
+}
+.dropper-left-light-far {
+  transition: box-shadow 0.4s ease-in-out;
+  box-shadow: 10px 12px 15px -3px rgba(0, 0, 0, 0.08);
+}
+.dropper-left-light-far:hover {
+  box-shadow: 12px 18px 22.5px rgba(0, 0, 0, 0.08);
+}
+.dropper-left-light-far2x {
+  transition: box-shadow 0.4s ease-in-out;
+  box-shadow: 10px 15px 18px -3px rgba(0, 0, 0, 0.08);
+}
+.dropper-left-light-far2x:hover {
+  box-shadow: 12px 22.5px 27px rgba(0, 0, 0, 0.08);
+}
+.dropper-left-regular-close {
+  transition: box-shadow 0.4s ease-in-out;
+  box-shadow: 12px 7px 17px -3px rgba(0, 0, 0, 0.12);
+}
+.dropper-left-regular-close:hover {
+  box-shadow: 14.4px 10.5px 25.5px rgba(0, 0, 0, 0.12);
+}
+.dropper-left-regular-medium {
+  transition: box-shadow 0.4s ease-in-out;
+  box-shadow: 12px 11px 20px -3px rgba(0, 0, 0, 0.12);
+}
+.dropper-left-regular-medium:hover {
+  box-shadow: 14.4px 16.5px 30px rgba(0, 0, 0, 0.12);
+}
+.dropper-left-regular-far {
+  transition: box-shadow 0.4s ease-in-out;
+  box-shadow: 12px 15px 24px -3px rgba(0, 0, 0, 0.12);
+}
+.dropper-left-regular-far:hover {
+  box-shadow: 14.4px 22.5px 36px rgba(0, 0, 0, 0.12);
+}
+.dropper-left-regular-far2x {
+  transition: box-shadow 0.4s ease-in-out;
+  box-shadow: 12px 17px 27px -3px rgba(0, 0, 0, 0.12);
+}
+.dropper-left-regular-far2x:hover {
+  box-shadow: 14.4px 25.5px 40.5px rgba(0, 0, 0, 0.12);
+}
+.dropper-left-semi-close {
+  transition: box-shadow 0.6s ease-in-out;
+  box-shadow: 14px 7px 17px -3px rgba(0, 0, 0, 0.17);
+}
+.dropper-left-semi-close:hover {
+  box-shadow: 16.8px 10.5px 25.5px rgba(0, 0, 0, 0.17);
+}
+.dropper-left-semi-medium {
+  transition: box-shadow 0.6s ease-in-out;
+  box-shadow: 14px 11px 20px -3px rgba(0, 0, 0, 0.17);
+}
+.dropper-left-semi-medium:hover {
+  box-shadow: 16.8px 16.5px 30px rgba(0, 0, 0, 0.17);
+}
+.dropper-left-semi-far {
+  transition: box-shadow 0.6s ease-in-out;
+  box-shadow: 14px 15px 24px -3px rgba(0, 0, 0, 0.17);
+}
+.dropper-left-semi-far:hover {
+  box-shadow: 16.8px 22.5px 36px rgba(0, 0, 0, 0.17);
+}
+.dropper-left-semi-far2x {
+  transition: box-shadow 0.6s ease-in-out;
+  box-shadow: 14px 17px 27px -3px rgba(0, 0, 0, 0.17);
+}
+.dropper-left-semi-far2x:hover {
+  box-shadow: 16.8px 25.5px 40.5px rgba(0, 0, 0, 0.17);
+}
+.dropper-left-bold-close {
+  transition: box-shadow 0.6s ease-in-out;
+  box-shadow: 14px 7px 17px -3px rgba(0, 0, 0, 0.24);
+}
+.dropper-left-bold-close:hover {
+  box-shadow: 16.8px 10.5px 25.5px rgba(0, 0, 0, 0.24);
+}
+.dropper-left-bold-medium {
+  transition: box-shadow 0.6s ease-in-out;
+  box-shadow: 14px 11px 20px -3px rgba(0, 0, 0, 0.24);
+}
+.dropper-left-bold-medium:hover {
+  box-shadow: 16.8px 16.5px 30px rgba(0, 0, 0, 0.24);
+}
+.dropper-left-bold-far {
+  transition: box-shadow 0.6s ease-in-out;
+  box-shadow: 14px 15px 24px -3px rgba(0, 0, 0, 0.24);
+}
+.dropper-left-bold-far:hover {
+  box-shadow: 16.8px 22.5px 36px rgba(0, 0, 0, 0.24);
+}
+.dropper-left-bold-far2x {
+  transition: box-shadow 0.6s ease-in-out;
+  box-shadow: 14px 17px 27px -3px rgba(0, 0, 0, 0.24);
+}
+.dropper-left-bold-far2x:hover {
+  box-shadow: 16.8px 25.5px 40.5px rgba(0, 0, 0, 0.24);
+}
+
+.dropper-right-light-close {
+  transition: box-shadow 0.4s ease-in-out;
+  box-shadow: -10px 5px 15px -3px rgba(0, 0, 0, 0.08);
+}
+.dropper-right-light-close:hover {
+  box-shadow: -12px 7.5px 22.5px rgba(0, 0, 0, 0.08);
+}
+.dropper-right-light-medium {
+  transition: box-shadow 0.4s ease-in-out;
+  box-shadow: -10px 8px 13px -3px rgba(0, 0, 0, 0.08);
+}
+.dropper-right-light-medium:hover {
+  box-shadow: -12px 12px 19.5px rgba(0, 0, 0, 0.08);
+}
+.dropper-right-light-far {
+  transition: box-shadow 0.4s ease-in-out;
+  box-shadow: -10px 12px 15px -3px rgba(0, 0, 0, 0.08);
+}
+.dropper-right-light-far:hover {
+  box-shadow: -12px 18px 22.5px rgba(0, 0, 0, 0.08);
+}
+.dropper-right-light-far2x {
+  transition: box-shadow 0.4s ease-in-out;
+  box-shadow: -10px 15px 18px -3px rgba(0, 0, 0, 0.08);
+}
+.dropper-right-light-far2x:hover {
+  box-shadow: -12px 22.5px 27px rgba(0, 0, 0, 0.08);
+}
+.dropper-right-regular-close {
+  transition: box-shadow 0.4s ease-in-out;
+  box-shadow: -12px 7px 17px -3px rgba(0, 0, 0, 0.12);
+}
+.dropper-right-regular-close:hover {
+  box-shadow: -14.4px 10.5px 25.5px rgba(0, 0, 0, 0.12);
+}
+.dropper-right-regular-medium {
+  transition: box-shadow 0.4s ease-in-out;
+  box-shadow: -12px 11px 20px -3px rgba(0, 0, 0, 0.12);
+}
+.dropper-right-regular-medium:hover {
+  box-shadow: -14.4px 16.5px 30px rgba(0, 0, 0, 0.12);
+}
+.dropper-right-regular-far {
+  transition: box-shadow 0.4s ease-in-out;
+  box-shadow: -12px 15px 24px -3px rgba(0, 0, 0, 0.12);
+}
+.dropper-right-regular-far:hover {
+  box-shadow: -14.4px 22.5px 36px rgba(0, 0, 0, 0.12);
+}
+.dropper-right-regular-far2x {
+  transition: box-shadow 0.4s ease-in-out;
+  box-shadow: -12px 17px 27px -3px rgba(0, 0, 0, 0.12);
+}
+.dropper-right-regular-far2x:hover {
+  box-shadow: -14.4px 25.5px 40.5px rgba(0, 0, 0, 0.12);
+}
+.dropper-right-semi-close {
+  transition: box-shadow 0.6s ease-in-out;
+  box-shadow: -14px 7px 17px -3px rgba(0, 0, 0, 0.17);
+}
+.dropper-right-semi-close:hover {
+  box-shadow: -16.8px 10.5px 25.5px rgba(0, 0, 0, 0.17);
+}
+.dropper-right-semi-medium {
+  transition: box-shadow 0.6s ease-in-out;
+  box-shadow: -14px 11px 20px -3px rgba(0, 0, 0, 0.17);
+}
+.dropper-right-semi-medium:hover {
+  box-shadow: -16.8px 16.5px 30px rgba(0, 0, 0, 0.17);
+}
+.dropper-right-semi-far {
+  transition: box-shadow 0.6s ease-in-out;
+  box-shadow: -14px 15px 24px -3px rgba(0, 0, 0, 0.17);
+}
+.dropper-right-semi-far:hover {
+  box-shadow: -16.8px 22.5px 36px rgba(0, 0, 0, 0.17);
+}
+.dropper-right-semi-far2x {
+  transition: box-shadow 0.6s ease-in-out;
+  box-shadow: -14px 17px 27px -3px rgba(0, 0, 0, 0.17);
+}
+.dropper-right-semi-far2x:hover {
+  box-shadow: -16.8px 25.5px 40.5px rgba(0, 0, 0, 0.17);
+}
+.dropper-right-bold-close {
+  transition: box-shadow 0.6s ease-in-out;
+  box-shadow: -14px 7px 17px -3px rgba(0, 0, 0, 0.24);
+}
+.dropper-right-bold-close:hover {
+  box-shadow: -16.8px 10.5px 25.5px rgba(0, 0, 0, 0.24);
+}
+.dropper-right-bold-medium {
+  transition: box-shadow 0.6s ease-in-out;
+  box-shadow: -14px 11px 20px -3px rgba(0, 0, 0, 0.24);
+}
+.dropper-right-bold-medium:hover {
+  box-shadow: -16.8px 16.5px 30px rgba(0, 0, 0, 0.24);
+}
+.dropper-right-bold-far {
+  transition: box-shadow 0.6s ease-in-out;
+  box-shadow: -14px 15px 24px -3px rgba(0, 0, 0, 0.24);
+}
+.dropper-right-bold-far:hover {
+  box-shadow: -16.8px 22.5px 36px rgba(0, 0, 0, 0.24);
+}
+.dropper-right-bold-far2x {
+  transition: box-shadow 0.6s ease-in-out;
+  box-shadow: -14px 17px 27px -3px rgba(0, 0, 0, 0.24);
+}
+.dropper-right-bold-far2x:hover {
+  box-shadow: -16.8px 25.5px 40.5px rgba(0, 0, 0, 0.24);
+}
+
+/*# sourceMappingURL=dropper.css.map */

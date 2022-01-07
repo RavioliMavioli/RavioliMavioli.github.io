@@ -3,8 +3,6 @@
     <!--Damn, it was such a pain to design this thing with pure HTML CSS and few Javascript-->
     <!--Few libraries were also used because I'm too lazy do it on my own-->
     <!--Anyway, thank you for visiting and pressing the inspect element, or maybe you cloned this code via my GitHub-->
-    <!--Which idk why would you do that since the code is basically a baked spaghetti-->
-    <!--But since this is licensed under GPL, feel free to do anything under the license-->
     <!--                                                                                 -->
     <!--The web's GitHub sourcecode : https://github.com/RavioliMavioli/RavioliMavioli.github.io -->
     <!--                                                                                 -->
@@ -13,7 +11,6 @@
     <!--Pacman-loading animation    : https://codepen.io/iddar/pen/xwXowq -->
     <!--Animate on Scroll           : https://michalsnik.github.io/aos/ -->
     <!--Lightbox                    : https://github.com/lokesh/lightbox2 -->
-    <!--jQuerry                     : https://github.com/jquery/jquery -->
     <!--Google Analytics            : https://analytics.google.com/ -->
     <!--Scrolling script            : https://stackoverflow.com/questions/49820013/javascript-scrollintoview-smooth-scroll-and-offset -->
 
@@ -39,6 +36,8 @@
     <link rel="stylesheet" href="css/loader.css">
     <link rel="stylesheet" href="css/support.css">
     <link rel="stylesheet" href="css/lightbox.css">
+    <link rel="stylesheet" href="css/commission-animation.css">
+    <link rel="stylesheet" href="css/boxshadow.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,9 +45,10 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <script src="js/scroll.js"></script>
+    <script src="js/commission-animation.js"></script>
     <script src="js/lightbox-plus-jquery.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+    <script>lightbox.option({ disableScrolling: true });</script>
+    
 </head>
 <body>
     <!--Page loading animation-->
@@ -59,11 +59,11 @@
     <!--Header section (Icon, title, etc)-->
     <section id="landing" class="header" data-aos="fade-up" loading="lazy">
     <div class="Title">
-        <img src="resource/image/manjaro icon.png">
+        <img src="resource/image/manjaro icon.png" class="shad-mid">
         <h1>RavioliMavioli</h1>
         <p>I am Ravioli, an aspiring freelance artist and open-<br>source enthusiast. Welcome to my web page</p>
         <svg></svg><br>
-        <a class="commission-btn" onclick="scrollToTargetAdjusted('commission',75)">Commission Info</a>
+        <a class="commission-btn box-bold" onclick="scrollToTargetAdjusted('commission',75)">Commission Info</a>
         
         <div class="external-links"><br>
             <ul>
@@ -78,14 +78,14 @@
     </section>
 
     <!--Sticky navbar-->
-    <div class="navbar">
+    <div class="navbar box-mid">
         <div class="navbrand" data-aos="fade-up" data-aos-once=true><a onclick="scrollToTarget('landing')">RavioliMavioli</a></div>
         <div class="navcenter" data-aos="fade-up" data-aos-once=true>
             <a onclick="scrollToTargetAdjusted('portfolio',75)">Portfolio</a>
             <a onclick="scrollToTargetAdjusted('commission',75)">Commission</a>
-            <a id="navlinux" onclick="scrollToTargetAdjusted('linux-tan',75)">Linux-tan 2.0</a>
+            <a id="navlinux" onclick="scrollToTargetAdjusted('linux-tan',330)">Linux-tan 2.0</a>
         </div>
-        <div class="navsupport" data-aos="fade-up" data-aos-once=true><a href="https://ko-fi.com/raviolimavioli" target="_blank">Support</a></div>
+        <div class="navsupport box-bold" data-aos="fade-up" data-aos-once=true><a href="https://ko-fi.com/raviolimavioli" target="_blank">Support</a></div>
     </div>
 
 
@@ -97,106 +97,121 @@
             <div class="text-title" data-aos="fade-up"><p>Portfolio</p></div>
             <div class="portfolio-container">
 
-                <div class="portfolio-gallery-item" data-aos="zoom-in" data-aos-delay=0>
+                <div class="portfolio-gallery-item box-bold" data-aos="zoom-in" data-aos-delay=0>
                     <div class="portfolio-images" >
                         <a href="resource/image/portfolio/big/1.jpg" data-lightbox="rav-portfolio"><img src="resource/image/portfolio/smol/1.jpg" loading="lazy"></a>
                     </div>
                 </div>
                 
-                <div class="portfolio-gallery-item" data-aos="zoom-in" data-aos-delay=0>
+                <div class="portfolio-gallery-item box-bold" data-aos="zoom-in" data-aos-delay=0>
                     <div class="portfolio-images" >
                         <a href="resource/image/portfolio/big/2.jpg" data-lightbox="rav-portfolio"><img src="resource/image/portfolio/smol/2.jpg" loading="lazy"></a>
                     </div>
                 </div>
 
-                <div class="portfolio-gallery-item" data-aos="zoom-in" data-aos-delay=0>
+                <div class="portfolio-gallery-item box-bold" data-aos="zoom-in" data-aos-delay=0>
                     <div class="portfolio-images" >
                         <a href="resource/image/portfolio/big/3.jpg" data-lightbox="rav-portfolio"><img src="resource/image/portfolio/smol/3.jpg" loading="lazy"></a>
                     </div>
                 </div>
 
-                <div class="portfolio-gallery-item" data-aos="zoom-in" data-aos-delay=0>
+                <div class="portfolio-gallery-item box-bold" data-aos="zoom-in" data-aos-delay=0>
                     <div class="portfolio-images" >
                         <a href="resource/image/portfolio/big/4.jpg" data-lightbox="rav-portfolio"><img src="resource/image/portfolio/smol/4.jpg" loading="lazy"></a>
                     </div>
                 </div>
 
-                <div class="portfolio-gallery-item" data-aos="zoom-in" data-aos-delay=0>
+                <div class="portfolio-gallery-item box-bold" data-aos="zoom-in" data-aos-delay=0>
                     <div class="portfolio-images" >
                         <a href="resource/image/portfolio/big/5.jpg" data-lightbox="rav-portfolio"><img src="resource/image/portfolio/smol/5.jpg" loading="lazy"></a>
                     </div>
                 </div>
 
-                <div class="portfolio-gallery-item" data-aos="zoom-in" data-aos-delay=0>
+                <div class="portfolio-gallery-item box-bold" data-aos="zoom-in" data-aos-delay=0>
                     <div class="portfolio-images" >
                         <a href="resource/image/portfolio/big/6.jpg" data-lightbox="rav-portfolio"><img src="resource/image/portfolio/smol/6.jpg" loading="lazy"></a>
                     </div>
                 </div>
 
-                <div class="portfolio-gallery-item" data-aos="zoom-in" data-aos-delay=0>
+                <div class="portfolio-gallery-item box-bold" data-aos="zoom-in" data-aos-delay=0>
                     <div class="portfolio-images" >
                         <a href="resource/image/portfolio/big/7.jpg" data-lightbox="rav-portfolio"><img src="resource/image/portfolio/smol/7.jpg" loading="lazy"></a>
                     </div>
                 </div>
 
-                <div class="portfolio-gallery-item" data-aos="zoom-in" data-aos-delay=0>
+                <div class="portfolio-gallery-item box-bold" data-aos="zoom-in" data-aos-delay=0>
                     <div class="portfolio-images" >
                         <a href="resource/image/portfolio/big/8.jpg" data-lightbox="rav-portfolio"><img src="resource/image/portfolio/smol/8.jpg" loading="lazy"></a>
                     </div>
                 </div>
-
+            </div>
         </div>
         <div class="text-normal" data-aos="fade-up"><p>More can be found on my social media</p></div>
 
         <!--Comission section-->
         <div id="commission">
             <div class="text-title" data-aos="fade-up"><p>Commission</p></div>
-            <div class="text-normal commission-section" data-aos="fade-up"><p>This site is still under construction :)</p></div>
-            <!--<div class="commission-section">
-                
-                
-                <div class="commission-container">
-                    <div class="commission-image" data-aos="fade-up" data-aos-delay="50"><img src="resource/image/commission/Arch Chan Transparent.png"></div>
-                </div>
-                
-                <div class="commission-container">
-                    <div class="commission-content" data-aos="fade-up" data-aos-delay="100">
-
-                        <div class="Big-text"><p>Parts</p></div>
+            <div class="region-container" data-aos="fade-up">
+                <a id="Outdonesia" class="animation-change-color-region box-bold" onclick="Region('Outdonesia')"><p>USD</p></a>
+                <a id="Indonesia" class="box-bold" onclick="Region('Indonesia')"><p>IDR</p></a>
+            </div>
+            <!-- This was the hardest section to make (for me), the conditional animated cropping line -->
+            <div class="commission-container animation-halfbody">
+                <div class="commission-container-left" data-aos="fade-up"><div class="img-solidcolor"></div><div class="img-detailed"></div><div class="img-blurry"></div><div class="img-simple"></div><div class="img-arch"></div>
+                    <div class="dynamic-price-container">
+                        <div class="dynamic-price-bg">
+                            <div class="dynamic-price-line-container box-bold">
+                                <div class="dynamic-price-line"></div>
+                                <div class="dynamic-price-triangle-L"></div>
+                                <div class="dynamic-price-triangle-R-down"><div class="dynamic-pricetag box-bold"></div></div>
+                                
+                            </div>
+                            <div class="dynamic-string text-normal"><p id="PARTNAME">Halfbody</p></div>
+                        </div>
                         
-                        <div class="commission-parts-container-main"><br><br>
-                        
-                            <div class="commission-parts-container">
-                                <div id="comm-headshot"><p>Headshot</p></div>
+                    </div>
+                    <div class="dynamic-price-container-up box-bold">
+                        <div class="dynamic-price-bg">
+                            <div class="dynamic-price-line-container">
+                                <div class="dynamic-price-line"></div>
+                                <div class="dynamic-price-triangle-L"></div>
+                                <div class="dynamic-price-triangle-R"></div>
                             </div>
-                            
-                            <div class="commission-parts-container">
-                                <div id="comm-bustup"><p>Bustup</p></div>
-                            </div>
-
-                            <div class="commission-parts-container">
-                                <div id="comm-halfbody"><p>Halfbody</p></div>
-                            </div>
-
-                            <div class="commission-parts-container">
-                                <div id="comm-fullbody"><p>Fullbody</p></div>
-                            </div>
-
                         </div>
                     </div>
                 </div>
-                -->
-            </div>
-            
-            
-        </div>
-        <!--Temporary placeholder-->
-        <div id="linux-tan">
-            <div class="text-title" data-aos="fade-up"><p>Linux-tan 2.0</p></div>
-            <div class="text-normal linux-tan-section" data-aos="fade-up"><p>This site is still under construction :)</p></div>
-        </div>
+                <div class="commission-container-right">
+                    <div class="parts-container">
+                        <div class="parts-header text-normal" data-aos="fade-up"><p>Body parts</p></div>
+                        <div class="parts-lists" data-aos="fade-up" data-aos-delay="50">
 
-       
+                            <!-- I had a eurika moment when I figured it out how to do the script of this section -->
+                            <a id="HEADSHOT" onclick="CropAnimate('HEADSHOT'), scrollToTargetAdjusted('commission',-10)"><p class="box-bold">Headshot</p></a>
+                            <a id="BUSTUP" onclick="CropAnimate('BUSTUP'), scrollToTargetAdjusted('commission',-20)"><p class="box-bold">Bust-up</p></a>
+                            <a id="HALFBODY" class="animation-change-color" onclick="CropAnimate('HALFBODY'), scrollToTargetAdjusted('commission',-50)"><p class="box-bold">Halfbody</p></a>
+                            <a id="KNEEUP" onclick="CropAnimate('KNEEUP'), scrollToTargetAdjusted('commission',-100)"><p class="box-bold">Knee-up</p></a>
+                            <a id="FULLBODY" onclick="CropAnimate('FULLBODY'), scrollToTargetAdjusted('commission',-200)"><p class="box-bold">Fullbody</p></a>
+                        </div>
+                        <div class="background-header text-normal" data-aos="fade-up" data-aos-delay="100"><p>Background</p></div>
+                        <div class="background-lists" data-aos="fade-up" data-aos-delay="150">
+                            <a id="SOLIDCOLOR" class="animation-change-color-bg" onclick="BgAnimate('SOLIDCOLOR')"><p class="box-bold">Solid Color</p></a>
+                            <a id="SIMPLE" onclick="BgAnimate('SIMPLE')"><p class="box-bold">Simple</p></a>
+                            <a id="BLURRY" onclick="BgAnimate('BLURRY')"><p class="box-bold">Blur</p></a>
+                            <a id="DETAILED" onclick="BgAnimate('DETAILED')"><p class="box-bold">Detailed</p></a>
+                        </div>
+                        <div class="A text-normal" data-aos="fade-up" data-aos-delay="200"><p>Commission is closed for a moment. Visit here again in the next few weeks!</p></div>            
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="linux-tan">
+            <div class="text-normal" data-aos="fade-up"><p>This site is still under construction, sorry for the inconvenience.</p></div>
+        </div>
+        <footer class="box-bold" data-aos="fade-up">
+            <div class="B text-normal"><p>©Copyright RavioliMavioli<br><br><br></p></div>
+            <div class="B text-normal"><p>♥ Made with love and passion from pure HTML/CSS and JavaScript ♥</p></div>
+            <div class="B text-normal"><p>Thank you for visiting!</p></div>
+        </footer>
     <!--Page loading animation when loading is complete-->
     <script>
         $(window).on("load", function(){

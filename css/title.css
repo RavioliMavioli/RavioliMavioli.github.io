@@ -23,7 +23,7 @@ html {
     overflow-x: hidden;
 }
 .navbar{
-    z-index: 1;
+    z-index: 200;
     position:sticky;
     top: 0;
     background: #161f28;
@@ -67,7 +67,7 @@ html {
     border-radius: 75px;
 }
 .navsupport a:hover{
-    background: orange;
+    background: white;
     color: black;
     border-radius: 0px;
 }
@@ -140,7 +140,7 @@ html {
     position: relative;
     display: inline-block;
     font-style: bold;
-    font-size: 30px;
+    font-size: 26px;
     color: white;
     line-height:63px;
 
@@ -259,6 +259,9 @@ html {
     
     .external-links li::after{
         font-size:0px;
+    }
+    .external-links img:hover{
+        opacity: 60%;
     }
     /*
     .external-links li:nth-child(1):after{

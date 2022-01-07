@@ -1,0 +1,62 @@
+.animation-text-fade p{
+    color: white;
+}
+.animation-change-color p{
+    background: linear-gradient(94.94deg, #1bb3da -1.76%, #1382cc 80.53%);
+}
+.animation-change-color-region, .animation-change-color-bg p{
+    background: linear-gradient(94.94deg, #FD9E04 -1.76%, #FF4C01 80.53%);
+}
+.animation-change-bg{
+    opacity: 100%;
+}
+.animation-headshot{
+    height: 75%;
+}
+.animation-bustup{
+    height: 65%;
+}
+.animation-halfbody{
+    height: 48%;
+}
+.animation-kneeup{
+    height: 30%;
+}
+.animation-fullbody{
+    height: 0%;
+}
+.animation-fullbody-up{
+    height: 0%;
+}
+
+:root{
+    --total-price-str: "$60";
+
+    --price-headshot-str: "$30";
+    --price-bustup-str: "$45";
+    --price-halfbody-str: "$60";
+    --price-kneeup-str: "$75";
+    --price-fullbody-str: "$89";
+
+    --price-solidcolor-str: "+$0";
+    --price-simple-str: "+$8";
+    --price-blurry-str: "+$20";
+    --price-detailed-str: "+$40";
+
+
+    --x-offset: 8vw;
+    --y-offset: -225%;
+
+    --price: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa";
+
+    --color-headshot: #1793d1;
+    --color-bustup: #1793d1;
+    --color-halfbody: white;
+    --color-kneeup: #1793d1;
+    --color-fullbody: #1793d1;
+
+    --color-solidcolor: white;
+    --color-simple: #FF4C01;
+    --color-blurry: #FF4C01;
+    --color-detailed: #FF4C01;
+}
