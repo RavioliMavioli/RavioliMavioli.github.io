@@ -197,11 +197,11 @@ function BgSetToDefault(commissionBg){
     });
 }
 
-if (window.innerWidth < 700)
+if (window.innerWidth < 1000)
         document.querySelector(":root").style.setProperty("--x-offset", '25vw');
 if (window.attachEvent) {
     window.attachEvent('onresize', function() {
-        if (window.innerWidth < 700)
+        if (window.innerWidth < 1000)
         document.querySelector(":root").style.setProperty("--x-offset", '25vw');
         else
         document.querySelector(":root").style.setProperty("--x-offset", '8vw');
@@ -209,7 +209,7 @@ if (window.attachEvent) {
 }
 else if (window.addEventListener) {
     window.addEventListener('resize', function() {
-        if (window.innerWidth < 700)
+        if (window.innerWidth < 1000)
         document.querySelector(":root").style.setProperty("--x-offset", '25vw');
         else
         document.querySelector(":root").style.setProperty("--x-offset", '8vw');
