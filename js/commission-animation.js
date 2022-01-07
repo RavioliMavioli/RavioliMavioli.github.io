@@ -13,6 +13,8 @@ let bgPartName      = ['solidcolor', 'simple', 'blurry', 'detailed'];
 let priceBgInIDR    = ['+Rp.0', '+Rp.40.000', '+Rp.120.000', '+Rp.200.000'];
 let priceBgInUSD    = ['+$0', '+$8', '+$20', '+$40'];
 
+
+
 function Region(regionID){
 
 
@@ -84,7 +86,8 @@ function CropAnimate(bodyPartID){
 }
 
 function CropSetToDefault(dynamicCrop, dynamicCrop_up){
-
+    Region("Indonesia");
+    Region("Outdonesia");
     // Remove every single classes from the element //
     bodyPartName.forEach(element => {
         let uppercaseElement = element.toString().toUpperCase();
@@ -181,7 +184,8 @@ function BgAnimate(bgID){
 }
 
 function BgSetToDefault(commissionBg){
-    
+    Region("Indonesia");
+    Region("Outdonesia");
     let bgPartName = ['solidcolor', 'simple', 'blurry', 'detailed'];
 
     // Remove every single classes from the element //

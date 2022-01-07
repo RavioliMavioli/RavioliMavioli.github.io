@@ -276,6 +276,7 @@ body{
 }
 
 .parts-lists a p, .background-lists a p{
+    
     cursor: pointer;
     color: white;
     font-weight: normal;
@@ -358,7 +359,22 @@ body{
     color: var(--color-detailed);
 }
 
+#linux-tan{
+    text-align: center;
+    margin-top: 50px;
+    min-height: 100vh;
+    position: relative;
+    color: white;
+    text-align: center;
+    justify-content: space-between;
+}
 
+.C p{
+    position: relative;
+    transform: translate(0%,50vh);
+    font-size: 16px;
+    margin: 10px;
+}
 
 .A p{
     position: relative;
@@ -368,10 +384,12 @@ body{
 }
 
 footer{
-    position: relative;
+    text-align: center;
     padding: 0px;
     margin: 0px;
-    height: 30vh;
+    position: absolute;
+    height: 200px;
+    width: 100%;
     background:#161f28;
     border-top: 5px solid #FF4C01;
 
@@ -379,7 +397,7 @@ footer{
 .B p{
     position: relative;
     font-size: 12px;
-    top: 30px;
+    top:  30px;
     margin: 5px;
 }
 
