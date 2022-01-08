@@ -1,7 +1,7 @@
 var currentPrice = 50;
 var bgPrice = 0;
 var totalPrice = currentPrice + bgPrice;
-var currentCurrency = 'USD';
+var currentCurrency = 'Indonesia';
 var currentBodyPart = 'halfbody';
 var currentBg       = 'solidcolor';
 
@@ -25,7 +25,7 @@ function Region(regionID){
     RegionSetToDefault();
     // Change the button color by adding animation class //
     if (regionID=="Indonesia"){
-        currentCurrency = 'IDR';
+        currentCurrency = 'Indonesia';
         IDR.classList.add('animation-change-color-region');
         // Change currency to IDR
         for (var index = 0; index < bodyPartName.length; index++){
@@ -38,7 +38,7 @@ function Region(regionID){
         }
     }
     else {
-        currentCurrency = 'USD';
+        currentCurrency = 'Outdonesia';
         USD.classList.add('animation-change-color-region')
         // Change currency to USD
         for (var index = 0; index < bodyPartName.length; index++){
@@ -112,7 +112,7 @@ function TotalPrice(IDlowercase, type){
     // Remove + from bg price
     if (type == "background") { strPrice = strPrice.slice(1); bgornot = true;}
     // Add the price clicked to the current price
-    if (currentCurrency=='USD'){
+    if (currentCurrency=='Outdonesia'){
         slicedPrice = strPrice.substring(2, strPrice.length - 1); // Remove quote and dollar sign
         priceInt    = parseInt(slicedPrice);                      // Convert it to integer
 
@@ -139,7 +139,7 @@ function UpdatePrice(){
     var {slicedPartPrice, slicedBgPrice} = '';
     var totalPrice    = 0;
     
-    if (currentCurrency=='USD'){
+    if (currentCurrency=='Outdonesia'){
         
         slicedPartPrice = getSelectedPartPrice.substring(2, getSelectedPartPrice.length - 1);
         slicedBgPrice   = getSelectedBgPrice.substring(3, getSelectedBgPrice.length - 1);
