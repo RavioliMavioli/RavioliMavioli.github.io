@@ -86,8 +86,8 @@ function CropAnimate(bodyPartID){
 }
 
 function CropSetToDefault(dynamicCrop, dynamicCrop_up){
-    Region("Indonesia");
-    Region("Outdonesia");
+
+    Region(currentCurrency);
     // Remove every single classes from the element //
     bodyPartName.forEach(element => {
         let uppercaseElement = element.toString().toUpperCase();
@@ -184,8 +184,7 @@ function BgAnimate(bgID){
 }
 
 function BgSetToDefault(commissionBg){
-    Region("Indonesia");
-    Region("Outdonesia");
+    Region(currentCurrency);
     let bgPartName = ['solidcolor', 'simple', 'blurry', 'detailed'];
 
     // Remove every single classes from the element //
