@@ -143,13 +143,13 @@ body{
     opacity: 100%;
 }
 .img-simple{
-    background: white;
+    background: rgb(219, 192, 179);
 }
 .img-blurry{
-    background: white;
+    background: rgb(130, 123, 158);
 }
 .img-detailed{
-    background: white;
+    background: rgb(171, 206, 157);
 }
 
 .dynamic-price-container-up{
@@ -358,6 +358,34 @@ body{
     content: var(--price-detailed-str);
     color: var(--color-detailed);
 }
+.total-price-container{
+    position: relative;
+    width: 100%;
+    margin: 10px 0px;
+}
+.total-price-container p{
+    margin-top: 20px;
+    position: relative;
+    color: white;
+    font-size: 18px;
+    font-weight: 300;
+}
+.total-price-number{
+    margin-top: 20px;
+    width: 100%;
+    height: 100%;
+}
+.total-price-number::after{
+    content: var(--total-price-str);
+    color: white;
+    background: linear-gradient(94.94deg, #1bb3da -1.76%, #1382cc 80.53%);
+    font-size: 24px;
+    font-weight:bold;
+    padding: 6px 20px;
+    border-radius: 100px;
+    transition: 0.8s;
+}
+
 
 #linux-tan{
     text-align: center;
