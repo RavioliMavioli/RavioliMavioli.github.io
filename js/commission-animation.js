@@ -1,7 +1,7 @@
 var currentPrice = 50;
 var bgPrice = 0;
 var totalPrice = currentPrice + bgPrice;
-var currentCurrency = 'Indonesia';
+var currentCurrency = 'Outdonesia';
 var currentBodyPart = 'halfbody';
 var currentBg       = 'solidcolor';
 
