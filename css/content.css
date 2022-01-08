@@ -104,14 +104,14 @@ body{
 .commission-container{
     position: relative;
     margin-top: 15px;
-    height: 113vh;
+    height: 118vh;
     margin-left: 13%;
     margin-right: 13%;
 }
 .commission-container-left, .commission-container-right{
     position: relative;
     display: inline-block;
-    height: 113vh;
+    height: 118vh;
     margin: 0px 5px;
 }
 .commission-container-left{
@@ -130,9 +130,10 @@ body{
     background-repeat: no-repeat;
     z-index: 0;
     width: 100%;
-    height: 113vh;
+    height: 118vh;
     opacity: 0%;
     transition: 1s;
+    min-height: 110vh;
 }
 .img-arch{
     background-image: url(../resource/image/commission/Arch\ Chan\ Transparent.png);
@@ -156,7 +157,7 @@ body{
     position: absolute;
     margin: 0px;
     width: 100%;
-    height: 3.5%;
+    height: 5%;
     transition: 0.5s;
 }
 .dynamic-price-container-up .dynamic-price-line-container{
@@ -358,6 +359,37 @@ body{
     content: var(--price-detailed-str);
     color: var(--color-detailed);
 }
+
+.commercial-container{
+    display: inline-block;
+    width: 50%;
+}
+.commercial-check-1, .commercial-check-2{
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+}
+.commercial-check-1{
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 100px;
+    transition: 0.3s;
+}
+.commercial-check-1:hover{
+    scale: 115%;
+}
+.commercial-check-2{
+    width: 70%;
+}
+.commercial-check-2 p{
+    font-size: 14px;    
+    font-weight: normal;
+}
+
 .total-price-container{
     position: relative;
     width: 100%;
@@ -428,7 +460,20 @@ footer{
     top:  30px;
     margin: 5px;
 }
-
+@media(max-height: 500px){
+    .parts-header ,.background-header{
+        padding: 0px;
+    }
+    .parts-lists a p, .background-lists a p{
+        font-size: 12px;
+        padding: 6px;
+        margin: 10px 22%;
+    }
+    #HEADSHOT::after, #BUSTUP::after, #HALFBODY::after, #KNEEUP::after, #FULLBODY::after,
+    #SOLIDCOLOR::after, #SIMPLE::after, #BLURRY::after, #DETAILED::after {
+        font-size: 12px;
+    }
+}
 @media(max-width: 1000px){
     .commission-container-left, .commission-container-right{
         display: flex;

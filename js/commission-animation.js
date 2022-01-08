@@ -1,6 +1,7 @@
 var currentPrice = 50;
 var bgPrice = 0;
-var totalPrice = currentPrice + bgPrice;
+var totalPrice = 0;
+var commercial = 1;
 var currentCurrency = 'Outdonesia';
 var currentBodyPart = 'halfbody';
 var currentBg       = 'solidcolor';
@@ -17,7 +18,6 @@ let priceBgInUSD    = ['+$0', '+$8', '+$20', '+$40'];
 
 function Region(regionID){
 
-
     const IDR = document.getElementById('Indonesia');
     const USD = document.getElementById('Outdonesia');
 
@@ -30,11 +30,8 @@ function Region(regionID){
         // Change currency to IDR
         for (var index = 0; index < bodyPartName.length; index++){
             document.querySelector(":root").style.setProperty(`--price-${bodyPartName[index]}-str`, `'${pricePartInIDR[index]}'`);
-            //console.log(`--price-${bodyPartName[index]}-str`);
-            //console.log(document.querySelector(":root").style.getPropertyValue(`--price-${bodyPartName[index]}-str`));   
-        }
-        for (var index = 0; index < bgPartName.length; index++){
-            document.querySelector(":root").style.setProperty(`--price-${bgPartName[index]}-str`, `'${priceBgInIDR[index]}'`);
+
+            if (index < bgPartName.length) document.querySelector(":root").style.setProperty(`--price-${bgPartName[index]}-str`, `'${priceBgInIDR[index]}'`); 
         }
     }
     else {
@@ -43,11 +40,8 @@ function Region(regionID){
         // Change currency to USD
         for (var index = 0; index < bodyPartName.length; index++){
             document.querySelector(":root").style.setProperty(`--price-${bodyPartName[index]}-str`, `'${pricePartInUSD[index]}'`);
-            //console.log(`--price-${bodyPartName[index]}-str`);
-            //console.log(document.querySelector(":root").style.getPropertyValue(`--price-${bodyPartName[index]}-str`));        
-        }
-        for (var index = 0; index < bgPartName.length; index++){
-            document.querySelector(":root").style.setProperty(`--price-${bgPartName[index]}-str`, `'${priceBgInUSD[index]}'`);
+            
+            if (index < bgPartName.length) document.querySelector(":root").style.setProperty(`--price-${bgPartName[index]}-str`, `'${priceBgInUSD[index]}'`); 
         }
     }
     // Update current price
@@ -102,35 +96,35 @@ function CropSetToDefault(dynamicCrop, dynamicCrop_up){
 
 }
 
+function SetTotalPrice(totalPrice){
+    document.querySelector(":root").style.setProperty('--total-price-str',
+        (function(){
+            if (currentCurrency == "Outdonesia") {return `'$${totalPrice}'`} else {return `'Rp.${parseInt(totalPrice)}.000'`};
+        }())
+    )
+}
+
 function TotalPrice(IDlowercase, type){
+
     // Initialization for getting the current price as integer
     var getPrice    = getComputedStyle(document.querySelector(':root')).getPropertyValue(`--price-${IDlowercase}-str`);
     var strPrice    = getPrice.toString();
     var slicedPrice = '';
     var priceInt    = 0;
-    var bgornot     = false;
-    // Remove + from bg price
-    if (type == "background") { strPrice = strPrice.slice(1); bgornot = true;}
-    // Add the price clicked to the current price
-    if (currentCurrency=='Outdonesia'){
-        slicedPrice = strPrice.substring(2, strPrice.length - 1); // Remove quote and dollar sign
-        priceInt    = parseInt(slicedPrice);                      // Convert it to integer
-
-        if (bgornot) bgPrice  = priceInt;                         // Set the current price to the new price
-        else currentPrice  = priceInt;
-        totalPrice = currentPrice + bgPrice;
-        document.querySelector(":root").style.setProperty('--total-price-str', `'$${totalPrice}'`)
-    }
-    else{
-        slicedPrice = strPrice.substring(4, strPrice.length - 1); // Remove quote and Rp. sign
-        priceInt    = parseInt(slicedPrice);                      // Convert it to integer, note that it returns 3 digit number since the "." inside the string is detected as comma
+    var isBg     = false;
     
-        if (bgornot) bgPrice  = priceInt;                         // Set the current price to the new price
-        else currentPrice  = priceInt;
-        totalPrice = currentPrice + bgPrice;
-        document.querySelector(":root").style.setProperty('--total-price-str', `'Rp.${totalPrice}.000'`); // Modify --price-total value to the current price
-    }
-    console.log(bgPrice);
+    // Add the price clicked to the current price
+    if (type == "background") { strPrice = strPrice.slice(1); isBg = true;} // Remove + from bg price
+    if (currentCurrency=='Outdonesia') { slicedPrice = strPrice.substring(2, strPrice.length - 1);} // Remove quote and dollar sign
+    else { slicedPrice = strPrice.substring(4, strPrice.length - 1);}
+
+    priceInt    = parseInt(slicedPrice);                      // Convert it to integer
+    
+    if (isBg) bgPrice  = priceInt;                         // Set the current price to the new price
+    else currentPrice  = priceInt;
+    totalPrice = (currentPrice + bgPrice)*commercial;
+    SetTotalPrice(totalPrice);
+
 }
 
 function UpdatePrice(){
@@ -140,31 +134,22 @@ function UpdatePrice(){
     var totalPrice    = 0;
     
     if (currentCurrency=='Outdonesia'){
-        
         slicedPartPrice = getSelectedPartPrice.substring(2, getSelectedPartPrice.length - 1);
         slicedBgPrice   = getSelectedBgPrice.substring(3, getSelectedBgPrice.length - 1);
-        priceIntPart    = parseInt(slicedPartPrice);
-        priceIntBg      = parseInt(slicedBgPrice);
-        
-        currentPrice    = priceIntPart;
-        bgPrice         = priceIntBg;
-        totalPrice      = currentPrice + bgPrice;
-
-        document.querySelector(":root").style.setProperty('--total-price-str', `'$${totalPrice}'`)
     }
-    else{
+    else {
         slicedPartPrice = getSelectedPartPrice.substring(4, getSelectedPartPrice.length - 1);
         slicedBgPrice   = getSelectedBgPrice.substring(5, getSelectedBgPrice.length - 1);
+    }
+
         priceIntPart    = parseInt(slicedPartPrice);
-        priceIntBg      = parseInt(slicedBgPrice);
+        priceIntBg      = parseInt(slicedBgPrice); 
 
         currentPrice    = priceIntPart;
         bgPrice         = priceIntBg;
-        totalPrice      = currentPrice + bgPrice;
+        totalPrice      = (currentPrice + bgPrice)*commercial;
 
-
-        document.querySelector(":root").style.setProperty('--total-price-str', `'Rp.${totalPrice}.000'`)
-    }
+        SetTotalPrice(totalPrice);
 }
 
 function BgAnimate(bgID){
@@ -173,7 +158,7 @@ function BgAnimate(bgID){
     var bg                      = document.getElementById(bgID);
     var commissionBg            = document.querySelector(`.img-${IDlowercase}`);
 
-    BgSetToDefault(commissionBg);      // Set the element class to the default state //
+    BgSetToDefault();      // Set the element class to the default state //
 
     document.querySelector(":root").style.setProperty(`--color-${IDlowercase}`, 'white');       // Move the cropping line, this function is flexible depending on the body part name
     bg.classList.add('animation-change-color-bg');
@@ -183,7 +168,7 @@ function BgAnimate(bgID){
     currentBg = IDlowercase;
 }
 
-function BgSetToDefault(commissionBg){
+function BgSetToDefault(){
     Region(currentCurrency);
     let bgPartName = ['solidcolor', 'simple', 'blurry', 'detailed'];
 
@@ -195,6 +180,18 @@ function BgSetToDefault(commissionBg){
         document.querySelector(":root").style.setProperty(`--color-${backgrounds}`, '#FF4C01');
     });
 }
+
+function Commercial(){
+    var commercalButton = document.querySelector('.commercial-check-1');
+
+    if(commercial != 1) { commercial = 1; commercalButton.className = 'commercial-check-1 box-bold';}
+    else { commercial = 1.5; commercalButton.classList.add("animation-commercial");}
+
+    totalPrice = (currentPrice + bgPrice)*commercial;
+    SetTotalPrice(totalPrice);
+}
+
+
 
 if (window.innerWidth < 1000)
         document.querySelector(":root").style.setProperty("--x-offset", '25vw');

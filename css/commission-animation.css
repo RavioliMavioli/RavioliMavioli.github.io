@@ -11,10 +11,10 @@
     opacity: 100%;
 }
 .animation-headshot{
-    height: 75%;
+    height: 73%;
 }
 .animation-bustup{
-    height: 65%;
+    height: 63%;
 }
 .animation-halfbody{
     height: 48%;
@@ -27,6 +27,9 @@
 }
 .animation-fullbody-up{
     height: 0%;
+}
+.animation-commercial{
+    background: linear-gradient(94.94deg, #FD9E04 -1.76%, #FF4C01 80.53%);
 }
 
 :root{
