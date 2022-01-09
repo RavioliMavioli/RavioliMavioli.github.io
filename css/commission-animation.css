@@ -31,7 +31,12 @@
 .animation-commercial{
     background: linear-gradient(94.94deg, #FD9E04 -1.76%, #FF4C01 80.53%);
 }
-
+.animation-canvas{
+    background: white;
+}
+.opacity-mid{
+    opacity: 75%;
+}
 :root{
     --total-price-str: "$60";
 

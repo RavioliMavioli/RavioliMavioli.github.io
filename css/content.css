@@ -2,9 +2,10 @@ body{
     padding: 0px;
     margin: 0px;
     background:#161f28;
-    overflow-x: hidden;
     z-index: -100;
-
+    overflow-x: hidden;
+    min-width: 200px;
+    min-height: 480px;
 }
 .content{
     margin: 20px;
@@ -12,6 +13,11 @@ body{
     background-color: #161f28;
     text-align: center;
 }
+
+/*---------------------------------------------------------------------------------------------------*/
+/*===================================================================================================*/
+/*---------------------------------------------------------------------------------------------------*/
+
 #portfolio{
     margin-top: 50px;
     position: relative;
@@ -72,7 +78,9 @@ body{
     transform: scale(1.1);
 }
 
-
+/*---------------------------------------------------------------------------------------------------*/
+/*===================================================================================================*/
+/*---------------------------------------------------------------------------------------------------*/
 
 #commission .text-title p:after{
     width: 150px;
@@ -114,6 +122,11 @@ body{
     height: 118vh;
     margin: 0px 5px;
 }
+
+/*---------------------------------------------------------------------------------------------------*/
+/*===================================================================================================*/
+/*---------------------------------------------------------------------------------------------------*/
+
 .commission-container-left{
     position: relative;
     
@@ -230,7 +243,7 @@ body{
     position: absolute;
     font-size: 18px;
     font-weight: bold;
-    color: black;
+    color: #161f28;
     transform: translate(-54%, 40%);
     content: var(--total-price-str);
 }
@@ -244,8 +257,9 @@ body{
     font-weight: 400;
 }
 
-
-
+/*---------------------------------------------------------------------------------------------------*/
+/*===================================================================================================*/
+/*---------------------------------------------------------------------------------------------------*/
 
 .commission-container-right{
     width: 30%;
@@ -295,6 +309,9 @@ body{
     scale: 110%;
 }
 
+/*---------------------------------------------------------------------------------------------------*/
+/*===================================================================================================*/
+/*---------------------------------------------------------------------------------------------------*/
 
 #HEADSHOT::after, #BUSTUP::after, #HALFBODY::after, #KNEEUP::after, #FULLBODY::after{
     position: absolute;
@@ -329,7 +346,9 @@ body{
     color: var(--color-fullbody);
 }
 
-
+/*---------------------------------------------------------------------------------------------------*/
+/*===================================================================================================*/
+/*---------------------------------------------------------------------------------------------------*/
 
 #SOLIDCOLOR::after, #SIMPLE::after, #BLURRY::after, #DETAILED::after{
     position: absolute;
@@ -359,6 +378,10 @@ body{
     content: var(--price-detailed-str);
     color: var(--color-detailed);
 }
+
+/*---------------------------------------------------------------------------------------------------*/
+/*===================================================================================================*/
+/*---------------------------------------------------------------------------------------------------*/
 
 .commercial-container{
     display: inline-block;
@@ -390,6 +413,10 @@ body{
     font-weight: normal;
 }
 
+/*---------------------------------------------------------------------------------------------------*/
+/*===================================================================================================*/
+/*---------------------------------------------------------------------------------------------------*/
+
 .total-price-container{
     position: relative;
     width: 100%;
@@ -418,49 +445,126 @@ body{
     transition: 0.8s;
 }
 
+/*---------------------------------------------------------------------------------------------------*/
+/*===================================================================================================*/
+/*---------------------------------------------------------------------------------------------------*/
 
-#linux-tan{
-    text-align: center;
-    margin-top: 50px;
-    min-height: 100vh;
+.canvas{
     position: relative;
-    color: white;
-    text-align: center;
-    justify-content: space-between;
+    margin-top: max(50px, calc(450px - 60vh)); /* Reverse vh */
+    background: #161f28;
 }
-
-.C p{
-    position: relative;
-    transform: translate(0%,50vh);
-    font-size: 16px;
-    margin: 10px;
-}
-
-.A p{
-    position: relative;
-    top: 20px;
-    font-size: 16px;
-    margin: 10px;
-}
-
-footer{
-    text-align: center;
-    padding: 0px;
-    margin: 0px;
-    position: absolute;
-    height: 200px;
+.canvas-container{
     width: 100%;
-    background:#161f28;
-    border-top: 5px solid #FF4C01;
+    margin-top: 15px;
+    
+}
+.canvas-container a{
+    cursor: pointer;
+    display: inline-block;
+    justify-content: space-between;
+    vertical-align: text-top;
+    width: 100px;
+    height: 100px;
+    margin: 25px 10px;
+    border: 2px dotted white;
+    transition: 0.5s;
+
+    box-shadow:
+    3.4px 3.4px 2.7px rgba(0, 0, 0, 0.031),
+    8.7px 8.7px 6.9px rgba(0, 0, 0, 0.044),
+    17.7px 17.7px 14.2px rgba(0, 0, 0, 0.056),
+    36.5px 36.5px 29.2px rgba(0, 0, 0, 0.069),
+    100px 100px 80px rgba(0, 0, 0, 0.08)
+  ;
 
 }
-.B p{
+.canvas-container p{
     position: relative;
-    font-size: 12px;
-    top:  30px;
-    margin: 5px;
+    font-size: 16px;
+    font-weight: 300;
+    color: white;
+    transform: translateY(120px);
 }
-@media(max-height: 500px){
+.canvas-container a:hover{
+    scale: 107%;
+}
+#A3PORTRAIT{
+    width: calc(100px / 1.4142);
+}
+#SQUARE{
+    width: calc(100px * 1);
+}
+#A3LANDSCAPE{
+    width: calc(100px * 1.4142);
+}
+#WIDESCREEN{
+    width: calc(100px * (16/9));
+}
+
+/*---------------------------------------------------------------------------------------------------*/
+/*===================================================================================================*/
+/*---------------------------------------------------------------------------------------------------*/
+
+#tos{
+    position: relative;
+    margin-top: 150px;
+}
+#tos .text-title p:after{
+    width: 200px;
+}
+#tos-img{
+    /*To do: make parallax blurry background*/
+}
+.tos-container{
+    margin: 30px 20vw;
+}
+.text-lists, .text-header p{
+    color: white;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 4ch;
+    transition: 0.5s;
+    text-align:start;
+    list-style: square;
+}
+.tos-container p{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+.tos-list-container{
+    background: linear-gradient(94.94deg, #1d3036 -1.76%, #1a2530 80.53%);
+    padding: 20px 40px;
+    border-radius: 20px;
+}
+.highlight-1, .highlight-2{
+    background: linear-gradient(94.94deg, #FD9E04 -1.76%, #FF4C01 80.53%);
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+.highlight-2{
+    background: linear-gradient(94.94deg, #1bb3da -1.76%, #1382cc 80.53%);
+}
+.highlight-2{
+    text-decoration: none;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+}
+
+/*---------------------------------------------------------------------------------------------------*/
+/*===================================================================================================*/
+/*---------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------*/
+/*===================================================================================================*/
+/*---------------------------------------------------------------------------------------------------*/
+
+
+@media(max-height: 550px){
     .parts-header ,.background-header{
         padding: 0px;
     }
@@ -474,7 +578,25 @@ footer{
         font-size: 12px;
     }
 }
-@media(max-width: 1000px){
+
+/*The "canvas" div refuses to elaborate when the screen is too vertically long or short */
+/*Prolly happens because of the "commission-right" div position that is set to absolute (it will break even more when set to relative)*/
+/*it just can't resize along with the screen and so with the div below*/
+
+@media(max-width: 800px){
+    @media(min-height: 720px)
+    {
+        .canvas{
+        margin-top: -10vh;
+        }
+    }
+    @media(min-height: 1000px)
+    {
+        .canvas{
+        margin-top: -40vh;
+        }
+    }
+    
     .commission-container-left, .commission-container-right{
         display: flex;
         justify-content: center;
@@ -484,6 +606,7 @@ footer{
     .commission-container-right{
         position: relative;
         margin-top: 50px;
+        height: 113vh;
     }
     .parts-container, .background-container{
         padding: 12px 12px;
@@ -504,9 +627,11 @@ footer{
         font-size: 12px;
     }
 }
-
 @media(max-width: 200px){
     
+    body{
+        overflow-x:visible;
+    }
     .text-normal p{
         font-size: 16px;
     }

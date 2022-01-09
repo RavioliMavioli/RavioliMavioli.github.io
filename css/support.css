@@ -1,0 +1,50 @@
+#support{
+    text-align: center;
+    margin-top: 150px;
+    min-height: 100vh;
+    position: relative;
+    color: white;
+    text-align: center;
+    justify-content: space-between;
+}
+
+#support .text-title p:after{
+    width: 100px;
+}
+.C p{
+    position: relative;
+    transform: translate(0%,30vh);
+    font-size: 16px;
+    margin: 10px;
+}
+
+.A p{
+    position: relative;
+    top: 20px;
+    font-size: 16px;
+    margin: 10px;
+}
+
+footer{
+    text-align: center;
+    padding: 0px;
+    margin: 0px 0px;
+    position: absolute;
+    width: 100%;
+    background:#161f28;
+    border-top: 5px solid #FF4C01;
+    height: 160px;
+    transform: translateX(-20px);
+}
+.B p{
+    position: relative;
+    font-size: 12px;
+    top:  20px;
+    margin: 5px;
+}
+
+@media(max-width: 700px){
+    #support .text-title p:after{
+        width: 110px;
+    }
+}

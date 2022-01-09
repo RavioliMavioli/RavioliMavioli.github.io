@@ -7,14 +7,15 @@ var currentBodyPart = 'halfbody';
 var currentBg       = 'solidcolor';
 
 let bodyPartName    = ['headshot', 'bustup', 'halfbody', 'kneeup', 'fullbody'];
-let pricePartInIDR  = ['Rp.125.000', 'Rp.175.000', 'Rp.250.000', 'Rp.325.000', 'Rp.425.000'];
+let pricePartInIDR  = ['Rp.150.000', 'Rp.225.000', 'Rp.300.000', 'Rp.375.000', 'Rp.449.000'];
 let pricePartInUSD  = ['$30', '$45', '$60', '$75', '$89'];
 
 let bgPartName      = ['solidcolor', 'simple', 'blurry', 'detailed'];
-let priceBgInIDR    = ['+Rp.0', '+Rp.40.000', '+Rp.120.000', '+Rp.200.000'];
+let priceBgInIDR    = ['+Rp.0', '+Rp.40.000', '+Rp.100.000', '+Rp.200.000'];
 let priceBgInUSD    = ['+$0', '+$8', '+$20', '+$40'];
 
-
+let canvasSizes      = ['square', 'a3portrait', 'a3landscape', 'widescreen'];
+let currentCanvas     = 'square';
 
 function Region(regionID){
 
@@ -22,12 +23,13 @@ function Region(regionID){
     const USD = document.getElementById('Outdonesia');
 
     // Set the element class to the default state //
-    RegionSetToDefault();
+    document.getElementById('Indonesia').className = '';
+    document.getElementById('Outdonesia').className = '';
     // Change the button color by adding animation class //
     if (regionID=="Indonesia"){
         currentCurrency = 'Indonesia';
         IDR.classList.add('animation-change-color-region');
-        // Change currency to IDR
+        // Change all of the price variables inside the css file to IDR
         for (var index = 0; index < bodyPartName.length; index++){
             document.querySelector(":root").style.setProperty(`--price-${bodyPartName[index]}-str`, `'${pricePartInIDR[index]}'`);
 
@@ -37,7 +39,7 @@ function Region(regionID){
     else {
         currentCurrency = 'Outdonesia';
         USD.classList.add('animation-change-color-region')
-        // Change currency to USD
+        // Change all of the price variables inside the css file to USD
         for (var index = 0; index < bodyPartName.length; index++){
             document.querySelector(":root").style.setProperty(`--price-${bodyPartName[index]}-str`, `'${pricePartInUSD[index]}'`);
             
@@ -48,11 +50,6 @@ function Region(regionID){
     UpdatePrice();
 }
 
-function RegionSetToDefault(){
-    document.getElementById('Indonesia').className = '';
-    document.getElementById('Outdonesia').className = '';
-}
-
 function CropAnimate(bodyPartID){
 
     var bodyPartIDtoString      = `${bodyPartID}`;
@@ -61,7 +58,6 @@ function CropAnimate(bodyPartID){
     const dynamicCrop           = document.querySelector('.dynamic-price-container');
     const dynamicCrop_up        = document.querySelector('.dynamic-price-container-up');
     const movingText            = document.getElementById('PARTNAME');
-    const headshotStr           = document.getElementById('HEADSHOT');
 
     CropSetToDefault(dynamicCrop, dynamicCrop_up);      // Set the element class to the default state //
 
@@ -96,14 +92,6 @@ function CropSetToDefault(dynamicCrop, dynamicCrop_up){
 
 }
 
-function SetTotalPrice(totalPrice){
-    document.querySelector(":root").style.setProperty('--total-price-str',
-        (function(){
-            if (currentCurrency == "Outdonesia") {return `'$${totalPrice}'`} else {return `'Rp.${parseInt(totalPrice)}.000'`};
-        }())
-    )
-}
-
 function TotalPrice(IDlowercase, type){
 
     // Initialization for getting the current price as integer
@@ -111,12 +99,12 @@ function TotalPrice(IDlowercase, type){
     var strPrice    = getPrice.toString();
     var slicedPrice = '';
     var priceInt    = 0;
-    var isBg     = false;
+    var isBg        = false;
     
     // Add the price clicked to the current price
-    if (type == "background") { strPrice = strPrice.slice(1); isBg = true;} // Remove + from bg price
-    if (currentCurrency=='Outdonesia') { slicedPrice = strPrice.substring(2, strPrice.length - 1);} // Remove quote and dollar sign
-    else { slicedPrice = strPrice.substring(4, strPrice.length - 1);}
+    if (type == "background") { strPrice = strPrice.slice(1); isBg = true;} // Remove "+" from bg price string
+    if (currentCurrency=='Outdonesia') { slicedPrice = strPrice.substring(2, strPrice.length - 1);} // Remove quotes and dollar sign
+    else { slicedPrice = strPrice.substring(4, strPrice.length - 1);} // Remove "Rp." and quotes
 
     priceInt    = parseInt(slicedPrice);                      // Convert it to integer
     
@@ -124,7 +112,6 @@ function TotalPrice(IDlowercase, type){
     else currentPrice  = priceInt;
     totalPrice = (currentPrice + bgPrice)*commercial;
     SetTotalPrice(totalPrice);
-
 }
 
 function UpdatePrice(){
@@ -152,6 +139,14 @@ function UpdatePrice(){
         SetTotalPrice(totalPrice);
 }
 
+function SetTotalPrice(totalPrice){
+    document.querySelector(":root").style.setProperty('--total-price-str',
+        (function(){
+            if (currentCurrency == "Outdonesia") {return `'$${totalPrice}'`} else {return `'Rp.${parseInt(totalPrice)}.000'`};
+        }())
+    )
+}
+
 function BgAnimate(bgID){
     var bgIDtoString            = `${bgID}`;
     var IDlowercase             = bgIDtoString.toLowerCase();
@@ -160,9 +155,9 @@ function BgAnimate(bgID){
 
     BgSetToDefault();      // Set the element class to the default state //
 
-    document.querySelector(":root").style.setProperty(`--color-${IDlowercase}`, 'white');       // Move the cropping line, this function is flexible depending on the body part name
-    bg.classList.add('animation-change-color-bg');
-    commissionBg.classList.add(`animation-change-bg`);
+    document.querySelector(":root").style.setProperty(`--color-${IDlowercase}`, 'white'); // Set selected price color to white    
+    bg.classList.add('animation-change-color-bg');  // Change the color of the button to orange gradient by inserting the animation class
+    commissionBg.classList.add(`animation-change-bg`); // Put the changing opacity animation class to the selected background
 
     TotalPrice(IDlowercase, "background");
     currentBg = IDlowercase;
@@ -182,22 +177,38 @@ function BgSetToDefault(){
 }
 
 function Commercial(){
-    var commercalButton = document.querySelector('.commercial-check-1');
+    let commercalButton = document.querySelector('.commercial-check-1');
 
     if(commercial != 1) { commercial = 1; commercalButton.className = 'commercial-check-1 box-bold';}
-    else { commercial = 1.5; commercalButton.classList.add("animation-commercial");}
+    else {commercial = 1.5; commercalButton.classList.add("animation-commercial");}
 
     totalPrice = (currentPrice + bgPrice)*commercial;
     SetTotalPrice(totalPrice);
 }
 
+function Canvas(canvasID){
+    var canvasToString          = `${canvasID}`;
+    var IDlowercase             = canvasToString.toLowerCase();
+    let canvas                  = document.getElementById(canvasID);
+
+    // Set canvas state to default
+    canvasSizes.forEach(canvasElement=>{
+        let uppercaseCanvas = canvasElement.toUpperCase();
+        document.getElementById(`${uppercaseCanvas}`).className ='';
+    });
+    
+    // Set color to white
+    canvas.classList.add("animation-canvas");
+    currentCanvas = IDlowercase;
+    console.log(currentCanvas);
+}
 
 
-if (window.innerWidth < 1000)
+if (window.innerWidth < 800)
         document.querySelector(":root").style.setProperty("--x-offset", '25vw');
 if (window.attachEvent) {
     window.attachEvent('onresize', function() {
-        if (window.innerWidth < 1000)
+        if (window.innerWidth < 800)
         document.querySelector(":root").style.setProperty("--x-offset", '25vw');
         else
         document.querySelector(":root").style.setProperty("--x-offset", '8vw');
@@ -205,9 +216,18 @@ if (window.attachEvent) {
 }
 else if (window.addEventListener) {
     window.addEventListener('resize', function() {
-        if (window.innerWidth < 1000)
+        if (window.innerWidth < 800)
         document.querySelector(":root").style.setProperty("--x-offset", '25vw');
         else
         document.querySelector(":root").style.setProperty("--x-offset", '8vw');
     });
 }
+
+let bg;
+let onceBg = true;
+window.addEventListener('scroll',function(){
+    if (onceBg) {onceBg = false; bg=document.getElementById("header-img");}
+    let value = window.scrollY;
+
+    bg.style.top = value*0.5 + 'px';
+})
