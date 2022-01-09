@@ -410,7 +410,7 @@ body{
 }
 .commercial-check-2 p{
     font-size: 14px;    
-    font-weight: normal;
+    font-weight: 300;
 }
 
 /*---------------------------------------------------------------------------------------------------*/
@@ -596,7 +596,36 @@ body{
         margin-top: -40vh;
         }
     }
-    
+
+    #portfolio p::after{
+        width: 70px;
+    }
+    #commission .text-title p::after{
+        width: 110px;
+    }
+    #tos .text-title p::after{
+        width: 130px;
+    }
+
+
+    .canvas-container p{
+        font-size: 14px;
+    }
+    .tos-container{
+        margin: 30px 3vw;
+    }
+    .text-lists{
+        font-size: 14px;
+    }
+    .tos-container p{
+        font-size: 16px;
+    }
+    .highlight-1, .highlight-2{
+        padding: 4px 8px;
+        font-size: 14px;
+    }
+
+
     .commission-container-left, .commission-container-right{
         display: flex;
         justify-content: center;
@@ -617,8 +646,10 @@ body{
     .background-container .parts-header{
         margin-top: 0px;
     }
+
+
     .text-title p{
-        font-size: 20px;
+        font-size: 18px;
     }
     .text-normal p, .A p{
         font-size: 16px;
@@ -637,11 +668,5 @@ body{
     }
     .text-title p{
         font-size: 20px;
-    }
-    #portfolio .text-title p:after{
-        width: 80px;
-    }
-    #commission .text-title p:after{
-        width: 110px;
     }
 }

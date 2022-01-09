@@ -43,8 +43,14 @@ footer{
     margin: 5px;
 }
 
-@media(max-width: 700px){
+@media(max-width: 800px){
     #support .text-title p:after{
-        width: 110px;
+        width: 70px;
+    }
+    .C p{
+        font-size: 14px;
+    }
+    .B p{
+        font-size: 10px;
     }
 }
