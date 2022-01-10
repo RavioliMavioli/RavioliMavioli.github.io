@@ -228,7 +228,7 @@ function Agree(){
 
 function ForwardToForm() {
     // Forwarding all current variables into Google form, this is quite tricky //
-
+    //
     let Parts         = "entry.1894098826";
     let Bg            = "entry.11836467";
     let Canvas        = "entry.484493434";
