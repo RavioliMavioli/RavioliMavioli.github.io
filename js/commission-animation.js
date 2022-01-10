@@ -1,6 +1,6 @@
-var currentPrice    = 50;
+var currentPrice    = 60;
 var bgPrice         = 0;
-var totalPrice      = 0;
+var totalPrice      = 60;
 var commercial      = 1;
 var agree           = false;
 var currentCurrency = 'Outdonesia';
@@ -228,14 +228,6 @@ function Agree(){
 
 function ForwardToForm() {
     // Forwarding all current variables into Google form, this is quite tricky //
-
-    //Index    Body         Background          Canvas//
-
-    //  0.   Headshot       Solid color         A3 Portrait
-    //  1.   Bustup         Simple              Square
-    //  2.   Halfbody       Blurry              A3 Landscape
-    //  3.   Kneeup         Detailed            Widescreen
-    //  4.   Fullbody
 
     let Parts         = "entry.1894098826";
     let Bg            = "entry.11836467";
