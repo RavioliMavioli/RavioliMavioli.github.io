@@ -39,7 +39,7 @@
 }
 .animation-order{
     scale: 0%;
-    margin-left: 10000px;
+    margin-top: 300px;
 }
 .animation-order-enabled{
     background: linear-gradient(94.94deg, #FD9E04 -1.76%, #FF4C01 80.53%);
