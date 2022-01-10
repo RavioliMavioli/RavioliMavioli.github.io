@@ -409,8 +409,9 @@ body{
     width: 70%;
 }
 .commercial-check-2 p{
-    font-size: 14px;    
+    font-size: 16px;    
     font-weight: 300;
+    color: white;
 }
 
 /*---------------------------------------------------------------------------------------------------*/
@@ -545,17 +546,69 @@ body{
     padding: 6px 10px;
     border-radius: 20px;
     font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    text-align: center;
+    color: white;
 }
 .highlight-2{
     background: linear-gradient(94.94deg, #1bb3da -1.76%, #1382cc 80.53%);
 }
-.highlight-2{
-    text-decoration: none;
-    text-align: center;
-    font-size: 18px;
+
+.agree-container{
+    display: inline-block;
+    width: 50%;
+}
+.agree-check-1, .agree-check-2{
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+}
+.agree-check-1{
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 100px;
+    transition: 0.3s;
+}
+.agree-check-1:hover{
+    scale: 115%;
+}
+.agree-check-2{
+    width: auto;
+}
+.agree-check-2 p{
+    font-size: 16px;    
+    font-weight: 300;
     color: white;
 }
 
+.order-btn-enabled, .order-btn-disabled{
+    position: absolute; 
+    font-style: bold;
+    font-size: 26px;
+    color: white;
+    background: gray;
+    padding: 10px 50px;
+
+    border-radius: 75px;
+    transform: translateX(-50%);
+}
+.order-btn-enabled:hover{
+    background: white;
+    color:black;
+}
+.order-btn-enabled{
+    cursor: pointer;
+    opacity: 0%;
+    transition: 0.5s;
+}
+.order-btn-disabled{
+    background: gray;
+}
 /*---------------------------------------------------------------------------------------------------*/
 /*===================================================================================================*/
 /*---------------------------------------------------------------------------------------------------*/
@@ -596,6 +649,20 @@ body{
         margin-top: -40vh;
         }
     }
+    .agree-check-2 p, .commercial-check-2 p{
+        padding: 10px;
+    }
+    
+
+    .text-title p{
+        font-size: 18px;
+    }
+    .text-normal p, .A p{
+        font-size: 16px;
+    }
+    .B p{
+        font-size: 12px;
+    }
 
     #portfolio p::after{
         width: 70px;
@@ -606,11 +673,10 @@ body{
     #tos .text-title p::after{
         width: 130px;
     }
-
-
     .canvas-container p{
         font-size: 14px;
     }
+    
     .tos-container{
         margin: 30px 3vw;
     }
@@ -645,18 +711,7 @@ body{
     }
     .background-container .parts-header{
         margin-top: 0px;
-    }
-
-
-    .text-title p{
-        font-size: 18px;
-    }
-    .text-normal p, .A p{
-        font-size: 16px;
-    }
-    .B p{
-        font-size: 12px;
-    }
+    }  
 }
 @media(max-width: 200px){
     

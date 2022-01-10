@@ -1,7 +1,7 @@
 .animation-text-fade p{
     color: white;
 }
-.animation-change-color p{
+.animation-change-color p, .animation-agree{
     background: linear-gradient(94.94deg, #1bb3da -1.76%, #1382cc 80.53%);
 }
 .animation-change-color-region, .animation-change-color-bg p{
@@ -36,6 +36,13 @@
 }
 .opacity-mid{
     opacity: 75%;
+}
+.animation-order{
+    scale: 0%;
+}
+.animation-order-enabled{
+    background: linear-gradient(94.94deg, #FD9E04 -1.76%, #FF4C01 80.53%);
+    opacity: 100%;
 }
 :root{
     --total-price-str: "$60";

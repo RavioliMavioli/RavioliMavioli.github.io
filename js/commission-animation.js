@@ -1,10 +1,13 @@
-var currentPrice = 50;
-var bgPrice = 0;
-var totalPrice = 0;
-var commercial = 1;
+var currentPrice    = 50;
+var bgPrice         = 0;
+var totalPrice      = 0;
+var commercial      = 1;
+var agree           = false;
 var currentCurrency = 'Outdonesia';
 var currentBodyPart = 'halfbody';
 var currentBg       = 'solidcolor';
+
+let currencyAll     = ['Indonesia', 'Outdonesia'];
 
 let bodyPartName    = ['headshot', 'bustup', 'halfbody', 'kneeup', 'fullbody'];
 let pricePartInIDR  = ['Rp.150.000', 'Rp.225.000', 'Rp.300.000', 'Rp.375.000', 'Rp.449.000'];
@@ -203,6 +206,71 @@ function Canvas(canvasID){
     console.log(currentCanvas);
 }
 
+function Agree(){
+    let agreeButton         = document.querySelector('.agree-check-1');
+    let orderButtonDisabled = document.querySelector('.order-btn-disabled');
+    let orderButtonEnabled  = document.querySelector('.order-btn-enabled');
+
+    if(agree){
+        agree = false;
+        agreeButton.className = 'agree-check-1 box-bold';
+        orderButtonDisabled.className = 'order-btn-disabled';
+        orderButtonEnabled.className = 'order-btn-enabled';
+    }
+    else {
+        agree = true;
+        agreeButton.classList.add("animation-agree");
+        orderButtonDisabled.classList.add("animation-order");
+        orderButtonEnabled.classList.add("animation-order-enabled");
+    }
+
+}
+
+function ForwardToForm() {
+    // Forwarding all current variables into Google form, this is quite tricky //
+
+    //Index    Body         Background          Canvas//
+
+    //  0.   Headshot       Solid color         A3 Portrait
+    //  1.   Bustup         Simple              Square
+    //  2.   Halfbody       Blurry              A3 Landscape
+    //  3.   Kneeup         Detailed            Widescreen
+    //  4.   Fullbody
+
+    let Parts         = "entry.1894098826";
+    let Bg            = "entry.11836467";
+    let Canvas        = "entry.484493434";
+    let Commercial    = "entry.848784798";
+    let Currency      = "entry.339349554";
+    let Price         = "entry.1342342806";
+
+
+    let fCurrency       = ["IDR (Rupiah)", "USD (US Dollar)"];
+    let fParts          = ["Headshot", "Bust Up","Half Body","Knee Up", "Fullbody"];
+    let fBg             = ["Solid Color","Simple Background","Blur Background","Detailed Background"];
+    let fCanvas         = ["Square","A3 Potrait","A3 Landscape","Widescreen 5K"];
+    let fCommercial     = (function(){
+        if (commercial == 1) {return "No, I only use it for non-commercial purposes."} else {return "Yes, I want it to be used as commercial purposes."};
+    }());
+    let totalPriceStr   = (function(){
+        if (currentCurrency == "Outdonesia") {return `$${totalPrice}`} else {return `Rp.${parseInt(totalPrice)}.000`};
+    }());
+
+    let iParts          = bodyPartName.indexOf(currentBodyPart);
+    let iBg             = bgPartName.indexOf(currentBg);
+    let iCanvas         = canvasSizes.indexOf(currentCanvas);
+    let iCurrency       = currencyAll.indexOf(currentCurrency);
+
+
+    window.open(`https://docs.google.com/forms/d/e/1FAIpQLSePoEfMdtBQeu77gCH41TZ6KMfOeQ2uUVPbD1SLZBG9afAUmw/viewform?${Parts}=${fParts[iParts]}&${Bg}=${fBg[iBg]}&${Canvas}=${fCanvas[iCanvas]}&${Commercial}=${fCommercial}&${Currency}=${fCurrency[iCurrency]}&${Price}=${totalPriceStr}`
+    
+    
+    
+    
+    
+    
+    , '_blank');
+}
 
 if (window.innerWidth < 800)
         document.querySelector(":root").style.setProperty("--x-offset", '25vw');
