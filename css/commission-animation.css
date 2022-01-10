@@ -39,6 +39,7 @@
 }
 .animation-order{
     scale: 0%;
+    opacity: 0%;
     margin-top: 300px;
 }
 .animation-order-enabled{
