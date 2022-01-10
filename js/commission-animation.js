@@ -1,11 +1,11 @@
-var currentPrice    = 60;
-var bgPrice         = 0;
-var totalPrice      = 60;
-var commercial      = 1;
-var agree           = false;
-var currentCurrency = 'Outdonesia';
-var currentBodyPart = 'halfbody';
-var currentBg       = 'solidcolor';
+let currentPrice    = 60;
+let bgPrice         = 0;
+let totalPrice      = 60;
+let commercial      = 1;
+let agree           = false;
+let currentCurrency = 'Outdonesia';
+let currentBodyPart = 'halfbody';
+let currentBg       = 'solidcolor';
 
 let currencyAll     = ['Indonesia', 'Outdonesia'];
 
@@ -32,8 +32,8 @@ function Region(regionID){
     if (regionID=="Indonesia"){
         currentCurrency = 'Indonesia';
         IDR.classList.add('animation-change-color-region');
-        // Change all of the price variables inside the css file to IDR
-        for (var index = 0; index < bodyPartName.length; index++){
+        // Change all of the price letiables inside the css file to IDR
+        for (let index = 0; index < bodyPartName.length; index++){
             document.querySelector(":root").style.setProperty(`--price-${bodyPartName[index]}-str`, `'${pricePartInIDR[index]}'`);
 
             if (index < bgPartName.length) document.querySelector(":root").style.setProperty(`--price-${bgPartName[index]}-str`, `'${priceBgInIDR[index]}'`); 
@@ -42,8 +42,8 @@ function Region(regionID){
     else {
         currentCurrency = 'Outdonesia';
         USD.classList.add('animation-change-color-region')
-        // Change all of the price variables inside the css file to USD
-        for (var index = 0; index < bodyPartName.length; index++){
+        // Change all of the price letiables inside the css file to USD
+        for (let index = 0; index < bodyPartName.length; index++){
             document.querySelector(":root").style.setProperty(`--price-${bodyPartName[index]}-str`, `'${pricePartInUSD[index]}'`);
             
             if (index < bgPartName.length) document.querySelector(":root").style.setProperty(`--price-${bgPartName[index]}-str`, `'${priceBgInUSD[index]}'`); 
@@ -55,9 +55,9 @@ function Region(regionID){
 
 function CropAnimate(bodyPartID){
 
-    var bodyPartIDtoString      = `${bodyPartID}`;
-    var IDlowercase             = bodyPartIDtoString.toLowerCase();
-    var bodyPart                = document.getElementById(bodyPartID);
+    let bodyPartIDtoString      = `${bodyPartID}`;
+    let IDlowercase             = bodyPartIDtoString.toLowerCase();
+    let bodyPart                = document.getElementById(bodyPartID);
     const dynamicCrop           = document.querySelector('.dynamic-price-container');
     const dynamicCrop_up        = document.querySelector('.dynamic-price-container-up');
     const movingText            = document.getElementById('PARTNAME');
@@ -73,7 +73,7 @@ function CropAnimate(bodyPartID){
     if(bodyPartID == 'FULLBODY')
         dynamicCrop_up.classList.add('animation-fullbody-up');
 
-    // Set --total-price-str variable to the new price
+    // Set --total-price-str letiable to the new price
     TotalPrice(IDlowercase, "crop");
     currentBodyPart = IDlowercase;
 }
@@ -98,11 +98,11 @@ function CropSetToDefault(dynamicCrop, dynamicCrop_up){
 function TotalPrice(IDlowercase, type){
 
     // Initialization for getting the current price as integer
-    var getPrice    = getComputedStyle(document.querySelector(':root')).getPropertyValue(`--price-${IDlowercase}-str`);
-    var strPrice    = getPrice.toString();
-    var slicedPrice = '';
-    var priceInt    = 0;
-    var isBg        = false;
+    let getPrice    = getComputedStyle(document.querySelector(':root')).getPropertyValue(`--price-${IDlowercase}-str`);
+    let strPrice    = getPrice.toString();
+    let slicedPrice = '';
+    let priceInt    = 0;
+    let isBg        = false;
     
     // Add the price clicked to the current price
     if (type == "background") { strPrice = strPrice.slice(1); isBg = true;} // Remove "+" from bg price string
@@ -118,10 +118,10 @@ function TotalPrice(IDlowercase, type){
 }
 
 function UpdatePrice(){
-    var getSelectedPartPrice    = getComputedStyle(document.querySelector(':root')).getPropertyValue(`--price-${currentBodyPart}-str`);
-    var getSelectedBgPrice      = getComputedStyle(document.querySelector(':root')).getPropertyValue(`--price-${currentBg}-str`);
-    var {slicedPartPrice, slicedBgPrice} = '';
-    var totalPrice    = 0;
+    let getSelectedPartPrice    = getComputedStyle(document.querySelector(':root')).getPropertyValue(`--price-${currentBodyPart}-str`);
+    let getSelectedBgPrice      = getComputedStyle(document.querySelector(':root')).getPropertyValue(`--price-${currentBg}-str`);
+    let {slicedPartPrice, slicedBgPrice} = '';
+    let totalPrice    = 0;
     
     if (currentCurrency=='Outdonesia'){
         slicedPartPrice = getSelectedPartPrice.substring(2, getSelectedPartPrice.length - 1);
@@ -151,10 +151,10 @@ function SetTotalPrice(totalPrice){
 }
 
 function BgAnimate(bgID){
-    var bgIDtoString            = `${bgID}`;
-    var IDlowercase             = bgIDtoString.toLowerCase();
-    var bg                      = document.getElementById(bgID);
-    var commissionBg            = document.querySelector(`.img-${IDlowercase}`);
+    let bgIDtoString            = `${bgID}`;
+    let IDlowercase             = bgIDtoString.toLowerCase();
+    let bg                      = document.getElementById(bgID);
+    let commissionBg            = document.querySelector(`.img-${IDlowercase}`);
 
     BgSetToDefault();      // Set the element class to the default state //
 
@@ -190,8 +190,8 @@ function Commercial(){
 }
 
 function Canvas(canvasID){
-    var canvasToString          = `${canvasID}`;
-    var IDlowercase             = canvasToString.toLowerCase();
+    let canvasToString          = `${canvasID}`;
+    let IDlowercase             = canvasToString.toLowerCase();
     let canvas                  = document.getElementById(canvasID);
 
     // Set canvas state to default
@@ -227,34 +227,37 @@ function Agree(){
 }
 
 function ForwardToForm() {
-    // Forwarding all current variables into Google form, this is quite tricky //
+    // Forwarding all current letiables into Google form, this is quite tricky //
     //
-    let Parts         = "entry.1894098826";
-    let Bg            = "entry.11836467";
-    let Canvas        = "entry.484493434";
-    let Commercial    = "entry.848784798";
-    let Currency      = "entry.339349554";
-    let Price         = "entry.1342342806";
+    let Parts             = "entry.1894098826";
+    let Bg                = "entry.11836467";
+    let Canvas            = "entry.484493434";
+    let Commercial        = "entry.848784798";
+    let Currency          = "entry.339349554";
+    let Price             = "entry.1342342806";
 
 
-    let fCurrency       = ["IDR (Rupiah)", "USD (US Dollar)"];
-    let fParts          = ["Headshot", "Bust Up","Half Body","Knee Up", "Fullbody"];
-    let fBg             = ["Solid Color","Simple Background","Blur Background","Detailed Background"];
-    let fCanvas         = ["Square","A3 Potrait","A3 Landscape","Widescreen 5K"];
-    let fCommercial     = (function(){
-        if (commercial == 1) {return "No, I only use it for non-commercial purposes."} else {return "Yes, I want it to be used as commercial purposes."};
+    let fCurrency         = ["IDR (Rupiah)", "USD (US Dollar)"];
+    let fParts            = ["Headshot", "Bust Up","Half Body","Knee Up", "Fullbody"];
+    let fBg               = ["Solid Color","Simple Background","Blur Background","Detailed Background"];
+    let fCanvas           = ["Square","A3 Potrait","A3 Landscape","Widescreen 5K"];
+    let fCommercial       = (function(){
+        if (commercial   == 1) {return "No, I only use it for non-commercial purposes."} else {return "Yes, I want it to be used as commercial purposes."};
     }());
-    let totalPriceStr   = (function(){
+    let totalPriceStr     = (function(){
         if (currentCurrency == "Outdonesia") {return `$${totalPrice}`} else {return `Rp.${parseInt(totalPrice)}.000`};
     }());
 
-    let iParts          = bodyPartName.indexOf(currentBodyPart);
-    let iBg             = bgPartName.indexOf(currentBg);
-    let iCanvas         = canvasSizes.indexOf(currentCanvas);
-    let iCurrency       = currencyAll.indexOf(currentCurrency);
+    let iParts            = bodyPartName.indexOf(currentBodyPart);
+    let iBg               = bgPartName.indexOf(currentBg);
+    let iCanvas           = canvasSizes.indexOf(currentCanvas);
+    let iCurrency         = currencyAll.indexOf(currentCurrency);
+    let updatedTotalPrice = window.getComputedStyle(document.querySelector(":root")).getPropertyValue("--total-price-str");
 
-
-    window.open(`https://docs.google.com/forms/d/e/1FAIpQLSePoEfMdtBQeu77gCH41TZ6KMfOeQ2uUVPbD1SLZBG9afAUmw/viewform?${Parts}=${fParts[iParts]}&${Bg}=${fBg[iBg]}&${Canvas}=${fCanvas[iCanvas]}&${Commercial}=${fCommercial}&${Currency}=${fCurrency[iCurrency]}&${Price}=${totalPriceStr}`
+    console.log(updatedTotalPrice);
+    // Open Google Form URL with parameters, each parameters are seperated by "&"
+    // This will autofill the destined lists
+    window.open(`https://docs.google.com/forms/d/e/1FAIpQLSePoEfMdtBQeu77gCH41TZ6KMfOeQ2uUVPbD1SLZBG9afAUmw/viewform?${Parts}=${fParts[iParts]}&${Bg}=${fBg[iBg]}&${Canvas}=${fCanvas[iCanvas]}&${Commercial}=${fCommercial}&${Currency}=${fCurrency[iCurrency]}&${Price}=${updatedTotalPrice}`
     
     
     
