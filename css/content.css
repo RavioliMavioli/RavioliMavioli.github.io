@@ -157,7 +157,7 @@ body{
     opacity: 100%;
 }
 .img-simple{
-    background: rgb(219, 192, 179);
+    background: url(../resource/image/commission/BG-1.jpg);
 }
 .img-blurry{
     background: rgb(130, 123, 158);
@@ -712,7 +712,11 @@ body{
     }
     .background-container .parts-header{
         margin-top: 0px;
-    }  
+    }
+    .order-btn-enabled, .order-btn-disabled{
+        font-size: 20px;
+        padding: 8px 38px;
+    }
 }
 @media(max-width: 200px){
     

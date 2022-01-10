@@ -252,10 +252,11 @@ function ForwardToForm() {
     let iBg               = bgPartName.indexOf(currentBg);
     let iCanvas           = canvasSizes.indexOf(currentCanvas);
     let iCurrency         = currencyAll.indexOf(currentCurrency);
-    let updatedTotalPrice = window.getComputedStyle(document.querySelector(":root")).getPropertyValue("--total-price-str");
+    let totalPrice_raw    = window.getComputedStyle(document.querySelector(":root")).getPropertyValue("--total-price-str");
+    let updatedTotalPrice = totalPrice_raw.slice(1, totalPrice_raw.length - 1); // Remmove quotes from the string
 
     console.log(updatedTotalPrice);
-    // Open Google Form URL with parameters, each parameters are seperated by "&"
+    // Open Google Form URL with arguments, each arguments are seperated by "&"
     // This will autofill the destined lists
     window.open(`https://docs.google.com/forms/d/e/1FAIpQLSePoEfMdtBQeu77gCH41TZ6KMfOeQ2uUVPbD1SLZBG9afAUmw/viewform?${Parts}=${fParts[iParts]}&${Bg}=${fBg[iBg]}&${Canvas}=${fCanvas[iCanvas]}&${Commercial}=${fCommercial}&${Currency}=${fCurrency[iCurrency]}&${Price}=${updatedTotalPrice}`
     
