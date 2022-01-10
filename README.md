@@ -1,8 +1,8 @@
-# Welcome
+# Welcome!
 Hello!  
-This is RavioliMavioli's commission and portofolio website created using pure HTML, CSS, and JavaScript.  
+This is RavioliMavioli's commission and portofolio website created by using pure HTML, CSS, and JavaScript.  
   
-Why did I create this with from scratch? Why did't I use Wix, Wordpress, or Carrd like the other Artists?  
+Why did I create this from scratch? Why did't I use Wix, Wordpress, or Carrd like any other Artists?  
 
 Because why not.  
 And I hate Wordpress.  
