@@ -607,7 +607,7 @@ body{
     transition: 0.5s;
 }
 .order-btn-disabled{
-    margin-left: 0px;
+    margin-top: 0px;
     background: gray;
 }
 /*---------------------------------------------------------------------------------------------------*/
