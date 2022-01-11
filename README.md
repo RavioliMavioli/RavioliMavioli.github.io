@@ -1,6 +1,7 @@
 # Welcome!
-Hello!  
-This is RavioliMavioli's commission and portofolio website created by using pure HTML, CSS, and JavaScript without any framework. 
+Hello and Welcome!
+RavioliMavioli's commission and portofolio website is created by using pure HTML, CSS, and JavaScript without any framework. 
+It is hosted on the GitHub page.
   
 Why did I create this from scratch? Why didn't I use Wix, Wordpress, or Carrd like any other Artists?  
 
