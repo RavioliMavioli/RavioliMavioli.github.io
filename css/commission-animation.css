@@ -46,6 +46,14 @@
     background: linear-gradient(94.94deg, #FD9E04 -1.76%, #FF4C01 80.53%);
     opacity: 100%;
 }
+.animation-sosmed p{
+    color: white;
+    margin-top: 6px;
+}
+.animation-sosmed img{
+    transform: scale(1.17);
+}
+
 :root{
     --total-price-str: "$60";
 

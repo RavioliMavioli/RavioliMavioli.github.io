@@ -73,11 +73,11 @@
         
         <div class="external-links"><br>
             <ul>
-                <li><a href="https://www.pixiv.net/en/users/60562229" target="_blank"><img src="resource/svg/Pixiv.svg"></a></li>
-                <li><a href="https://www.instagram.com/raviolimavioli/" target="_blank"><img src="resource/svg/instagram.svg"></a></li>
-                <li><a href="https://twitter.com/raviolimavioli" target="_blank"><img src="resource/svg/twitter.svg"></a></li>
-                <li><a href="https://github.com/RavioliMavioli" target="_blank"><img src="resource/svg/Github.svg"></a></li>
-                <li><a href="https://ko-fi.com/raviolimavioli" target="_blank"><img src="resource/svg/Kofi.svg"></a></li>
+                <li><a id="pixiv" href="https://www.pixiv.net/en/users/60562229" target="_blank" onmouseover="ExternalLinksEnter('pixiv')" onmouseleave="ExternalLinksLeave()"><img src="resource/svg/Pixiv.svg"><p>Pixiv</p></a></li>
+                <li><a id="instagram" href="https://www.instagram.com/raviolimavioli/" target="_blank" onmouseover="ExternalLinksEnter('instagram')" onmouseleave="ExternalLinksLeave()"><img src="resource/svg/instagram.svg"><p>Instagram</p></a></li>
+                <li><a id="twitter" href="https://twitter.com/raviolimavioli" target="_blank" onmouseover="ExternalLinksEnter('twitter')" onmouseleave="ExternalLinksLeave()"><img src="resource/svg/twitter.svg"><p>Twitter</p></a></li>
+                <li><a id="github" href="https://github.com/RavioliMavioli" target="_blank" onmouseover="ExternalLinksEnter('github')" onmouseleave="ExternalLinksLeave()"><img src="resource/svg/Github.svg"><p>GitHub</p></a></li>
+                <li><a id="kofi" href="https://ko-fi.com/raviolimavioli" target="_blank" onmouseover="ExternalLinksEnter('kofi')" onmouseleave="ExternalLinksLeave()"><img src="resource/svg/Kofi.svg"><p>Ko-fi</p></a></li>
             </ul>
         </div>
     </div>
@@ -89,9 +89,9 @@
         <div class="navcenter" data-aos="fade-up" data-aos-once=true>
             <a onclick="scrollToTargetAdjusted('portfolio',75)">Portfolio</a>
             <a onclick="scrollToTargetAdjusted('commission',75)">Commission</a>
-            <a id="navlinux" onclick="scrollToTargetAdjusted('tos',75)">Terms of Service</a>
+            <a id="navtos" onclick="scrollToTargetAdjusted('tos',75)">Terms of Service</a>
         </div>
-        <div class="navsupport box-bold" data-aos="fade-up" data-aos-once=true><a onclick="scrollToTargetAdjusted('support',75)" target="_blank">Support</a></div>
+        <div class="navsupport" data-aos="fade-up" data-aos-once=true><a onclick="scrollToTargetAdjusted('support',75)" target="_blank">Support</a></div>
     </div>
 
 
@@ -177,7 +177,7 @@
                         </div>
                         
                     </div>
-                    <div class="dynamic-price-container-up box-bold">
+                    <div class="dynamic-price-container-up">
                         <div class="dynamic-price-bg">
                             <div class="dynamic-price-line-container">
                                 <div class="dynamic-price-line"></div>

@@ -36,69 +36,57 @@ html {
 /*---------------------------------------------------------------------------------------------------*/
 
 .navbar{
-    z-index: 200;
     position:sticky;
-    top: 0;
-    background: #161f28;
-    margin: 0px;
-    overflow: hidden;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 200;
+    top: 0;
+    background: #161f28;
+    overflow: hidden;
+    height: 55px;
 }
-.navbrand a{
-    cursor: pointer;
-    font-size: 24px;
-    color: white;
-    text-decoration: none;
-    box-sizing: border-box;
-    float: left;
-    display: inline-block;
-    text-align: center;
-    padding: 16px 24px;
-    transition: 0.5s
-}
-.navbrand a:hover{
-   color: orange;
-}
-.navsupport{
-    cursor: pointer;
-    margin-right: 20px;
-}
-.navsupport a{
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 18px;
-    box-sizing: border-box;
-    float: left;
-    display: inline-block;
-    text-align: center;
-    padding: 8px 24px;
-    transition: 0.5s;
-    background: linear-gradient(94.94deg, #FD9E04 -1.76%, #FF4C01 80.53%);
-    border-radius: 75px;
-}
-.navsupport a:hover{
-    background: white;
-    color: black;
-    border-radius: 0px;
+.navbrand, .navcenter, .navsupport{
+    position: relative;
+    display: flex;
+    justify-content:center;
+    width: 25%;
 }
 .navcenter{
-    cursor: pointer;
-    margin-right: 70px;
+    width: auto;
 }
-.navcenter a{
+.navbrand{
+    justify-content: left;
+}
+.navsupport{
+    justify-content: right;
+}
+.navbrand a, .navcenter a, .navsupport a{
+    cursor: pointer;
     color: white;
     text-decoration: none;
     font-weight: 500;
     font-size: 16px;
-    box-sizing: border-box;
-    float: left;
-    display: inline-block;
-    text-align: center;
+    
     padding: 10px 20px;
-    transition: 0.5s
+    transition: 0.5s;
+}
+.navbrand a{
+    font-size: 24px;
+    font-weight: 800;
+    margin-left: 10px;
+}
+.navsupport a{
+    background: linear-gradient(94.94deg, #FD9E04 -1.76%, #FF4C01 80.53%);;
+    border-radius: 50px;
+    margin-right: 10px;
+}
+.navbrand a:hover{
+   color: orange;
+}
+.navsupport a:hover{
+    background: white;
+    color: black;
 }
 .navcenter a:hover{
     background: white;
@@ -198,46 +186,24 @@ html {
     padding: 8px 8px;
     transition: 0.2s;
 }
-.external-links li::after{
+.external-links p{
     position: absolute;
-    margin-top: -20px;
+    display: block;
+    
+    margin-top: -15px;
     color: transparent;
     font-weight: 500;
     font-size: 14px;
-    display: block;
     transition: 0.5s;
 
-}
-.external-links li:nth-child(1):after{
-    content:"Pixiv";
-    transform: translate(10px,8px);
-}
-.external-links li:nth-child(2):after{
-    content:"Instagram";
-    transform: translate(-6px,8px);
-}
-.external-links li:nth-child(3):after{
-    content:"Twitter";
-    transform: translate(2px,8px);
-}
-.external-links li:nth-child(4):after{
-    content:"GitHub";
-    transform: translate(2.5px,8px);
-}
-.external-links li:nth-child(5)::after{
-    content:"Ko-Fi";
-    transform: translate(8px,8px);
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-
-.external-links li:hover:after{
-    color: white;
-    margin-top: 0px;
-}
-.external-links img:hover{
+/* .external-links img:hover{
     transform: scale(1.17);
-    /* filter: invert(48%) sepia(13%) saturate(3207%) hue-rotate(-20deg) brightness(150%) contrast(100%); */
-}
+    /* filter: invert(48%) sepia(13%) saturate(3207%) hue-rotate(-20deg) brightness(150%) contrast(100%); 
+}*/
 
 /*---------------------------------------------------------------------------------------------------*/
 /*===================================================================================================*/
@@ -248,20 +214,9 @@ html {
 /*---------------------------------------------------------------------------------------------------*/
 /*===================================================================================================*/
 /*---------------------------------------------------------------------------------------------------*/
+
 
 @media(max-width: 800px){
-    .navcenter{
-        margin-right: 38px;
-    }
-    .navbrand a{
-        font-size: 18px;
-    }
-    .navcenter a{
-        font-size: 14px;
-    }
-}
-
-@media(max-width: 719px){
     .Title img{
         width: 160px;
         height: auto;
@@ -287,44 +242,16 @@ html {
     }
     .external-links img{
         width: calc(50px / 1.2);
-        height: auto;
-        list-style: none;
-        display: inline-block;
-        position: relative;
     }
-    
-    .external-links li::after{
-        font-size:0px;
+    .external-links a p{
+        font-size: 12px;
     }
-    .external-links img:hover{
-        opacity: 60%;
+    .navbar{
+        height: 40px;
     }
-    /*
-    .external-links li:nth-child(1):after{
-        content:"Pixiv";
-        transform: translate(11px,8px);
-    }
-    .external-links li:nth-child(2):after{
-        content:"Instagram";
-        transform: translate(-1px,8px);
-    }
-    .external-links li:nth-child(3):after{
-        content:"Twitter";
-        transform: translate(5px,8px);
-    }
-    .external-links li:nth-child(4):after{
-        content:"GitHub";
-        transform: translate(6px,8px);
-    }
-    .external-links li:nth-child(5)::after{
-        content:"Ko-Fi";
-        transform: translate(10px,8px);
-    } */
-
-
     .navbar a{
         font-size: calc(18px / 1.33);
-        line-height: calc(21px / 1.33);
+        padding: 6px 15px;
     }
     .navcenter a{
         font-size: 12px;
@@ -332,14 +259,14 @@ html {
     }
     .navcenter{
         position: absolute;
-        margin-left: 20px;
+        margin-left: 10px;
     }
     .navbrand a{
         font-size: 0px;
     }
 }
-@media(max-width: 380px){
-    #navlinux{
+@media(max-width: 400px){
+    #navtos{
         font-size: 0px;
     }
 }

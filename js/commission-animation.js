@@ -268,6 +268,21 @@ function ForwardToForm() {
     , '_blank');
 }
 
+function ExternalLinksEnter(sosmed){
+    let destinedSosmed = document.getElementById(sosmed);
+
+    // Animation
+    destinedSosmed.classList.add(`animation-sosmed`);
+    console.log(sosmed);
+}
+
+function ExternalLinksLeave(){
+    let allSosmed = ["pixiv", "twitter", "instagram", "github", "kofi"];
+    allSosmed.forEach(element =>{
+        document.getElementById(element).className = '';
+    });
+}
+
 if (window.innerWidth < 800)
         document.querySelector(":root").style.setProperty("--x-offset", '25vw');
 if (window.attachEvent) {
