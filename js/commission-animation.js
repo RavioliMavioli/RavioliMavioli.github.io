@@ -258,14 +258,14 @@ function ForwardToForm() {
     console.log(updatedTotalPrice);
     // Open Google Form URL with arguments, each arguments are seperated by "&"
     // This will autofill the destined lists
-    window.open(`https://docs.google.com/forms/d/e/1FAIpQLSePoEfMdtBQeu77gCH41TZ6KMfOeQ2uUVPbD1SLZBG9afAUmw/viewform?${Parts}=${fParts[iParts]}&${Bg}=${fBg[iBg]}&${Canvas}=${fCanvas[iCanvas]}&${Commercial}=${fCommercial}&${Currency}=${fCurrency[iCurrency]}&${Price}=${updatedTotalPrice}`
+    // window.open(`https://docs.google.com/forms/d/e/1FAIpQLSePoEfMdtBQeu77gCH41TZ6KMfOeQ2uUVPbD1SLZBG9afAUmw/viewform?${Parts}=${fParts[iParts]}&${Bg}=${fBg[iBg]}&${Canvas}=${fCanvas[iCanvas]}&${Commercial}=${fCommercial}&${Currency}=${fCurrency[iCurrency]}&${Price}=${updatedTotalPrice}`
     
     
     
     
     
     
-    , '_blank');
+    //, '_blank');
 }
 
 function ExternalLinksEnter(sosmed){

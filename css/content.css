@@ -88,6 +88,17 @@ body{
 #commission{
     margin-top: 100px;
 }
+.comm-title::after{
+    color: white;
+    margin-top: 15px;
+    opacity: 50%;
+    font-size: 24px;
+    font-weight: 300;
+    position: relative;
+    content: "Status: Closed";
+    display: inline-block;
+}
+
 .region-container{
     position: relative;
     margin-top: 15px;
