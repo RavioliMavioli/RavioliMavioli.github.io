@@ -32,7 +32,7 @@ function Region(regionID){
     if (regionID=="Indonesia"){
         currentCurrency = 'Indonesia';
         IDR.classList.add('animation-change-color-region');
-        // Change all of the price letiables inside the css file to IDR
+        // Change all of the price variables inside the css file to IDR
         for (let index = 0; index < bodyPartName.length; index++){
             document.querySelector(":root").style.setProperty(`--price-${bodyPartName[index]}-str`, `'${pricePartInIDR[index]}'`);
 
@@ -42,7 +42,7 @@ function Region(regionID){
     else {
         currentCurrency = 'Outdonesia';
         USD.classList.add('animation-change-color-region')
-        // Change all of the price letiables inside the css file to USD
+        // Change all of the price variables inside the css file to USD
         for (let index = 0; index < bodyPartName.length; index++){
             document.querySelector(":root").style.setProperty(`--price-${bodyPartName[index]}-str`, `'${pricePartInUSD[index]}'`);
             
