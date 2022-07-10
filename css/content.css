@@ -168,13 +168,13 @@ body{
     opacity: 100%;
 }
 .img-simple{
-    background: url(../resource/image/commission/BG-1.jpg);
+    background: white;
 }
 .img-blurry{
-    background: rgb(130, 123, 158);
+    background: white;
 }
 .img-detailed{
-    background: rgb(171, 206, 157);
+    background: white;
 }
 
 .dynamic-price-container-up{

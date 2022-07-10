@@ -1,6 +1,6 @@
-let currentPrice    = 60;
+let currentPrice    = 30;
 let bgPrice         = 0;
-let totalPrice      = 60;
+let totalPrice      = 30;
 let commercial      = 1;
 let agree           = false;
 let currentCurrency = 'Outdonesia';
@@ -10,12 +10,12 @@ let currentBg       = 'solidcolor';
 let currencyAll     = ['Indonesia', 'Outdonesia'];
 
 let bodyPartName    = ['headshot', 'bustup', 'halfbody', 'kneeup', 'fullbody'];
-let pricePartInIDR  = ['Rp.150.000', 'Rp.225.000', 'Rp.300.000', 'Rp.375.000', 'Rp.449.000'];
-let pricePartInUSD  = ['$30', '$45', '$60', '$75', '$89'];
+let pricePartInIDR  = ['Rp.50.000', 'Rp.150.000', 'Rp.200.000', 'Rp.300.000', 'Rp.400.000'];
+let pricePartInUSD  = ['$15', '$25', '$30', '$40', '$50'];
 
 let bgPartName      = ['solidcolor', 'simple', 'blurry', 'detailed'];
-let priceBgInIDR    = ['+Rp.0', '+Rp.40.000', '+Rp.100.000', '+Rp.200.000'];
-let priceBgInUSD    = ['+$0', '+$8', '+$20', '+$40'];
+let priceBgInIDR    = ['+Rp.0', '+Rp.25.000', '+Rp.80.000', '+Rp.150.000'];
+let priceBgInUSD    = ['+$0', '+$5', '+$10', '+$20'];
 
 let canvasSizes      = ['square', 'a3portrait', 'a3landscape', 'widescreen'];
 let currentCanvas     = 'square';
