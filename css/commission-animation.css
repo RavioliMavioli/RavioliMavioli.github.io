@@ -55,18 +55,18 @@
 }
 
 :root{
-    --total-price-str: "$30";
+    --total-price-str: "$39";
 
-    --price-headshot-str: "$15";
-    --price-bustup-str: "$25";
-    --price-halfbody-str: "$30";
-    --price-kneeup-str: "$40";
-    --price-fullbody-str: "$50";
+    --price-headshot-str: "$14";
+    --price-bustup-str: "$24";
+    --price-halfbody-str: "$39";
+    --price-kneeup-str: "$59";
+    --price-fullbody-str: "$89";
 
     --price-solidcolor-str: "+$0";
-    --price-simple-str: "+$5";
-    --price-blurry-str: "+$10";
-    --price-detailed-str: "+$20";
+    --price-simple-str: "+$15";
+    --price-blurry-str: "+$25";
+    --price-detailed-str: "+$60";
 
 
     --x-offset: 8vw;
