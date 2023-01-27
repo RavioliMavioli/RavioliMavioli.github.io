@@ -10,7 +10,7 @@ let currentBg       = 'solidcolor';
 let currencyAll     = ['Indonesia', 'Outdonesia'];
 
 let bodyPartName    = ['headshot', 'bustup', 'halfbody', 'kneeup', 'fullbody'];
-let pricePartInIDR  = ['Rp.99.000', 'Rp.149.000', 'Rp.359.000', 'Rp.359.000', 'Rp.479.000'];
+let pricePartInIDR  = ['Rp.99.000', 'Rp.149.000', 'Rp.259.000', 'Rp.359.000', 'Rp.479.000'];
 let pricePartInUSD  = ['$14', '$29', '$49', '$69', '$89'];
 
 let bgPartName      = ['solidcolor', 'simple', 'blurry', 'detailed'];
