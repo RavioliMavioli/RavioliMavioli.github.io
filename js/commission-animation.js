@@ -11,11 +11,11 @@ let currentBg       = 'solidcolor';
 let currencyAll     = ['Indonesia', 'Outdonesia'];
 
 let bodyPartName    = ['bustup', 'halfbody', 'kneeup', 'fullbody'];
-let pricePartInIDR  = ['Rp.600.000', 'Rp.800.000', 'Rp.1000.000', 'Rp.1200.000'];
+let pricePartInIDR  = ['Rp.300.000', 'Rp.500.000', 'Rp.700.000', 'Rp.900.000'];
 let pricePartInUSD  = ['$59', '$79', '$99', '$119'];
 
 let bgPartName      = ['solidcolor', 'blurry', 'detailed', 'blender'];
-let priceBgInIDR    = ['+Rp.0', '+Rp.600.000', '+Rp.1000.000', '+Rp.1500.000'];
+let priceBgInIDR    = ['+Rp.0', '+Rp.400.000', '+Rp.600.000', '+Rp.900.000'];
 let priceBgInUSD    = ['+$0', '+$59', '+$99', '+$199'];
 
 let canvasSizes      = ['square', 'a3portrait', 'a3landscape', 'widescreen'];
