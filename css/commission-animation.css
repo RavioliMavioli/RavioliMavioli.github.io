@@ -55,33 +55,28 @@
 }
 
 :root{
-    --total-price-str: "$49";
+    --total-price-str: "$0";
 
-    --price-headshot-str: "$14";
-    --price-bustup-str: "$29";
-    --price-halfbody-str: "$49";
-    --price-kneeup-str: "$69";
-    --price-fullbody-str: "$89";
+    --price-bustup-str: "$0";
+    --price-halfbody-str: "$0";
+    --price-kneeup-str: "$0";
+    --price-fullbody-str: "$0";
 
     --price-solidcolor-str: "+$0";
-    --price-simple-str: "+$14";
-    --price-blurry-str: "+$35";
-    --price-detailed-str: "+$70";
-
+    --price-blurry-str: "+$0";
+    --price-detailed-str: "+$0";
+    --price-blender-str: "+$0";
 
     --x-offset: 8vw;
     --y-offset: -225%;
 
-    --price: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa";
-
-    --color-headshot: #1793d1;
     --color-bustup: #1793d1;
-    --color-halfbody: white;
+    --color-halfbody: #1793d1;
     --color-kneeup: #1793d1;
     --color-fullbody: #1793d1;
 
-    --color-solidcolor: white;
-    --color-simple: #FF4C01;
+    --color-solidcolor: #FF4C01;
     --color-blurry: #FF4C01;
     --color-detailed: #FF4C01;
+    --color-blender: #FF4C01;
 }

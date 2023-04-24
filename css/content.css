@@ -147,7 +147,7 @@ body{
     width: 60%;
     z-index: 100;
 }
-.img-arch, .img-solidcolor , .img-simple , .img-blurry , .img-detailed{
+.img-arch, .img-solidcolor , .img-blender , .img-blurry , .img-detailed{
     position: absolute;
     background-position: center;
     background-size:80vh;
@@ -167,7 +167,7 @@ body{
     background: white;
     opacity: 100%;
 }
-.img-simple{
+.img-blender{
     background: white;
 }
 .img-blurry{
@@ -324,7 +324,7 @@ body{
 /*===================================================================================================*/
 /*---------------------------------------------------------------------------------------------------*/
 
-#HEADSHOT::after, #BUSTUP::after, #HALFBODY::after, #KNEEUP::after, #FULLBODY::after{
+#BUSTUP::after, #HALFBODY::after, #KNEEUP::after, #FULLBODY::after{
     position: absolute;
     transform: translate(var(--x-offset), var(--y-offset));
     font-size: 16px;
@@ -332,10 +332,6 @@ body{
     text-align: start;
     float: left;
     transition: 0.5s;
-}
-#HEADSHOT::after{
-    content: var(--price-headshot-str);
-    color: var(--color-headshot);
 }
 #BUSTUP::after{
     content: var(--price-bustup-str);
@@ -361,7 +357,7 @@ body{
 /*===================================================================================================*/
 /*---------------------------------------------------------------------------------------------------*/
 
-#SOLIDCOLOR::after, #SIMPLE::after, #BLURRY::after, #DETAILED::after{
+#SOLIDCOLOR::after, #BLENDER::after, #BLURRY::after, #DETAILED::after{
     position: absolute;
     transform: translate(var(--x-offset), var(--y-offset));
     font-size: 16px;
@@ -375,10 +371,6 @@ body{
     content: var(--price-solidcolor-str);
     color: var(--color-solidcolor);
 }
-#SIMPLE::after{
-    content: var(--price-simple-str);
-    color: var(--color-simple);
-}
 
 #BLURRY::after{
     content: var(--price-blurry-str);
@@ -390,6 +382,13 @@ body{
     color: var(--color-detailed);
 }
 
+#BLENDER::after{
+    content: var(--price-blender-str);
+    color: gray;
+}
+#BLENDER{
+    cursor: not-allowed;
+}
 /*---------------------------------------------------------------------------------------------------*/
 /*===================================================================================================*/
 /*---------------------------------------------------------------------------------------------------*/
@@ -627,7 +626,10 @@ body{
 /*---------------------------------------------------------------------------------------------------*/
 /*===================================================================================================*/
 /*---------------------------------------------------------------------------------------------------*/
-
+.grayed{
+    cursor: not-allowed !important;
+    background-color: gray;
+}
 
 @media(max-height: 550px){
     .parts-header ,.background-header{
@@ -638,8 +640,8 @@ body{
         padding: 6px;
         margin: 10px 22%;
     }
-    #HEADSHOT::after, #BUSTUP::after, #HALFBODY::after, #KNEEUP::after, #FULLBODY::after,
-    #SOLIDCOLOR::after, #SIMPLE::after, #BLURRY::after, #DETAILED::after {
+    #BUSTUP::after, #HALFBODY::after, #KNEEUP::after, #FULLBODY::after,
+    #SOLIDCOLOR::after, #BLENDER::after, #BLURRY::after, #DETAILED::after {
         font-size: 12px;
     }
 }

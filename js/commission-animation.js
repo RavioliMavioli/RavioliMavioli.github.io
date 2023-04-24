@@ -1,6 +1,7 @@
-let currentPrice    = 49;
+let commercialMultiplier      = 1.5;
+let currentPrice    = 79;
 let bgPrice         = 0;
-let totalPrice      = 49;
+let totalPrice      = 79;
 let commercial      = 1;
 let agree           = false;
 let currentCurrency = 'Outdonesia';
@@ -9,17 +10,22 @@ let currentBg       = 'solidcolor';
 
 let currencyAll     = ['Indonesia', 'Outdonesia'];
 
-let bodyPartName    = ['headshot', 'bustup', 'halfbody', 'kneeup', 'fullbody'];
-let pricePartInIDR  = ['Rp.99.000', 'Rp.149.000', 'Rp.259.000', 'Rp.359.000', 'Rp.479.000'];
-let pricePartInUSD  = ['$14', '$29', '$49', '$69', '$89'];
+let bodyPartName    = ['bustup', 'halfbody', 'kneeup', 'fullbody'];
+let pricePartInIDR  = ['Rp.600.000', 'Rp.800.000', 'Rp.1000.000', 'Rp.1200.000'];
+let pricePartInUSD  = ['$59', '$79', '$99', '$119'];
 
-let bgPartName      = ['solidcolor', 'simple', 'blurry', 'detailed'];
-let priceBgInIDR    = ['+Rp.0', '+Rp.79.000', '+Rp.179.000', '+Rp.359.000'];
-let priceBgInUSD    = ['+$0', '+$14', '+$35', '+$70'];
+let bgPartName      = ['solidcolor', 'blurry', 'detailed', 'blender'];
+let priceBgInIDR    = ['+Rp.0', '+Rp.600.000', '+Rp.1000.000', '+Rp.1500.000'];
+let priceBgInUSD    = ['+$0', '+$59', '+$99', '+$199'];
 
 let canvasSizes      = ['square', 'a3portrait', 'a3landscape', 'widescreen'];
 let currentCanvas     = 'square';
 
+function Initialize(){
+    Region('Outdonesia');
+    CropAnimate('HALFBODY');
+    BgAnimate('SOLIDCOLOR');
+}
 function Region(regionID){
 
     const IDR = document.getElementById('Indonesia');
@@ -140,6 +146,7 @@ function UpdatePrice(){
         totalPrice      = (currentPrice + bgPrice)*commercial;
 
         SetTotalPrice(totalPrice);
+        console.log(totalPrice);
 }
 
 function SetTotalPrice(totalPrice){
@@ -168,14 +175,14 @@ function BgAnimate(bgID){
 
 function BgSetToDefault(){
     Region(currentCurrency);
-    let bgPartName = ['solidcolor', 'simple', 'blurry', 'detailed'];
-
+    
     // Remove every single classes from the element //
     bgPartName.forEach(backgrounds => {
         let uppercasedBg = backgrounds.toUpperCase();
         document.getElementById(`${uppercasedBg}`).className = '';
         document.querySelector(`.img-${backgrounds}`).className = `img-${backgrounds}`;
         document.querySelector(":root").style.setProperty(`--color-${backgrounds}`, '#FF4C01');
+        console.log(backgrounds);
     });
 }
 
@@ -183,7 +190,7 @@ function Commercial(){
     let commercalButton = document.querySelector('.commercial-check-1');
 
     if(commercial != 1) { commercial = 1; commercalButton.className = 'commercial-check-1 box-bold';}
-    else {commercial = 1.5; commercalButton.classList.add("animation-commercial");}
+    else {commercial = commercialMultiplier; commercalButton.classList.add("animation-commercial");}
 
     totalPrice = (currentPrice + bgPrice)*commercial;
     SetTotalPrice(totalPrice);
@@ -227,7 +234,7 @@ function Agree(){
 }
 
 function ForwardToForm() {
-    // Forwarding all current letiables into Google form, this is quite tricky //
+    // Forwarding all current variables into Google form //
     //
     let Parts             = "entry.1894098826";
     let Bg                = "entry.11836467";
@@ -238,8 +245,8 @@ function ForwardToForm() {
 
 
     let fCurrency         = ["IDR (Rupiah)", "USD (US Dollar)"];
-    let fParts            = ["Headshot", "Bust Up","Half Body","Knee Up", "Fullbody"];
-    let fBg               = ["Solid Color","Simple Background","Blur Background","Detailed Background"];
+    let fParts            = ["Bust Up","Half Body","Knee Up", "Fullbody"];
+    let fBg               = ["Solid Color","Detailed Blur","Detailed HD","3D Render"];
     let fCanvas           = ["Square","A3 Potrait","A3 Landscape","Widescreen 5K"];
     let fCommercial       = (function(){
         if (commercial   == 1) {return "No, I only use it for non-commercial purposes."} else {return "Yes, I want it to be used as commercial purposes."};

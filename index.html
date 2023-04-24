@@ -65,11 +65,11 @@
     <div id="landing" class="header" data-aos="fade-up" loading="lazy">
     <div id="header-img" class="header"></div>
     <div class="Title">
-        <img src="resource/image/manjaro icon.png" class="shad-mid">
+        <img src="resource/image/icon.png" class="shad-mid">
         <h1>RavioliMavioli</h1>
-        <p>I am Ravioli, a freelance 2D/3D digital artist<br>
-            Chemical Engineering Student, Front End Developer,<br>
-            and open-source enthusiast. Welcome to my web page</p>
+        <p>I am Ravioli, a freelance illustrator,<br>
+            developer, and open-source enthusiast<br>
+            Welcome to my web page</p>
         <svg></svg><br>
         <a class="commission-btn box-bold" onclick="scrollToTargetAdjusted('commission',75)">Commission Info</a>
         
@@ -166,7 +166,7 @@
             </div>
             <!-- This was the second hardest script to make-->
             <div class="commission-container animation-halfbody">
-                <div class="commission-container-left" data-aos="fade-up"><div class="img-solidcolor"></div><div class="img-detailed"></div><div class="img-blurry"></div><div class="img-simple"></div><div class="img-arch"></div>
+                <div class="commission-container-left" data-aos="fade-up"><div class="img-solidcolor"></div><div class="img-detailed"></div><div class="img-blurry"></div><div class="img-blender"></div><div class="img-arch"></div>
                     <div class="dynamic-price-container">
                         <div class="dynamic-price-bg">
                             <div class="dynamic-price-line-container box-bold">
@@ -194,19 +194,18 @@
                         <div class="parts-header text-normal"><p>Body parts</p></div>
                         <div class="parts-lists">
 
-                            <!-- I had a eurika moment when I figured it out how to do the script of this section -->
-                            <a id="HEADSHOT" onclick="CropAnimate('HEADSHOT'), scrollToTargetAdjusted('commission',-10)"><p class="box-bold">Headshot</p></a>
                             <a id="BUSTUP" onclick="CropAnimate('BUSTUP'), scrollToTargetAdjusted('commission',-20)"><p class="box-bold">Bust-up</p></a>
-                            <a id="HALFBODY" class="animation-change-color" onclick="CropAnimate('HALFBODY'), scrollToTargetAdjusted('commission',-50)"><p class="box-bold">Halfbody</p></a>
+                            <a id="HALFBODY" onclick="CropAnimate('HALFBODY'), scrollToTargetAdjusted('commission',-50)"><p class="box-bold">Halfbody</p></a>
                             <a id="KNEEUP" onclick="CropAnimate('KNEEUP'), scrollToTargetAdjusted('commission',-100)"><p class="box-bold">Knee-up</p></a>
                             <a id="FULLBODY" onclick="CropAnimate('FULLBODY'), scrollToTargetAdjusted('commission',-200)"><p class="box-bold">Fullbody</p></a>
                         </div>
                         <div class="background-header text-normal"><p>Background</p></div>
                         <div class="background-lists">
-                            <a id="SOLIDCOLOR" class="animation-change-color-bg" onclick="BgAnimate('SOLIDCOLOR')"><p class="box-bold">Solid Color</p></a>
-                            <a id="SIMPLE" onclick="BgAnimate('SIMPLE')"><p class="box-bold">Simple</p></a>
-                            <a id="BLURRY" onclick="BgAnimate('BLURRY')"><p class="box-bold">Blur</p></a>
-                            <a id="DETAILED" onclick="BgAnimate('DETAILED')"><p class="box-bold">Detailed</p></a>
+                            
+                            <a id="SOLIDCOLOR" onclick="BgAnimate('SOLIDCOLOR')"><p class="box-bold">Solid Color</p></a>
+                            <a id="BLURRY" onclick="BgAnimate('BLURRY')"><p class="box-bold">Detailed Blur</p></a>
+                            <a id="DETAILED" onclick="BgAnimate('DETAILED')"><p class="box-bold">Detailed HD</p></a>
+                            <a id="BLENDER"><p class="box-bold grayed">3D Render</p></a>
                         </div>
                         <div class="commercial-container">
                             <a class="commercial-check-1 box-bold" onclick="Commercial()"></a>
@@ -235,12 +234,12 @@
                     <div class="general text-lists" data-aos="fade-up"> <p>General</p><br>
                         <div class="tos-list-container box-mid">
                             <ul>
-                                <li>The estimated time of delivery is <b>1 weeks to 2.5 months after I send you the final sketch</b> depending on the complexity.</li>
+                                <li>The estimated time of delivery is <b>1 weeks to 2 months after I send you the final sketch</b> depending on the complexity.</li>
                                 <li>Female characters are prefered, I can draw male too but the result will be not as good as female.</li>
                                 <li>Only 1 character.</li>
-                                <li>Strictly No Echi and or NSFW.</li>
+                                <li>Strictly No Ecchi and or NSFW.</li>
                                 <li>No humongous oppai and or thicc thighs.</li>
-                                <li>Not accepting Chibi, Mecha, Furry, Old Character, Weird Fetishes (sorry, I didn't mean to kinkshame you), Complex Poses, Complex Background, Controversial Topic, and Realistic Style.</li>
+                                <li>Not accepting Chibi, Mecha, Furry, Old Character, Weird Fetishes, Controversial Topic, and Realistic Style.</li>
                             </ul>
                         </div>
                     </div><br>
@@ -248,16 +247,14 @@
                         <div class="tos-list-container box-mid">
                             <ul>
                                 <li>Only pay when I accept your commission.</li>
-                                <li>Additional <b>+$20 or +Rp.100.000</b> for faster commissioning.</li>
+                                <li>Additional payment for faster commissioning.</li>
                                 <li> Upfront payment:
                                     <ul><br>
                                         <li style="margin-left:20px;">First, 50% of the total price after I send you the sketch.</li>
                                         <li style="margin-left:20px;">Second, 50% of the total price after I send you the final product.</li>
                                     </ul>
                                 </li><br>
-                                <li>Payment via  <span class="highlight-2">PayPal</span>   (International) or  <span class="highlight-1">BRI/DANA/OVO</span>  (Local).</li>
-                                <li>I may cancel or refuse your commission.</li>
-                                <li>100% Refund is possible.</li>
+                                <li>I may refuse or cancel your commission with the refund as long as the commission is not finished.</li>
                             </ul>
                         </div>
                     </div><br>
@@ -265,9 +262,9 @@
                         <div class="tos-list-container box-mid">
                             <ul>
                                 <li>Final artworks will be sent before you send the full payment.</li>
-                                <li>Final artworks will be sent in the form of PNG at a full resolution with the source file (.kra and .psd).</li>
-                                <li>Final artworks will be sent via email or Google Drive links.</li>
-                                <li>Final artworks will be uploaded to my Instagram, Pixiv, DeviantArt, and other social media at 30% resolution with the addition of watermarks under clients permission.</li>
+                                <li>Final artworks will be sent in the form of PNG at a full resolution.</li>
+                                <li>Final artworks will be sent via Google Drive links.</li>
+                                <li>Final artworks will be uploaded to my social media at 30% resolution with the addition of watermarks.</li>
                             </ul>
                         </div>
                     </div><br>
@@ -277,7 +274,6 @@
                                 <li>Both the artist (me) and the client (you) should retain the Copyrights.</li>
                                 <li>You are free to redistribute the artworks.</li>
                                 <li>Unless you choose the "Commercial" category, <b>DO NOT</b> sell or make any profit from the artworks.</li>
-                                <li>Please do not claim that you drew the commissioned artworks.</li>
                             </ul>
                         </div>
                     </div><br>
@@ -322,6 +318,7 @@
 
         });
     </script>
+    <script>Initialize()</script>
 </body>
 <footer class="shad-bold">
     <div class="B text-normal opacity-mid"><p>Copyright © RavioliMavioli<br><br></p></div>
