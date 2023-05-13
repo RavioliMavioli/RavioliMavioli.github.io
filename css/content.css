@@ -78,6 +78,90 @@ body{
     transform: scale(1.1);
 }
 
+
+/*---------------------------------------------------------------------------------------------------*/
+/*===================================================================================================*/
+/*---------------------------------------------------------------------------------------------------*/
+
+#my-skill{
+    margin-top: 50px;
+    position: relative;
+    color: white;
+    text-align: center;
+    justify-content: space-between;
+}
+#my-skill p::after{
+    background: transparent;
+}
+.skill-container{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    margin: 3%;
+    grid-template-columns: repeat(3, 2fr);
+
+    grid-gap: 20px;
+}
+
+.skill-title{
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+.skill-container-left, .skill-container-middle, .skill-container-right{
+    background: linear-gradient(120deg, #1d3036 -1.76%, #1a2530 80.53%);
+    padding: 20px 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.skill-container-left:hover, .skill-container-middle:hover, .skill-container-right:hover{
+    scale: 105%;
+    transition: 0.5s;
+}
+
+.language-container{
+    display: flex;
+    align-items:center;
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.language-container-inner, .language-container-inner-r{
+    position: relative;
+    display: flex;
+    align-items:center;
+    width: 50%;
+}
+.language-container-inner-r{
+    display: block;
+    float: right;
+    text-align: right;
+}
+.language-container-inner p{
+    font-weight:300;
+    font-size: 18px;
+    margin: 10px;
+}
+#BEGINNER, #INTERMEDIATE, #ADVANCED, #PRO{
+    width: 80px;
+    margin: 0px 3px;
+    padding: 5px 10px;
+    font-size: 18px;
+    color: white;
+    border-radius: 100px;
+}
+#BEGINNER{
+    background-color: rgba(27, 141, 27, 0.607);
+}
+#INTERMEDIATE{
+    background-color: #16648bb5;
+}
+#ADVANCED{
+    background-color: rgba(164, 124, 50, 0.711);
+}
+#PRO{
+    background-color: rgba(122, 38, 139, 0.656);
+}
 /*---------------------------------------------------------------------------------------------------*/
 /*===================================================================================================*/
 /*---------------------------------------------------------------------------------------------------*/
@@ -547,9 +631,15 @@ body{
     color: white;
 }
 .tos-list-container{
+    cursor: pointer;
     background: linear-gradient(94.94deg, #1d3036 -1.76%, #1a2530 80.53%);
     padding: 20px 40px;
     border-radius: 20px;
+    transition: 0.5s;
+}
+.tos-list-container:hover{
+    scale: 103%;
+    transition: 0.5s;
 }
 .highlight-1, .highlight-2{
     background: linear-gradient(94.94deg, #FD9E04 -1.76%, #FF4C01 80.53%);
@@ -729,6 +819,27 @@ body{
     .order-btn-enabled, .order-btn-disabled{
         font-size: 20px;
         padding: 8px 38px;
+    }
+    .skill-container{
+        grid-template-columns: repeat(1, 3fr);
+    }
+    .skill-container p{
+        font-size: 14px;
+    }
+    .skill-title{
+        font-size: 16px;
+        margin-top: 8px;
+        margin-bottom: 18px;
+    }
+    .language-container{
+        margin-bottom: 8px;
+    }
+    .language-container-inner img{
+        width: 28px;
+        height: 28px;
+    }
+    #BEGINNER, #INTERMEDIATE, #ADVANCED, #PRO{
+        font-size: 14px;
     }
 }
 @media(max-width: 200px){

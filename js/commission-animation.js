@@ -15,7 +15,7 @@ let pricePartInIDR  = ['Rp.300.000', 'Rp.500.000', 'Rp.700.000', 'Rp.900.000'];
 let pricePartInUSD  = ['$59', '$79', '$99', '$119'];
 
 let bgPartName      = ['solidcolor', 'blurry', 'detailed', 'blender'];
-let priceBgInIDR    = ['+Rp.0', '+Rp.400.000', '+Rp.600.000', '+Rp.900.000'];
+let priceBgInIDR    = ['+Rp.0', '+Rp.400.000', '+Rp.600.000', '+Rp.2.000.000'];
 let priceBgInUSD    = ['+$0', '+$59', '+$99', '+$199'];
 
 let canvasSizes      = ['square', 'a3portrait', 'a3landscape', 'widescreen'];
