@@ -18,7 +18,7 @@
     <!--The next option was to use a framework which involves coding, but I had to learn the framework syntax and functions-->
     <!--So fuck it, I am gonna build it from scratch.-->
     <!--                                                                                 -->
-    <!--Sincerely, RavioliMavioli-->
+    <!--Sincerely, Ravimo-->
 
 <html lang="en">
 <head>
@@ -35,13 +35,13 @@
     <!--Import files and libaries-->
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-9">
-    <title>RavioliMavioli</title>
+    <title>Ravimo</title>
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/content.css">
     <link rel="stylesheet" href="css/loader.css">
     <link rel="stylesheet" href="css/support.css">
     <link rel="stylesheet" href="css/lightbox.css">
-    <link rel="stylesheet" href="css/commission-animation.css">
+    <link rel="stylesheet" href="css/animation.css">
     <link rel="stylesheet" href="css/boxshadow.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -50,9 +50,10 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <script src="js/scroll.js"></script>
-    <script src="js/commission-animation.js"></script>
+    <script src="js/main.js"></script>
     <script src="js/lightbox-plus-jquery.js"></script>
     <script>lightbox.option({ disableScrolling: true });</script>
+    
     
 </head>
 <body>
@@ -66,8 +67,8 @@
     <div id="header-img" class="header"></div>
     <div class="Title">
         <img src="resource/image/icon.png" class="shad-mid">
-        <h1>RavioliMavioli</h1>
-        <p>I am Ravioli, a freelance illustrator, junior<br>
+        <h1>Ravimo</h1>
+        <p>I am Ravimo, a freelance illustrator, junior<br>
             developer, and open-source enthusiast<br>
             Welcome to my web page!</p>
         <svg></svg><br>
@@ -78,8 +79,9 @@
                 <li><a id="pixiv" href="https://www.pixiv.net/en/users/60562229" target="_blank" onmouseover="ExternalLinksEnter('pixiv')" onmouseleave="ExternalLinksLeave()"><img src="resource/svg/Pixiv.svg"><p>Pixiv</p></a></li>
                 <li><a id="instagram" href="https://www.instagram.com/raviolimavioli/" target="_blank" onmouseover="ExternalLinksEnter('instagram')" onmouseleave="ExternalLinksLeave()"><img src="resource/svg/instagram.svg"><p>Instagram</p></a></li>
                 <li><a id="twitter" href="https://twitter.com/_ravimo" target="_blank" onmouseover="ExternalLinksEnter('twitter')" onmouseleave="ExternalLinksLeave()"><img src="resource/svg/twitter.svg"><p>Twitter</p></a></li>
+                <li><a id="youtube" href="https://www.youtube.com/channel/UCH8793ApsCw2ilvRiO1_97g" target="_blank" onmouseover="ExternalLinksEnter('youtube')" onmouseleave="ExternalLinksLeave()"><img src="resource/svg/youtube.svg"><p>YouTube</p></a></li>
                 <li><a id="github" href="https://github.com/RavioliMavioli" target="_blank" onmouseover="ExternalLinksEnter('github')" onmouseleave="ExternalLinksLeave()"><img src="resource/svg/Github.svg"><p>GitHub</p></a></li>
-                <li><a id="kofi" href="https://ko-fi.com/ravimo" target="_blank" onmouseover="ExternalLinksEnter('kofi')" onmouseleave="ExternalLinksLeave()"><img src="resource/svg/Kofi.svg"><p>Ko-fi</p></a></li>
+                
             </ul>
         </div>
     </div>
@@ -87,13 +89,13 @@
 
     <!--Sticky navbar-->
     <div class="navbar box-mid">
-        <div class="navbrand" data-aos="fade-up" data-aos-once=true><a onclick="scrollToTarget('landing')">RavioliMavioli</a></div>
+        <div class="navbrand" data-aos="fade-up" data-aos-once=true><a onclick="scrollToTarget('landing')">Ravimo</a></div>
         <div class="navcenter" data-aos="fade-up" data-aos-once=true>
             <a onclick="scrollToTargetAdjusted('portfolio',75)">Portfolio</a>
             <a onclick="scrollToTargetAdjusted('commission',75)">Commission</a>
             <a id="navtos" onclick="scrollToTargetAdjusted('tos',75)">Terms of Service</a>
         </div>
-        <div class="navsupport" data-aos="fade-up" data-aos-once=true><a onclick="scrollToTargetAdjusted('support',75)" target="_blank">Support</a></div>
+        <div class="navsupport" data-aos="fade-up" data-aos-once=true><a onclick="scrollToTargetAdjusted('contact',75)" target="_blank">Contact</a></div>
     </div>
 
 
@@ -169,7 +171,7 @@
                             <p>English</p>
                         </div>
                         <div class="language-container-inner-r">
-                            <span id="PRO">Fluent</span>
+                            <span id="PRO">Advanced</span>
                         </div>
                         
                     </div>
@@ -181,7 +183,7 @@
                             <p>Indonesian</p>
                         </div>
                         <div class="language-container-inner-r">
-                            <span id="PRO">Fluent</span>
+                            <span id="PRO">Advanced</span>
                         </div>
                         
                     </div>
@@ -210,7 +212,7 @@
                             <p>Krita</p>
                         </div>
                         <div class="language-container-inner-r">
-                            <span id="PRO">Pro</span>
+                            <span id="PRO">Advanced</span>
                         </div>
                         
                     </div>
@@ -222,7 +224,7 @@
                             <p>Inksacpe</p>
                         </div>
                         <div class="language-container-inner-r">
-                            <span id="PRO">Pro</span>
+                            <span id="PRO">Advanced</span>
                         </div>
                         
                     </div>
@@ -243,7 +245,7 @@
                         
                         <div class="language-container-inner"> 
                             <img src="resource/image/portfolio/software/vscode.svg" width="48px" height="48px">
-                            <p>Vscode</p>
+                            <p>VSCode</p>
                         </div>
                         <div class="language-container-inner-r">
                             <span id="INTERMEDIATE">Intermediate</span>
@@ -276,7 +278,7 @@
                             <p>HTML</p>
                         </div>
                         <div class="language-container-inner-r">
-                            <span id="INTERMEDIATE">Intermediate</span>
+                            <span id="BEGINNER">Beginner</span>
                         </div>
                         
                     </div>
@@ -288,7 +290,7 @@
                             <p>CSS</p>
                         </div>
                         <div class="language-container-inner-r">
-                            <span id="BEGINNER">Beginner</span>
+                            <span id="INTERMEDIATE">Intermediate</span>
                         </div>
                         
                     </div>
@@ -478,11 +480,52 @@
                 </div>
             </div>        
         </div><br><br><br><br><br><br>
-        <div id="support">
-            <div class="text-title" data-aos="fade-up"><p>Support</p></div>
-            <div class="C text-normal" data-aos="fade-up">
-                <p>This site is still under construction, sorry for the inconvenience.</p><br>
-                <p>In the mean time, you can support me via Ko-fi <a target="_blank" href="https://ko-fi.com/ravimo" class="highlight-2">here</a></p>
+        <div id="contact">
+            <div class="text-title" data-aos="fade-up"><p>Contact</p></div>
+            <div class="contact-container">
+                <div class="contact-left">
+                    <div class="contact-inner-container ">
+                        <form id="FORM">
+                            <div class="text-header" data-aos="fade-up">Message</div>
+                            <br>
+                            <br>
+
+                            <div class="contact-thin-text" data-aos="fade-up">Name*</div>
+                            <input type="text" id="NAME" name="Name" class="box-mid" placeholder="Your name" required data-aos="fade-up">
+
+                            <div class="contact-thin-text" data-aos="fade-up">Email*</div>
+                            <input type="email" id="EMAIL" name="Email" class="box-mid" placeholder="Email address" required data-aos="fade-up">
+
+                            <div class="contact-thin-text" data-aos="fade-up">Message*</div>
+                            <textarea id="MESSAGE" name="Message" class="box-mid" rows="6" placeholder="Message" required data-aos="fade-up"></textarea>
+                            <div data-aos="fade-up">
+                                <div class="send box-mid" onclick="SendEmail()">Send</div>
+                            </div>
+                            
+                            <div class="text-header email-not-sent">
+                                Email sent, Thank you!
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <div class="contact-inner-container">
+                        <div class="text-header" data-aos="fade-up">Get in touch</div>
+                        
+
+                        <div class="contact-thin-text" data-aos="fade-up">
+                        <p>You can contact me via my social media below:</p>
+                        </div>
+                        <div class="external-links external-links-2" data-aos="fade-up"><br>
+                            <ul>
+                                <li><a id="facebook2" href="https://www.facebook.com/ravimo44/" target="_blank" onmouseover="ExternalLinksEnter('facebook2')" onmouseleave="ExternalLinksLeave()"><img src="resource/svg/facebook.svg"><p>Facebook</p></a></li>
+                                <li><a id="instagram2" href="https://www.instagram.com/raviolimavioli/" target="_blank" onmouseover="ExternalLinksEnter('instagram2')" onmouseleave="ExternalLinksLeave()"><img src="resource/svg/instagram.svg"><p>Instagram</p></a></li>
+                                <li><a id="twitter2" href="https://twitter.com/_ravimo" target="_blank" onmouseover="ExternalLinksEnter('twitter2')" onmouseleave="ExternalLinksLeave()"><img src="resource/svg/twitter.svg"><p>Twitter</p></a></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         
@@ -510,9 +553,9 @@
     <script>Initialize()</script>
 </body>
 <footer class="shad-bold">
-    <div class="B text-normal opacity-mid"><p>Copyright © RavioliMavioli<br><br></p></div>
+    <div class="B text-normal opacity-mid"><p>GPL-3.0 Ravimo<br><br></p></div>
     
-    <div class="B text-normal"><p>♥ Created by RavioliMavioli with love and passion ♥</p></div>
+    <div class="B text-normal"><p>♥ Created by Ravimo with love and passion ♥</p></div>
     <div class="B text-normal"><p>Powered by pure HTML/CSS and JavaScript<br><br></p></div>
 
     <div class="B text-normal opacity-mid"><p>Contact: @raviolimavioli008@gmail.com</p></div>

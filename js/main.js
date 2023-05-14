@@ -280,15 +280,67 @@ function ExternalLinksEnter(sosmed){
 
     // Animation
     destinedSosmed.classList.add(`animation-sosmed`);
-    console.log(sosmed);
 }
 
 function ExternalLinksLeave(){
-    let allSosmed = ["pixiv", "twitter", "instagram", "github", "kofi"];
+    let allSosmed = ["pixiv", "twitter", "instagram", "github", "youtube", "facebook2", "instagram2", "twitter2"];
     allSosmed.forEach(element =>{
         document.getElementById(element).className = '';
     });
 }
+
+function Checkform(form) {
+    // get all the inputs within the submitted form
+    let inputs = form.getElementsByTagName('input');
+    let textarea = document.getElementById('MESSAGE');
+    for (var i = 0; i < inputs.length; i++) {
+        // only validate the inputs that have the required attribute
+        if(inputs[i].hasAttribute("required")){
+            if(inputs[i].value == ""){
+                // found an empty field that is required
+                alert("Please fill all required fields");
+                return false;
+            }
+        }
+    }
+    if (textarea.value == ""){
+        // found an empty field that is required
+        alert("Please fill all required fields");
+        return false;
+    }
+
+    return true;
+}
+
+function SendEmail(){
+    // Form
+    let form = document.getElementById("FORM");
+
+    if (Checkform(form)){
+        // Email sent confirmation animation
+        let emailSent = document.querySelector(".email-not-sent");
+        emailSent.classList.add("email-sent");
+
+        // Send form
+        form.action = "https://formsubmit.co/raviolimavioli008@gmail.com";
+        form.method = "POST"
+        form.submit();
+
+        //
+        function SendEmailComplete(){
+            emailSent.classList.remove("email-sent");
+        }
+
+        setTimeout(SendEmailComplete, 5000)
+        form.reset();
+    }
+    
+}
+
+
+
+
+
 
 if (window.innerWidth < 800)
         document.querySelector(":root").style.setProperty("--x-offset", '25vw');

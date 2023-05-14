@@ -1,19 +1,11 @@
 # Welcome!
 Hello and Welcome!  
 
-RavioliMavioli's commission and portofolio website is created by using pure HTML, CSS, and JavaScript without any framework. 
-It is hosted on the GitHub page.
-  
-Why did I create this from scratch? Why didn't I use Wix, Wordpress, or Carrd like any other Artists?  
-
-Because why not.  
-And I hate Wordpress.  
+RavioliMavioli's commission and portofolio website is created by using pure HTML, CSS, and JavaScript without any framework. It is developed by me with my self-learning knowledge of programming.
 
 Feel free to clone, edit, or redistribute the code under the GPL license.  
 
-`git clone https://github.com/RavioliMavioli/RavioliMavioli.github.io`  
-
-Open the `index.html` to do a preview of the website.  
+Thank you for visiting!
 
 # Library and Script Used
 [Animate on Scroll](https://michalsnik.github.io/aos/)  
