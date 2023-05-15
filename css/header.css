@@ -42,9 +42,10 @@ html {
     align-items: center;
     z-index: 200;
     top: 0;
+    bottom: auto;
     background: #161f28;
     overflow: hidden;
-    height: 55px;
+    height: 60px;
 }
 .navbrand, .navcenter, .navsupport{
     position: relative;
@@ -81,10 +82,10 @@ html {
     border-radius: 50px;
     margin-right: 10px;
 }
-.navbrand a:hover{
+.navbrand a:hover, .navsupport a:hover, .navcenter a:hover{
    color: orange;
 }
-.navsupport a:hover{
+/*.navsupport a:hover{
     background: white;
     color: black;
 }
@@ -248,7 +249,11 @@ html {
         font-size: 12px;
     }
     .navbar{
-        height: 40px;
+        position: fixed;
+        width: 100vw;
+        height: 50px;
+        top: auto;
+        bottom: 0;
     }
     .navbar a{
         font-size: calc(18px / 1.33);

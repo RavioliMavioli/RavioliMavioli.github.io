@@ -773,6 +773,9 @@ body{
     #commission .text-title p::after{
         width: 110px;
     }
+    .comm-title::after{
+        font-size: 16px;
+    }
     #tos .text-title p::after{
         width: 130px;
     }
