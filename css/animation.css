@@ -53,7 +53,13 @@
 .animation-sosmed img{
     transform: scale(1.17);
 }
-
+.animation-dynamic-pricetag{
+    width: 150px;
+    transform: translate(20%,-50%);
+}
+.animation-triangle{
+    transform: translate(-150px,-50%);
+}
 :root{
     --total-price-str: "$0";
 

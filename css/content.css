@@ -52,7 +52,7 @@ body{
     margin: 3%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 300px 300px;
+    grid-auto-rows: 45vh 45vh;
     grid-gap: 10px;
 }
 .portfolio-gallery-item{
@@ -75,7 +75,7 @@ body{
     transition: 0.5s;
 }
 .portfolio-gallery-item:hover .portfolio-images img{
-    transform: scale(1.1);
+    transform: scale(1.08) rotate(-1deg);
 }
 
 /*---------------------------------------------------------------------------------------------------*/
@@ -325,6 +325,7 @@ body{
     border-bottom: 20px solid transparent;
     border-right:30px solid #1793d1;
     transform: translate(-100px, -50%);
+    transition: 0.5s;
 }
 .dynamic-pricetag{
     position: absolute;
@@ -333,6 +334,7 @@ body{
     height: 40px;
     background: #1793d1;
     transform: translate(30%,-50%);
+    transition: 0.5s;
 }
 .dynamic-pricetag::after{
     position: absolute;
@@ -497,7 +499,7 @@ body{
     transition: 0.3s;
 }
 .commercial-check-1:hover{
-    scale: 115%;
+    scale: 107%;
 }
 .commercial-check-2{
     width: 70%;
@@ -675,7 +677,7 @@ body{
     transition: 0.3s;
 }
 .agree-check-1:hover{
-    scale: 115%;
+    scale: 107%;
 }
 .agree-check-2{
     width: auto;
@@ -770,6 +772,10 @@ body{
 
     #portfolio p::after{
         width: 70px;
+    }
+    .portfolio-container{
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 30vh 30vh;
     }
     #commission .text-title p::after{
         width: 110px;
