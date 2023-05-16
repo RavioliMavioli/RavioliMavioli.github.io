@@ -337,11 +337,6 @@ function SendEmail(){
     
 }
 
-
-
-
-
-
 if (window.innerWidth < 800)
         document.querySelector(":root").style.setProperty("--x-offset", '25vw');
 if (window.attachEvent) {

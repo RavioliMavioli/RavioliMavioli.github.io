@@ -85,6 +85,26 @@ html {
 .navbrand a:hover, .navsupport a:hover, .navcenter a:hover{
    color: orange;
 }
+.navcenter a::after{
+    background: transparent;
+    transition: 0.5s;
+}
+#nav-contact{
+    font-size: 0px;
+}
+.hamburger{
+    display: none;
+    cursor: pointer;
+    margin-right: 20px;
+}
+.bar{
+    background: white;
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: 0.5s; 
+}
 /*.navsupport a:hover{
     background: white;
     color: black;
@@ -94,7 +114,6 @@ html {
     color: black;
     border-radius: 75px;
 }
-
 /*---------------------------------------------------------------------------------------------------*/
 /*===================================================================================================*/
 /*---------------------------------------------------------------------------------------------------*/
@@ -249,30 +268,70 @@ html {
         font-size: 12px;
     }
     .navbar{
-        position: fixed;
-        width: 100vw;
         height: 50px;
-        top: auto;
-        bottom: 0;
+        transition: 0.5s;
+    }
+    .navbar.active{
+        height: 50vh;
+        transition: 0.5s;
     }
     .navbar a{
         font-size: calc(18px / 1.33);
         padding: 6px 15px;
     }
     .navcenter a{
-        font-size: 12px;
+        font-size: 0px;
         padding: 6px 10px;
+        color: transparent;
+        transition: 0.5s;
     }
-    .navcenter{
-        position: absolute;
-        margin-left: 10px;
+    .navcenter a::after{
+        display: block;
+        content: "";
+        background: transparent;
+        width: 100%;
+        margin: 20px auto;
+        height: 1px;
+    }
+    .navbrand{
+        vertical-align: top;
     }
     .navbrand a{
+        font-size: 18px;
+    }
+    .navsupport a{
         font-size: 0px;
     }
-}
-@media(max-width: 400px){
-    #navtos{
-        font-size: 0px;
+    .navbrand.active a{
+        font-size: 0;
+    }
+    .hamburger{
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0%;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .navcenter{
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        transition: 0.5s;
+    }
+    .navcenter.active a{
+        font-size: 16px !important;
+        color: white;
+        transition: 0.5s;
+    }
+    .navcenter.active a:hover{
+        color: orange;
+    }
+    .navcenter.active a::after{
+        background: white;
     }
 }

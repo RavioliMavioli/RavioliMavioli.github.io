@@ -185,6 +185,7 @@ body{
 .region-container{
     position: relative;
     margin-top: 15px;
+    margin-bottom: 25px;
     height: 35px;
     width: 100%;
 }
@@ -201,7 +202,7 @@ body{
     transition: 0.5s;
 }
 #Indonesia:hover, #Outdonesia:hover{
-    scale: 110%;
+    scale: 107%;
 }
 .commission-container{
     position: relative;
@@ -400,7 +401,7 @@ body{
     transition: 0.5s;
 }
 .parts-lists a p:hover, .background-lists a p:hover{
-    scale: 110%;
+    scale: 107%;
 }
 
 /*---------------------------------------------------------------------------------------------------*/
