@@ -32,7 +32,7 @@ function Region(regionID){
     const USD = document.getElementById('Outdonesia');
 
     // Set the element class to the default state //
-    document.getElementById('Indonesia').className = '';
+    document.getElementById('Indonesia').className = 'grayed';
     document.getElementById('Outdonesia').className = '';
     // Change the button color by adding animation class //
     if (regionID=="Indonesia"){
