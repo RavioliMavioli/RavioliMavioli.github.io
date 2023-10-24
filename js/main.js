@@ -12,11 +12,11 @@ let currencyAll     = ['Indonesia', 'Outdonesia'];
 
 let bodyPartName    = ['bustup', 'halfbody', 'kneeup', 'fullbody'];
 let pricePartInIDR  = ['Rp.500.000', 'Rp.700.000', 'Rp.900.000', 'Rp.1100.000'];
-let pricePartInUSD  = ['$59', '$79', '$99', '$119'];
+let pricePartInUSD  = ['$80', '$120', '$160', '$200'];
 
 let bgPartName      = ['solidcolor', 'blurry', 'detailed', 'blender'];
 let priceBgInIDR    = ['+Rp.0', '+Rp.500.000', '+Rp.900.000', '+Rp.1900.000'];
-let priceBgInUSD    = ['+$0', '+$59', '+$99', '+$199'];
+let priceBgInUSD    = ['+$0', '+$50', '+$150', '+$300'];
 
 let canvasSizes      = ['square', 'a3portrait', 'a3landscape', 'widescreen'];
 let currentCanvas     = 'square';
@@ -28,16 +28,16 @@ function Initialize(){
 }
 function Region(regionID){
 
-    const IDR = document.getElementById('Indonesia');
-    const USD = document.getElementById('Outdonesia');
+   //const IDR = document.getElementById('Indonesia');
+    //const USD = document.getElementById('Outdonesia');
 
     // Set the element class to the default state //
-    document.getElementById('Indonesia').className = 'grayed';
-    document.getElementById('Outdonesia').className = '';
+    //document.getElementById('Indonesia').className = '';
+    //document.getElementById('Outdonesia').className = '';
     // Change the button color by adding animation class //
     if (regionID=="Indonesia"){
         currentCurrency = 'Indonesia';
-        IDR.classList.add('animation-change-color-region');
+        //IDR.classList.add('animation-change-color-region');
         // Change all of the price variables inside the css file to IDR
         for (let index = 0; index < bodyPartName.length; index++){
             document.querySelector(":root").style.setProperty(`--price-${bodyPartName[index]}-str`, `'${pricePartInIDR[index]}'`);
@@ -51,7 +51,7 @@ function Region(regionID){
     }
     else {
         currentCurrency = 'Outdonesia';
-        USD.classList.add('animation-change-color-region')
+        //USD.classList.add('animation-change-color-region')
         // Change all of the price variables inside the css file to USD
         for (let index = 0; index < bodyPartName.length; index++){
             document.querySelector(":root").style.setProperty(`--price-${bodyPartName[index]}-str`, `'${pricePartInUSD[index]}'`);

@@ -34,7 +34,7 @@ body{
 }
 .text-title p::after{
     content: "";
-    background: white;
+    background: white !important;
     height: 2px;
     width: 100px;
     display: block;
@@ -90,7 +90,7 @@ body{
     justify-content: space-between;
 }
 #my-skill p::after{
-    background: transparent;
+    width: 130px;
 }
 .skill-container{
     display: grid;
@@ -100,6 +100,43 @@ body{
     grid-template-columns: repeat(3, 2fr);
 
     grid-gap: 20px;
+}
+
+.game-container .game-container-image{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    margin: 30px;
+    grid-template-columns: 1fr;
+
+    grid-gap: 10px;
+}
+
+.game-container-image img{
+    width: 40%;
+    height: auto;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.game-container a{
+    text-decoration: none;
+}
+
+
+.game-container p{
+    background: -webkit-linear-gradient(#1bb3da, #1382cc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.game-container p::after{
+    background: transparent !important;
 }
 
 .skill-title{
@@ -470,11 +507,9 @@ body{
 
 #BLENDER::after{
     content: var(--price-blender-str);
-    color: gray;
+    color: var(--color-detailed);
 }
-#BLENDER{
-    cursor: not-allowed;
-}
+
 /*---------------------------------------------------------------------------------------------------*/
 /*===================================================================================================*/
 /*---------------------------------------------------------------------------------------------------*/
@@ -776,6 +811,12 @@ body{
     .portfolio-container{
         grid-template-columns: repeat(2, 1fr);
         grid-auto-rows: 30vh 30vh;
+    }
+    #my-skill p::after{
+        width: 80px
+    }
+    .game-container-image img{
+        width: 80%;
     }
     #commission .text-title p::after{
         width: 110px;

@@ -161,7 +161,8 @@
         </div>
 
         <div id="my-skill">
-            <div class="text-title" data-aos="fade-up"><p>Proficiency</p></div>
+            <div class="text-title" data-aos="fade-up"><p>My Games</p></div>
+            <!--
             <div class="skill-container" data-aos="fade-up">
                 <div class="skill-container-left box-mid">
                     <div class="skill-title text-header">
@@ -348,17 +349,25 @@
                 </div>
                 
             </div>
-        
+            -->
+            <br>
+            <div class="game-container text-title" data-aos="fade-up">
+                <a href="https://raviolimavioli.itch.io/system77" target="_blank"><p>System77-prototype</p></a>
+                <div class="game-container-image">
+                    <img src="https://img.itch.zone/aW1hZ2UvMjI2ODYxOC8xMzQ0NTA0Ni5wbmc=/original/6MFpML.png" data-aos="fade-up">
+                    <img src="https://img.itch.zone/aW1hZ2UvMjI2ODYxOC8xMzQ0NTA0NC5wbmc=/original/Sf2dgU.png" data-aos="fade-up">
+                </div>
+            </div>
         </div>
         <!--Comission section-->
         <div id="commission">
             <div class="text-title comm-title" data-aos="fade-up"><p>Commission</p></div>
-            <!-- This was the most hardest script to make-->
+            <!--
             <div class="region-container" data-aos="fade-up">
                 <a id="Outdonesia" class="animation-change-color-region box-bold" onclick="Region('Outdonesia')"><p>USD</p></a>
-                <a id="Indonesia" class="box-bold"><p>IDR</p></a>
+                <a id="Indonesia" class="box-bold" onclick="Region('Outdonesia')"><p>IDR</p></a>
             </div>
-            <!-- This was the second hardest script to make-->
+            -->
             <div class="commission-container animation-halfbody">
                 <div class="commission-container-left" data-aos="fade-up"><div class="img-solidcolor"></div><div class="img-detailed"></div><div class="img-blurry"></div><div class="img-blender"></div><div class="img-arch"></div>
                     <div class="dynamic-price-container">
@@ -399,7 +408,7 @@
                             <a id="SOLIDCOLOR" onclick="BgAnimate('SOLIDCOLOR')"><p class="box-bold">Solid Color</p></a>
                             <a id="BLURRY" onclick="BgAnimate('BLURRY')"><p class="box-bold">Detailed Blur</p></a>
                             <a id="DETAILED" onclick="BgAnimate('DETAILED')"><p class="box-bold">Detailed HD</p></a>
-                            <a id="BLENDER"><p class="box-bold grayed">3D Render</p></a>
+                            <a id="BLENDER"><p onclick="BgAnimate('BLENDER')" class="box-bold">3D Render</p></a>
                         </div>
                         <div class="commercial-container">
                             <a class="commercial-check-1 box-bold" onclick="Commercial()"></a>
@@ -429,6 +438,7 @@
                         <div class="tos-list-container box-mid">
                             <ul>
                                 <li>The estimated time of delivery is <b>1 weeks to 2 months after I send you the final sketch</b> depending on the complexity.</li>
+                                <li>If however I could not deliver the final product in 3 months, 80% refund will be sent.</li>
                                 <li>Female characters are prefered, I can draw male too but the result will be not as good as female.</li>
                                 <li>Only 1 character.</li>
                                 <li>Strictly No Ecchi and or NSFW.</li>
