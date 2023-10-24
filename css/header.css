@@ -25,7 +25,7 @@ html {
 }
 #header-img{
     background-image: url(../resource/image/BG.jpg);
-    background-color: rgb(0, 0, 0, 0.66);
+    background-color: rgb(0, 0, 0, 0.2);
     background-blend-mode: multiply;
     background-position: center;
     background-size: cover;
