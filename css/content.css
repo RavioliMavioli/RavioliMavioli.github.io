@@ -221,7 +221,7 @@ body{
     font-size: 24px;
     font-weight: 300;
     position: relative;
-    content: "Status: Close";
+    content: "Please contact me for more information.";
     display: inline-block;
 }
 
@@ -513,7 +513,7 @@ body{
 
 #BLENDER::after{
     content: var(--price-blender-str);
-    color: var(--color-detailed);
+    color: var(--color-blender);
 }
 
 /*---------------------------------------------------------------------------------------------------*/

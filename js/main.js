@@ -12,11 +12,11 @@ let currencyAll     = ['Indonesia', 'Outdonesia'];
 
 let bodyPartName    = ['bustup', 'halfbody', 'kneeup', 'fullbody'];
 let pricePartInIDR  = ['Rp.500.000', 'Rp.700.000', 'Rp.900.000', 'Rp.1100.000'];
-let pricePartInUSD  = ['$80', '$120', '$160', '$200'];
+let pricePartInUSD  = ['±$50', '±$80', '±$120', '±$150'];
 
 let bgPartName      = ['solidcolor', 'blurry', 'detailed', 'blender'];
 let priceBgInIDR    = ['+Rp.0', '+Rp.500.000', '+Rp.900.000', '+Rp.1900.000'];
-let priceBgInUSD    = ['+$0', '+$50', '+$150', '+$300'];
+let priceBgInUSD    = ['+$0', '±$50', '±$120', '±$250'];
 
 let canvasSizes      = ['square', 'a3portrait', 'a3landscape', 'widescreen'];
 let currentCanvas     = 'square';
@@ -117,7 +117,8 @@ function TotalPrice(IDlowercase, type){
     let isBg        = false;
     
     // Add the price clicked to the current price
-    if (type == "background") { strPrice = strPrice.slice(1); isBg = true;} // Remove "+" from bg price string
+    strPrice = strPrice.slice(1);
+    if (type == "background") {  isBg = true;} // Remove "+" from bg price string
     if (currentCurrency=='Outdonesia') { slicedPrice = strPrice.substring(2, strPrice.length - 1);} // Remove quotes and dollar sign
     else { slicedPrice = strPrice.substring(4, strPrice.length - 1);} // Remove "Rp." and quotes
 
@@ -136,7 +137,7 @@ function UpdatePrice(){
     let totalPrice    = 0;
     
     if (currentCurrency=='Outdonesia'){
-        slicedPartPrice = getSelectedPartPrice.substring(2, getSelectedPartPrice.length - 1);
+        slicedPartPrice = getSelectedPartPrice.substring(3, getSelectedPartPrice.length - 1);
         slicedBgPrice   = getSelectedBgPrice.substring(3, getSelectedBgPrice.length - 1);
     }
     else {
@@ -158,7 +159,7 @@ function UpdatePrice(){
 function SetTotalPrice(totalPrice){
     document.querySelector(":root").style.setProperty('--total-price-str',
         (function(){
-            if (currentCurrency == "Outdonesia") {return `'$${totalPrice}'`} else {return `'Rp.${parseInt(totalPrice)}.000'`};
+            if (currentCurrency == "Outdonesia") {return `'±$${totalPrice}'`} else {return `'Rp.${parseInt(totalPrice)}.000'`};
         }())
     )
 }
